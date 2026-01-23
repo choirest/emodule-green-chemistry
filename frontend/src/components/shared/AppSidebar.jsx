@@ -49,6 +49,19 @@ const AppSidebar = () => {
         { label: "Evaluasi Proses Belajar", href: "#n" },
       ],
     },
+    {
+      label: "Kegiatan 3",
+      href: "/kegiatan-3",
+      submenu: [
+        { label: "Identifikasi Masalah", href: "#o" },
+        { label: "Merumuskan Hipotesis", href: "#p" },
+        { label: "Mengumpulkan Data dan Menguji Hipotesis", href: "#q" },
+        { label: "Hasil Pengamatan", href: "#r" },
+        { label: "Analisis Data", href: "#s" },
+        { label: "Kesimpulan", href: "#t" },
+        { label: "Evaluasi Proses Belajar", href: "#u" },
+      ],
+    },
     { label: "Post Test", href: "/post-test" },
   ]
 

@@ -77,7 +77,7 @@ const Kegiatan3 = () => {
       <section className="p-4">
         <Card>
           <ScrollArea className="h-144">
-            <div id="h" className="grid gap-16">
+            <div id="o" className="grid gap-16">
               <CardHeader>
                 <CardTitle>Identifikasi Masalah</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify">
@@ -140,7 +140,7 @@ serta mengelola limbah detergen sebelum dibuang ke perairan.
               </CardHeader>
             </div>
 
-            <div id="i" className="grid gap-16">
+            <div id="p" className="grid gap-16">
               <CardHeader>
                 <CardTitle>Merumuskan Hipotesis</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify">
@@ -182,7 +182,7 @@ salah satu solusi menanggulangi pencemaran air akibat cairan pembersih komersial
               </CardHeader>
             </div>
 
-            <div id="j" className="grid gap-16">
+            <div id="q" className="grid gap-16">
               <CardHeader>
                 <CardTitle>Mengumpulkan Data dan Menguji Hipotesis</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify">
@@ -214,7 +214,7 @@ informasi dari berbagai sumber!
               </CardHeader>
             </div>
 
-            <div id="k" className="grid gap-16">
+            <div id="r" className="grid gap-16">
               <CardHeader>
                 <CardTitle>Hasil Pengamatan</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify">
@@ -243,7 +243,7 @@ informasi dari berbagai sumber!
               </CardHeader>
             </div>
 
-            <div id="l" className="grid gap-16">
+            <div id="s" className="grid gap-16">
               <CardHeader>
                 <CardTitle>Analisis Data</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify">
@@ -304,7 +304,7 @@ informasi dari berbagai sumber!
               </CardHeader>
             </div>
 
-            <div id="m" className="grid gap-16">
+            <div id="t" className="grid gap-16">
               <CardHeader>
                 <CardTitle>Kesimpulan</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify">
@@ -332,7 +332,7 @@ informasi dari berbagai sumber!
               </CardHeader>
             </div>
 
-            <div id="n" className="grid gap-16">
+            <div id="u" className="grid gap-16">
               <CardHeader>
                 <CardTitle>Evaluasi Proses Belajar</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify">

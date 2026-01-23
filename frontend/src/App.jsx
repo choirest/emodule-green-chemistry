@@ -15,6 +15,7 @@ import Pretest from './components/student/Pretest';
 import Materi from './components/student/Materi';
 import Kegiatan1 from './components/student/Kegiatan1';
 import Kegiatan2 from './components/student/Kegiatan2';
+import Kegiatan3 from './components/student/Kegiatan3';
 import Posttest from './components/student/Posttest';
 
 // Admin Components
@@ -140,6 +141,14 @@ function AppRoutes() {
                       element={
                         <ProtectedRoute allowedRoles={['SISWA']}>
                           <Kegiatan2 />
+                        </ProtectedRoute>
+                      } 
+                    />
+                    <Route 
+                      path="/kegiatan-3" 
+                      element={
+                        <ProtectedRoute allowedRoles={['SISWA']}>
+                          <Kegiatan3 />
                         </ProtectedRoute>
                       } 
                     />
