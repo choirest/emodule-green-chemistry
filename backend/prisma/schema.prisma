@@ -1,0 +1,71 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  nama      String
+  email     String   @unique
+  password  String
+  role      Role     @default(SISWA)
+  kelas     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  jawaban   Jawaban[]
+  
+  @@map("users")
+}
+
+enum Role {
+  ADMIN
+  SISWA
+}
+
+model Soal {
+  id          Int      @id @default(autoincrement())
+  jenisSoal   JenisSoal
+  nomorSoal   Int
+  pertanyaan  String   @db.Text
+  createdAt   DateTime @default(now())
+  
+  jawaban     Jawaban[]
+  
+  @@unique([jenisSoal, nomorSoal])
+  @@map("soal")
+}
+
+enum JenisSoal {
+  PRETEST
+  MATERI
+  KEGIATAN1
+  KEGIATAN2
+  KEGIATAN3
+  POSTTEST
+}
+
+model Jawaban {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  soalId      Int
+  jawaban     String   @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  soal        Soal     @relation(fields: [soalId], references: [id], onDelete: Cascade)
+  
+  @@unique([userId, soalId])
+  @@map("jawaban")
+}
