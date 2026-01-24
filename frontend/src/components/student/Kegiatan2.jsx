@@ -79,8 +79,12 @@ const Kegiatan2 = () => {
           <ScrollArea className="h-144">
             <div id="h" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Identifikasi Masalah</CardTitle>
-                <CardDescription className="pt-2 pb-8 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Identifikasi Masalah
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                  <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 pb-8 grid gap-4 text-justify text-black">
                   <p>Perhatikan Video dibawah ini</p>
                   <iframe 
                     src="https://www.youtube.com/embed/pnuiEGuThsI?si=Ja2dZWd64GCtrKDN" 
@@ -134,6 +138,15 @@ beritanya!
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen>
                   </iframe>
+                  </CardDescription>
+              </CardHeader>
+
+              <CardHeader>
+                <CardTitle className="flex gap-4">
+                  Kuis Berhadiah
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(0, 1).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -154,6 +167,15 @@ beritanya!
                       </button>
                     </div>
                   ))}
+                  </CardDescription>
+              </CardHeader>
+
+              <CardHeader>
+                <CardTitle className="flex gap-4">
+                  Mari Berpikir
+                  <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 pb-8 grid gap-4 text-justify text-black">
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lalu penanggulangan apa yang bisa kita lakukan untuk mencegah munculnya 
 sampah plastik tersebut? Berbagai upaya penanggulangan sampah telah dilakukan melalui 
@@ -179,8 +201,11 @@ bisa dimakan beserta makanannya?
 
             <div id="i" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Merumuskan Hipotesis</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Merumuskan Hipotesis
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Berbagai upaya penanggulangan sampah telah dilakukan melalui pendekatan 
 pencegahan, seperti membawa tumbler dan wadah makan dari rumah serta melakukan 
@@ -219,8 +244,11 @@ langsung menghilangkan potensi sampah.
 
             <div id="j" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Mengumpulkan Data dan Menguji Hipotesis</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Mengumpulkan Data dan Menguji Hipotesis
+                  <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>
                     Carilah informasi dari berbagai sumber untuk menguji hipotesis yang telah kalian buat!
                   </p>
@@ -250,8 +278,8 @@ langsung menghilangkan potensi sampah.
 
             <div id="k" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Hasil Pengamatan</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">Hasil Pengamatan</CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(3, 4).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -278,8 +306,11 @@ langsung menghilangkan potensi sampah.
 
             <div id="l" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Analisis Data</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Analisis Data
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(4, 6).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -306,8 +337,11 @@ langsung menghilangkan potensi sampah.
 
             <div id="m" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Kesimpulan</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Kesimpulan
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(6, 7).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -334,8 +368,8 @@ langsung menghilangkan potensi sampah.
 
             <div id="n" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Evaluasi Proses Belajar</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">Evaluasi Proses Belajar</CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(7, 8).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">

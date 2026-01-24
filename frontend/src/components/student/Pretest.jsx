@@ -79,7 +79,7 @@ const Pretest = () => {
             <div className="grid gap-16">
               <CardHeader>
                 <CardTitle>BACAAN UNTUK MENJAWAB SOAL NOMOR 1-8 </CardTitle>
-                <CardDescription className="pt-2 grid gap-2 text-justify">
+                <CardDescription className="pt-2 grid gap-2 text-justify text-black">
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemanfaatan limbah organik sebagai pupuk merupakan salah satu contoh nyata penerapan prinsip kimia 
     hijau dalam kehidupan sehari-hari. Banyak jenis sampah rumah tangga yang biasanya dianggap tidak 
@@ -110,7 +110,7 @@ const Pretest = () => {
 
               <CardHeader>
                 <CardTitle>Soal</CardTitle>
-                <CardDescription>
+                <CardDescription className="text-black">
                   {soal.map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">

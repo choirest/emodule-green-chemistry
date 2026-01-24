@@ -78,7 +78,7 @@ const Posttest = () => {
           <div className="grid gap-16">
             <CardHeader>
               <CardTitle></CardTitle>
-              <CardDescription>
+              <CardDescription className="text-black">
                 {soal.map((item, index) => (
                   <div key={item.id} className="pb-6">
                     <h3 className="mb-3">

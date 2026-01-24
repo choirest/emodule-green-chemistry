@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { CheckCircle2 } from 'lucide-react';
 
 export default function Register({ className, ...props }) {
   const [nama, setNama] = useState('');
@@ -38,9 +39,18 @@ export default function Register({ className, ...props }) {
             alt="Image"
             className="w-1/2 h-auto object-contain dark:brightness-[0.2] dark:grayscale"
           />
-          <div className="grid gap-4 text-center">
-            <h1 className="text-4xl text-white font-bold">E-Modul Green Chemistry</h1>
-            <h2 className="text-xl text-white font-semibold">Berbasis Inquiry-based Experiment</h2>
+          <div className="grid gap-8 text-center">
+            <h1 className="text-4xl text-white font-bold">E-Modul Kimia Hijau</h1>
+            <div className="grid grid-cols-2 gap-8 items-center text-md text-white font-semibold">
+              <h2 className="flex">
+                <CheckCircle2 className="mr-2" />
+                Berbasis Inquiry-based Experiment
+              </h2>
+              <h2 className="flex">
+                <CheckCircle2 className="mr-2" />
+                Terintegrasi dengan Green Chemistry
+              </h2>
+            </div>
           </div>
         </div>
         <div className="flex flex-col gap-4 p-6 md:p-10">

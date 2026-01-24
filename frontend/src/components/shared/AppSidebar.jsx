@@ -1,5 +1,17 @@
 import { Link, useLocation, useNavigate } from "react-router-dom"
-import { ChevronDown, User2, ChevronUp } from "lucide-react"
+import { 
+  ChevronDown, 
+  ChevronUp, 
+  Home, 
+  User, 
+  BookOpen, 
+  FileText, 
+  ClipboardList, 
+  BookMarked, 
+  LayoutDashboard, 
+  Users, 
+  FlaskConical
+} from "lucide-react"
 import { useAuth } from "@/context/AuthContext";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubButton, SidebarMenuSubItem } from "../ui/sidebar";
 import { Separator } from "../ui/separator";
@@ -17,15 +29,16 @@ const AppSidebar = () => {
   };
 
   const studentMenus = [
-    { label: "Beranda", href: "/" },
-    { label: "Halaman Francis", href: "/francis" },
-    { label: "Kata Pengantar", href: "/kata-pengantar" },
-    { label: "Pendahuluan", href: "/pendahuluan" },
-    { label: "Pretest", href: "/pretest" },
-    { label: "Materi dan Kata Kunci", href: "/materi" },
+    { label: "Beranda", href: "/", icon: Home },
+    { label: "Halaman Francis", href: "/francis", icon: User },
+    { label: "Kata Pengantar", href: "/kata-pengantar", icon: BookOpen },
+    { label: "Pendahuluan", href: "/pendahuluan", icon: FileText },
+    { label: "Pretest", href: "/pretest", icon: ClipboardList },
+    { label: "Materi dan Kata Kunci", href: "/materi", icon: BookMarked },
     {
       label: "Kegiatan 1",
       href: "/kegiatan-1",
+      icon: FlaskConical,
       submenu: [
         { label: "Identifikasi Masalah", href: "#a" },
         { label: "Merumuskan Hipotesis", href: "#b" },
@@ -39,6 +52,7 @@ const AppSidebar = () => {
     {
       label: "Kegiatan 2",
       href: "/kegiatan-2",
+      icon: FlaskConical,
       submenu: [
         { label: "Identifikasi Masalah", href: "#h" },
         { label: "Merumuskan Hipotesis", href: "#i" },
@@ -52,6 +66,7 @@ const AppSidebar = () => {
     {
       label: "Kegiatan 3",
       href: "/kegiatan-3",
+      icon: FlaskConical,
       submenu: [
         { label: "Identifikasi Masalah", href: "#o" },
         { label: "Merumuskan Hipotesis", href: "#p" },
@@ -62,12 +77,12 @@ const AppSidebar = () => {
         { label: "Evaluasi Proses Belajar", href: "#u" },
       ],
     },
-    { label: "Post Test", href: "/post-test" },
+    { label: "Post Test", href: "/post-test", icon: ClipboardList },
   ]
 
   const adminMenus = [
-    { label: 'Dashboard', href: '/admin' },
-    { label: 'Data Siswa', href: '/admin/students' }
+    { label: 'Dashboard', href: '/admin', icon: LayoutDashboard },
+    { label: 'Data Siswa', href: '/admin/students', icon: Users }
   ];
 
   const menus = user?.role === 'ADMIN' ? adminMenus : studentMenus;
@@ -91,6 +106,7 @@ const AppSidebar = () => {
             <SidebarMenu>
               {menus.map((item) => {
                 const isActive = location.pathname === item.href;
+                const Icon = item.icon;
                 
                 return (
                   <SidebarMenuItem key={item.label}>
@@ -100,7 +116,8 @@ const AppSidebar = () => {
                           <SidebarMenuButton
                             className={isActive ? "bg-green-100 text-green-700 font-semibold border-l-4 border-green-500" : ""}
                           >
-                            <a href={item.href}>
+                            <a href={item.href} className="flex items-center gap-2 w-full">
+                              {Icon && <Icon className="w-4 h-4" />}
                               <span>{item.label}</span>
                             </a>
                             <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
@@ -132,7 +149,8 @@ const AppSidebar = () => {
                         asChild
                         className={isActive ? "bg-green-100 text-green-700 font-semibold border-l-4 border-green-500" : ""}
                       >
-                        <a href={item.href}>
+                        <a href={item.href} className="flex items-center gap-2">
+                          {Icon && <Icon className="w-4 h-4" />}
                           <span>{item.label}</span>
                         </a>
                       </SidebarMenuButton>
@@ -151,7 +169,7 @@ const AppSidebar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <SidebarMenuButton>
-                  <User2 /> {user?.email}
+                  <User /> {user?.email}
                   <ChevronUp className="ml-auto" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>

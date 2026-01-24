@@ -11,7 +11,7 @@ const Pendahuluan = () => {
           <div className="grid gap-16">
             <CardHeader>
               <CardTitle>Identitas Materi</CardTitle>
-              <CardDescription className="pt-2 grid gap-2">
+              <CardDescription className="pt-2 grid gap-2 text-black">
                 <div className="grid grid-cols-3">
                   <p className="col-span-1">Materi</p>
                   <p className="col-span-2">: Kimia Hijau</p>
@@ -40,7 +40,7 @@ const Pendahuluan = () => {
 
             <CardHeader>
               <CardTitle>Capaian Pembelajaran</CardTitle>
-              <CardDescription className="pt-2 grid gap-2">
+              <CardDescription className="pt-2 grid gap-2 text-black">
                 <div className="flex gap-2">
                   <p className="">1.</p>
                   <p className="">
@@ -62,7 +62,7 @@ const Pendahuluan = () => {
             
             <CardHeader>
               <CardTitle>Tujuan Pembelajaran</CardTitle>
-              <CardDescription className="pt-2 grid gap-2">
+              <CardDescription className="pt-2 grid gap-2 text-black">
                 <div className="flex gap-2">
                   <p className="">1.</p>
                   <p className="">Mendesripsikan pengertian kimia hijau</p>
@@ -91,7 +91,7 @@ const Pendahuluan = () => {
 
             <CardHeader>
               <CardTitle>Petunjuk Pembelajaran</CardTitle>
-              <CardDescription className="pt-2 grid gap-2">
+              <CardDescription className="pt-2 grid gap-2 text-black">
                 <div className="flex gap-2">
                   <p className="">1.</p>
                   <p className="">Bukalah laman web.</p>
@@ -158,7 +158,7 @@ const Pendahuluan = () => {
 
             <CardHeader>
               <CardTitle>Referensi</CardTitle>
-              <CardDescription className="grid gap-2 text-justify">
+              <CardDescription className="grid gap-2 text-justify text-black">
                 <p>
                   Brady, J.E., Holum, J.R. 1994. General of Chemistry, 5d Edition, New York: John 
     Wiley & Son joshi, D.R and Nisha Adhikari. 2019. "Green Chemistry: Beginning”.
@@ -185,7 +185,7 @@ const Pendahuluan = () => {
 
             <CardHeader className="italic">
               <CardTitle>Glosarium</CardTitle>
-              <CardDescription className="grid gap-2 text-justify">
+              <CardDescription className="grid gap-2 text-justify text-black">
                 <p>
                   <strong>Atom Economy (Ekonomi Atom): </strong>
                   Ukuran efisiensi suatu reaksi kimia berdasarkan jumlah 

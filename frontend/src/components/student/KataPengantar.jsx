@@ -10,7 +10,7 @@ const KataPengantar = () => {
           <div className="grid gap-16">
             <CardHeader>
               <CardTitle></CardTitle>
-              <CardDescription className="grid gap-4 text-justify">
+              <CardDescription className="grid gap-4 text-justify text-black">
                 <p>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alhamdulillah penulis panjatkan kehadirat Allah SWT yang telah memberikan rahmat dan 
     hidayah-Nya sehingga e-module berbasis Inquiry-based experiment terintegrasi green 

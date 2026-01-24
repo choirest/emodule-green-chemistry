@@ -78,8 +78,11 @@ const Materi = () => {
         <ScrollArea className="h-144">
           <div className="grid gap-16">
             <CardHeader>
-              <CardTitle>Pengertian Kimia Hijau</CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify italic">
+              <CardTitle className="flex gap-4">
+                Pengertian Kimia Hijau
+                <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-4 text-justify italic text-black">
                 <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemanfaatan limbah organik sebagai pupuk merupakan salah satu contoh nyata penerapan prinsip kimia 
     hijau dalam kehidupan sehari-hari. Banyak jenis sampah rumah tangga yang biasanya dianggap tidak 
@@ -122,8 +125,8 @@ const Materi = () => {
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>12 Prinsip Kimia Hijau</CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify">
+              <CardTitle className="flex gap-4">12 Prinsip Kimia Hijau</CardTitle>
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <p>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kimia hijau bukan hanya terkait dengan penggunaan dan produksi bahan kimia
 yang aman saja. Prinsip kimia hijau dapat Kalian terapkan di rumah. Bahan kimia
@@ -147,8 +150,11 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>1. Waste Prevention</CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify">
+              <CardTitle className="flex gap-4">
+                1. Waste Prevention
+                <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip1.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
                 <p className="italic text-center text-xs mb-2">Kamar Tidur Berantakan vs Kamar Tidur Rapi</p>
                 <p>
@@ -167,8 +173,11 @@ ekstra membersihkan tumpukan kekacauan.
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>2. Atom Economy</CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify">
+              <CardTitle className="flex gap-4">
+                2. Atom Economy
+                <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <div className="w-1/2 flex gap-2 mx-auto mt-4">
                   <img src="/prinsip2a.jpg" alt="greenchemistry" className="w-2/3" />
                   <img src="/prinsip2b.jpg" alt="greenchemistry" className="w-1/3" />
@@ -190,7 +199,10 @@ atomnya rendah.
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>3. Less Hazardous Chemical Synthesis</CardTitle>
+              <CardTitle className="flex gap-4">
+                3. Less Hazardous Chemical Synthesis
+                <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
               <CardDescription className="pt-2 grid gap-4 text-justify">
                 <img src="/prinsip3.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
                 <p className="italic text-center text-xs mb-2">Nylon, Polyurethane, dan PVC</p>
@@ -208,8 +220,11 @@ mengganggu hormon.
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>4. Design Safer Chemical</CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify">
+              <CardTitle className="flex gap-4">
+                4. Design Safer Chemical
+                <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <div className="w-1/2 flex gap-2 mx-auto mt-4">
                   <img src="/prinsip4a.jpg" alt="greenchemistry" className="w-2/5" />
                   <img src="/prinsip4b.jpg" alt="greenchemistry" className="w-3/5" />
@@ -233,8 +248,11 @@ berbahaya (aerosol).
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>5. Safer Solvents & Auxiliaries</CardTitle>
-              <CardDescription className="pt-2 grid gap-2 text-justify">
+              <CardTitle className="flex gap-4">
+                5. Safer Solvents & Auxiliaries
+                <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-2 text-justify text-black">
                 <div className="w-1/2 flex gap-2 mx-auto mt-4">
                   <img src="/prinsip5a.jpg" alt="greenchemistry" className="w-1/5" />
                   <img src="/prinsip5b.jpg" alt="greenchemistry" className="w-4/5" />
@@ -261,8 +279,11 @@ berbahaya bagi tubuh atau lingkungan.
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>6. Design for Energy Efficiency</CardTitle>
-              <CardDescription className="pt-2 grid gap-2 text-justify">
+              <CardTitle className="flex gap-4">
+                6. Design for Energy Efficiency
+                <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-2 text-justify text-black">
                 <p>
                   Saat siang hari terasa agak panas, kamu bisa memilih menyalakan AC yang dingin,
 tapi boros listrik atau cukup pakai kipas angin, yang lebih hemat energi dan sudah
@@ -276,8 +297,11 @@ menggunakan energi sesuai kebutuhan, tanpa berlebihan.
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>7. Use of Renewable Feddstocks</CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify">
+              <CardTitle className="flex gap-4">
+                7. Use of Renewable Feddstocks
+                <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <div className="w-1/2 flex gap-2 mx-auto mt-4">
                   <img src="/prinsip7a.jpg" alt="greenchemistry" className="w-1/2" />
                   <img src="/prinsip7b.jpg" alt="greenchemistry" className="w-1/2" />
@@ -297,8 +321,11 @@ menghasilkan warna yang tajam, tapi tetap aman bagi kesehatan dan bumi.
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>8. Reduce Derivatives</CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify">
+              <CardTitle className="flex gap-4">
+                8. Reduce Derivatives
+                <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip8.jpg" alt="greenchemistry" className="w-1/4 mx-auto mt-4" />
                 <p className="italic text-center text-xs mb-2">Kubis Merah</p>
                 <p>
@@ -318,8 +345,11 @@ lingkungan sesuai prinsip kimia hijau.
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>9. Catalyst</CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify">
+              <CardTitle className="flex gap-4">
+                9. Catalyst
+                <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip9.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
                 <p className="italic text-center text-xs mb-2">Polusi dari Pabrik</p>
                 <p>
@@ -338,8 +368,11 @@ atau kobalt-molibdenum (Co-Mo) pada suhu dan tekanan tinggi.
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>10. Design for Degradation</CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify">
+              <CardTitle className="flex gap-4">
+                10. Design for Degradation
+                <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <div className="w-1/2 flex gap-2 mx-auto mt-4">
                   <img src="/prinsip10a.jpg" alt="greenchemistry" className="w-2/5" />
                   <img src="/prinsip10b.jpg" alt="greenchemistry" className="w-3/5" />
@@ -362,8 +395,11 @@ berarti besar bagi lingkungan.
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>11. Real-Time Pollution Prevention</CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify">
+              <CardTitle className="flex gap-4">
+                11. Real-Time Pollution Prevention
+                <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip11.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
                 <p className="italic text-center text-xs mb-2">Aktivitas Memasak Air Gula</p>
                 <p>
@@ -383,8 +419,11 @@ cara lama yang hanya menguji sampel akhir produk di laboratorium.
             </CardHeader>
 
             <CardHeader>
-              <CardTitle>12. Safer Chemistry for Accident Prevention</CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify">
+              <CardTitle className="flex gap-4">
+                12. Safer Chemistry for Accident Prevention
+                <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+              </CardTitle>
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip12.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
                 <p className="italic text-center text-xs mb-2">Airbag Mobil</p>
                 <p>

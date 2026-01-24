@@ -79,8 +79,12 @@ const Kegiatan1 = () => {
           <ScrollArea className="h-144">
             <div id="a" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Identifikasi Masalah</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Identifikasi Masalah
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                  <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>Perhatikan video dibawah ini</p>
                   <iframe 
                     src="https://www.youtube.com/embed/wgLuXvtaLyQ?si=2AiqBb9Hu0h0-MUo" 
@@ -142,8 +146,11 @@ serta mendukung prinsip-prinsip keberlanjutan yang sejalan dengan konsep kimia h
 
             <div id="b" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Merumuskan Hipotesis</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Merumuskan Hipotesis
+                  <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />\
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menurut data World Bank 2019 sampah organik menjadi salah salah satu 
 penyumbang terbesar sampah di Indonesia. Apa benar ya? Yuk kita simak vidio berikut 
@@ -188,8 +195,11 @@ sebagai pupuk organik cair yang diuji pada pertumbuhan tanaman <i>miana</i>.
 
             <div id="c" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Mengumpulkan Data dan Menguji Hipotesis</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Mengumpulkan Data dan Menguji Hipotesis
+                  <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(3, 4).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -216,8 +226,8 @@ sebagai pupuk organik cair yang diuji pada pertumbuhan tanaman <i>miana</i>.
 
             <div id="d" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Hasil Pengamatan</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">Hasil Pengamatan</CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(4, 5).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -244,8 +254,11 @@ sebagai pupuk organik cair yang diuji pada pertumbuhan tanaman <i>miana</i>.
 
             <div id="e" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Analisis Data</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Analisis Data
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(5, 6).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -272,8 +285,11 @@ sebagai pupuk organik cair yang diuji pada pertumbuhan tanaman <i>miana</i>.
 
             <div id="f" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Kesimpulan</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Kesimpulan
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                  </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(6, 7).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -300,8 +316,8 @@ sebagai pupuk organik cair yang diuji pada pertumbuhan tanaman <i>miana</i>.
 
             <div id="g" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Evaluasi Proses Belajar</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">Evaluasi Proses Belajar</CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(7, 8).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">

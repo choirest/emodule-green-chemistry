@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { CheckCircle2 } from "lucide-react";
 
 const Login = ({ className, ...props }) => {
   const [email, setEmail] = useState('');
@@ -42,7 +43,7 @@ const Login = ({ className, ...props }) => {
               <div className="flex items-center justify-center rounded-md">
                 <img src="/gr-ch.png" alt="Green Chemistry" className="w-10 h-10" />
               </div>
-              <h3>E-Modul <br/>Green Chemistry</h3>
+              <h3>E-Modul <br/>Kimia Hijau</h3>
             </Link>
           </div>
           <div className="flex flex-1 items-center justify-center">
@@ -100,9 +101,18 @@ const Login = ({ className, ...props }) => {
             alt="Image"
             className="w-1/2 h-auto object-contain dark:brightness-[0.2] dark:grayscale"
           />
-          <div className="grid gap-4 text-center">
-            <h1 className="text-4xl text-white font-bold">E-Modul Green Chemistry</h1>
-            <h2 className="text-xl text-white font-semibold">Berbasis Inquiry-based Experiment</h2>
+          <div className="grid gap-8 text-center">
+            <h1 className="text-4xl text-white font-bold">E-Modul Kimia Hijau</h1>
+            <div className="grid grid-cols-2 gap-8 items-center text-md text-white font-semibold">
+              <h2 className="flex">
+                <CheckCircle2 className="mr-2" />
+                Berbasis Inquiry-based Experiment
+              </h2>
+              <h2 className="flex">
+                <CheckCircle2 className="mr-2" />
+                Terintegrasi dengan Green Chemistry
+              </h2>
+            </div>
           </div>
         </div>
       </div>

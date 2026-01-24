@@ -79,8 +79,12 @@ const Kegiatan3 = () => {
           <ScrollArea className="h-144">
             <div id="o" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Identifikasi Masalah</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Identifikasi Masalah
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                  <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>Simak permasalahan pada vidio berikut!</p>
                   <iframe 
                     src="https://www.youtube.com/embed/X96MPG_W7nY?si=nl_AgFMW-BdI9Ed8" 
@@ -142,8 +146,11 @@ serta mengelola limbah detergen sebelum dibuang ke perairan.
 
             <div id="p" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Merumuskan Hipotesis</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Merumuskan Hipotesis
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studi pembuatan cairan pembersih dari bahan organik berkembang sebagai 
 respons terhadap meningkatnya pencemaran lingkungan akibat penggunaan pembersih 
@@ -184,8 +191,12 @@ salah satu solusi menanggulangi pencemaran air akibat cairan pembersih komersial
 
             <div id="q" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Mengumpulkan Data dan Menguji Hipotesis</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Mengumpulkan Data dan Menguji Hipotesis
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                  <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>
                     Rancanglah alat dan bahan serta langkah kerja dalam praktikum ini dengan menghimpun 
 informasi dari berbagai sumber!
@@ -216,8 +227,8 @@ informasi dari berbagai sumber!
 
             <div id="r" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Hasil Pengamatan</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">Hasil Pengamatan</CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>Organoleptik</p>
                   {soal.slice(5, 6).map((item, index) => (
                     <div key={item.id} className="pb-6">
@@ -245,8 +256,11 @@ informasi dari berbagai sumber!
 
             <div id="s" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Analisis Data</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Analisis Data
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <div className="flex gap-2">
                     <p className="">1.</p>
                     <div className="grid gap-4">
@@ -306,8 +320,11 @@ informasi dari berbagai sumber!
 
             <div id="t" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Kesimpulan</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">
+                  Kesimpulan
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(8, 9).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -334,8 +351,8 @@ informasi dari berbagai sumber!
 
             <div id="u" className="grid gap-16">
               <CardHeader>
-                <CardTitle>Evaluasi Proses Belajar</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify">
+                <CardTitle className="flex gap-4">Evaluasi Proses Belajar</CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   {soal.slice(9, 10).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
