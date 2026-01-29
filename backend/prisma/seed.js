@@ -21,20 +21,20 @@ async function main() {
   });
   console.log('Created admin:', admin);
 
-  // Create Sample Student
-  const studentPassword = await bcrypt.hash('siswa123', 10);
-  const student = await prisma.user.upsert({
-    where: { email: 'siswa@emodule.com' },
-    update: {},
-    create: {
-      email: 'siswa@emodule.com',
-      nama: 'Siswa',
-      password: studentPassword,
-      role: 'SISWA',
-      kelas: 'X MIPA 1',
-    },
-  });
-  console.log('Created student:', student);
+  // // Create Sample Student
+  // const studentPassword = await bcrypt.hash('siswa123', 10);
+  // const student = await prisma.user.upsert({
+  //   where: { email: 'siswa@emodule.com' },
+  //   update: {},
+  //   create: {
+  //     email: 'siswa@emodule.com',
+  //     nama: 'Siswa',
+  //     password: studentPassword,
+  //     role: 'SISWA',
+  //     kelas: 'X MIPA 1',
+  //   },
+  // });
+  // console.log('Created student:', student);
 
   // Create Pretest Questions
   const pretestQuestions = [
