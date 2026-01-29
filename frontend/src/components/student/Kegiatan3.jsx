@@ -87,6 +87,7 @@ const Kegiatan3 = () => {
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>Simak permasalahan pada vidio berikut!</p>
                   <iframe 
+                    className="mx-auto" 
                     src="https://www.youtube.com/embed/X96MPG_W7nY?si=nl_AgFMW-BdI9Ed8" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -94,6 +95,7 @@ const Kegiatan3 = () => {
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen>
                   </iframe>
+                  <p className="italic text-center text-xs mb-2">Channel PasraJY</p>
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aktivitas sehari-hari masyarakat seperti mencuci pakaian, mandi, dan mencuci 
 peralatan dapur yang hampir semuanya menggunakan deterjen. Dari aktivitas sederhana 

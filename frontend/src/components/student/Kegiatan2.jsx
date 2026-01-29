@@ -7,6 +7,13 @@ import { ScrollArea } from '../ui/scroll-area';
 const Kegiatan2 = () => {
   const [soal, setSoal] = useState([]);
   const [jawaban, setJawaban] = useState({});
+  const [tabelPengamatan, setTabelPengamatan] = useState({
+    day1: { bau: '', warna: '' },
+    day2: { bau: '', warna: '' },
+    day3: { bau: '', warna: '' },
+    day4: { bau: '', warna: '' },
+    day5: { bau: '', warna: '' }
+  });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
@@ -47,6 +54,16 @@ const Kegiatan2 = () => {
     });
   };
 
+  const handleTabelChange = (day, field, value) => {
+    setTabelPengamatan({
+      ...tabelPengamatan,
+      [day]: {
+        ...tabelPengamatan[day],
+        [field]: value
+      }
+    });
+  };
+
   const handleSubmit = async (soalId) => {
     setSaving(true);
     try {
@@ -63,6 +80,23 @@ const Kegiatan2 = () => {
       setSaving(false);
     }
   };
+  
+  const handleSaveTable = async (soalId) => {
+    setSavingTable(true);
+    try {
+      await api.post('/jawaban', {
+        soalId,
+        jawaban: JSON.stringify(tabelPengamatan)
+      });
+      setMessage('Tabel pengamatan berhasil disimpan!');
+      setTimeout(() => setMessage(''), 3000);
+    } catch (error) {
+      console.error('Error saving table:', error);
+      setMessage('Gagal menyimpan tabel pengamatan');
+    } finally {
+      setSavingTable(false);
+    }
+  };
 
   if (loading) {
     return (
@@ -71,6 +105,15 @@ const Kegiatan2 = () => {
       </div>
     );
   }
+
+  const soalPengamatan = soal.find(s => 
+    s.pertanyaan.includes('Hasil Pengamatan') || 
+    s.pertanyaan.includes('Organoleptik')
+  );
+  const soalLainnya = soal.filter(s => 
+    !s.pertanyaan.includes('Hasil Pengamatan') && 
+    !s.pertanyaan.includes('Organoleptik')
+  );
 
   return (
     <>
@@ -87,6 +130,7 @@ const Kegiatan2 = () => {
                 <CardDescription className="pt-2 pb-8 grid gap-4 text-justify text-black">
                   <p>Perhatikan Video dibawah ini</p>
                   <iframe 
+                    className="mx-auto"
                     src="https://www.youtube.com/embed/pnuiEGuThsI?si=Ja2dZWd64GCtrKDN" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -94,6 +138,7 @@ const Kegiatan2 = () => {
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen>
                   </iframe>
+                  <p className="italic text-center text-xs mb-2">Sumber: Kok Bisa?</p>
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selain handphone di tangan, ada satu benda yang susah lepas dari hidup kita. 
 Dialah, plastik! Benda ringan yang karena kuat dan praktisnya bikin disukai sama banyak 
@@ -116,6 +161,7 @@ bumbu mie instan pun dikemas menggunakan plastik. Bahaya sedotan plastik bisa ka
 simak dalam video berikut!
                   </p>
                   <iframe 
+                    className="mx-auto"
                     src="https://www.youtube.com/embed/TX6QbdSi3sY?si=R9lyVUn76e8uBM6c" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -123,6 +169,7 @@ simak dalam video berikut!
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen>
                   </iframe>
+                  <p className="italic text-center text-xs mb-2">Sumber: CNN Indonesia</p>
                   <img src="/keg2b.jpg" alt="greenchemistry" className="w-1/4 mx-auto mt-4" />
                   <p className="italic text-center text-xs mb-2">(Sumber: kontakpackaging)</p>
                   <p>
@@ -131,6 +178,7 @@ dong! Namun tahukah kamu sedotan kertas berbahaya bagi kesehatan? Yuk simak
 beritanya!
                   </p>
                   <iframe 
+                    className="mx-auto"
                     src="https://www.youtube.com/embed/Z3m7qkOYPOs?si=4p7erA-iTQRjVyr_" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -138,6 +186,7 @@ beritanya!
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen>
                   </iframe>
+                  <p className="italic text-center text-xs mb-2">Sumber: CNN Indonesia</p>
                   </CardDescription>
               </CardHeader>
 
@@ -147,6 +196,7 @@ beritanya!
                   <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
+                  <img src="/mapping.png" alt="greenchemistry" className="w-1/4 mx-auto mt-4" />
                   {soal.slice(0, 1).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">

@@ -87,6 +87,7 @@ const Kegiatan1 = () => {
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>Perhatikan video dibawah ini</p>
                   <iframe 
+                    className="mx-auto"
                     src="https://www.youtube.com/embed/wgLuXvtaLyQ?si=2AiqBb9Hu0h0-MUo" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -94,6 +95,7 @@ const Kegiatan1 = () => {
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen>
                   </iframe>
+                  <p className="italic text-center text-xs mb-2">Sumber: OzHarvest</p>
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Video tersebut membahas isu food waste (pemborosan makanan) sebagai salah 
 satu permasalahan lingkungan yang sering terjadi dalam kehidupan sehari-hari, khususnya 
@@ -148,7 +150,7 @@ serta mendukung prinsip-prinsip keberlanjutan yang sejalan dengan konsep kimia h
               <CardHeader>
                 <CardTitle className="flex gap-4">
                   Merumuskan Hipotesis
-                  <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />\
+                  <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>
@@ -156,13 +158,15 @@ serta mendukung prinsip-prinsip keberlanjutan yang sejalan dengan konsep kimia h
 penyumbang terbesar sampah di Indonesia. Apa benar ya? Yuk kita simak vidio berikut 
                   </p>
                   <iframe 
+                    className="mx-auto"
                     src="https://www.youtube.com/embed/JqNjPnsYXDY?si=49UimW9Sv4t0LkmN" 
                     title="YouTube video player" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen>
-                  </iframe>
+                  </iframe>                  
+                  <p className="italic text-center text-xs mb-2">Sumber: Siapdarling</p>
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dari vidio tersebut dinyatakan bahwa sampah organik bisa dirubah menjadi sediaan 
 pupuk lho! Sebuah studi ilmiah dari SPECTA Journal of Technology tahun 2025 membahas 

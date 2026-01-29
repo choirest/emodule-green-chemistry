@@ -94,7 +94,7 @@ const Pendahuluan = () => {
               <CardDescription className="pt-2 grid gap-2 text-black">
                 <div className="flex gap-2">
                   <p className="">1.</p>
-                  <p className="">Bukalah laman web.</p>
+                  <p className="">Buka laman web.</p>
                 </div>
                 <div className="flex gap-2">
                   <p className="">2.</p>
@@ -153,108 +153,6 @@ const Pendahuluan = () => {
     pada gambar/video disertai membaca deskripsi dari fenomena. 
                   </p>
                 </div>
-              </CardDescription>
-            </CardHeader>
-
-            <CardHeader>
-              <CardTitle>Referensi</CardTitle>
-              <CardDescription className="grid gap-2 text-justify text-black">
-                <p>
-                  Brady, J.E., Holum, J.R. 1994. General of Chemistry, 5d Edition, New York: John 
-    Wiley & Son joshi, D.R and Nisha Adhikari. 2019. "Green Chemistry: Beginning”.
-                </p>
-                <p>
-                  Johart, JMC dan M. Rachmawatti. 2017. ESPS Kimia Untuk SMA/MA Kelas X. 
-    Jakarta. Erlangga. 
-                </p>
-                <p>
-                  Recent Progress, and Future Challenges". Word Journal of Pharmacy and. 
-    Pharmaceutical Sciences. Volume 8, Issue 7, hal 280, 293. 
-                </p>
-                <p>
-                  Tjahjadarmawan, E. dkk. (2021). Ilmu Pengetahuan Alam SMA Kelas X. Jakarta : 
-    Pusat Kurikulum dan Perbukuan Badan Penelitian dan Pengembangan dan Perbukuan 
-    Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi.  
-                </p>
-                <p>
-                  Watoni, A. Haris dan Dini K. 2016. Buku Siswa Kimia Untuk SMA/MA Kelas X 
-    Kelompok Peminatan Matematika dan Umum Pengetahuan Alam. Bandung. Yrama Widya. 
-                </p>
-              </CardDescription>
-            </CardHeader>
-
-            <CardHeader className="italic">
-              <CardTitle>Glosarium</CardTitle>
-              <CardDescription className="grid gap-2 text-justify text-black">
-                <p>
-                  <strong>Atom Economy (Ekonomi Atom): </strong>
-                  Ukuran efisiensi suatu reaksi kimia berdasarkan jumlah 
-    atom reaktan yang benar-benar menjadi bagian dari produk akhir. Semakin tinggi nilai 
-    ekonomi atom, semakin sedikit limbah yang dihasilkan.
-                </p>
-                <p>
-                  <strong>Bahan Terbarukan (Renewable Resources): </strong>
-                  Bahan yang dapat diperoleh kembali dalam 
-    waktu singkat oleh alam, seperti tanaman, air, dan mikroorganisme.
-                </p>
-                <p>
-                  <strong>Biodegradasi: </strong>
-                  Proses penguraian zat oleh mikroorganisme menjadi senyawa yang lebih 
-    sederhana dan tidak berbahaya bagi lingkungan. 
-                </p>
-                <p>
-                  <strong>Catalyst (Katalis): </strong>
-                  Zat yang mempercepat reaksi kimia tanpa ikut habis dalam reaksi. 
-    Katalis penting dalam kimia hijau karena memungkinkan reaksi berlangsung lebih cepat 
-    dan efisien dengan energi lebih rendah.
-                </p>
-                <p>
-                  <strong>Degradasi: </strong>
-                  Proses pemecahan senyawa kompleks menjadi bentuk yang lebih sederhana. 
-    Dalam konteks kimia hijau, degradasi yang aman (seperti biodegradasi) sangat 
-    diutamakan. 
-                </p>
-                <p>
-                  <strong>EM4 (Effective Microorganisms 4): </strong>
-                  Campuran mikroorganisme bermanfaat yang 
-    digunakan untuk mempercepat fermentasi dan penguraian bahan organik, sering dipakai 
-    dalam pengelolaan limbah dan pembuatan pupuk organik cair.  
-                </p>
-                <p>
-                  <strong>Green Chemistry (Kimia Hijau): </strong>
-                  Cabang ilmu kimia yang berfokus pada perancangan 
-    produk dan proses yang mengurangi atau menghilangkan penggunaan dan pembentukan 
-    zat berbahaya.  
-                </p>
-                <p>
-                  <strong>Kompos: </strong>
-                  Hasil dekomposisi bahan organik yang dapat digunakan sebagai pupuk alami. 
-                </p>
-                <p>
-                  <strong>Limonene: </strong>
-                  Senyawa alami yang terdapat dalam kulit jeruk, berfungsi sebagai pelarut 
-    alami dan antibakteri dalam pembersih organik.  
-                </p>
-                <p>
-                  <strong>Organik (dalam konteks kimia): </strong>
-                  Senyawa yang mengandung karbon, biasanya berasal dari 
-    makhluk hidup. 
-                </p>
-                <p>
-                  <strong>Sintesis Hijau (Green Synthesis): </strong>
-                  Proses pembuatan senyawa kimia yang meminimalkan 
-    penggunaan bahan beracun dan menghasilkan limbah sedikit.  
-                </p>
-                <p>
-                  <strong>Senyawa Berbahaya (Hazardous Substances): </strong>
-                  Zat yang dapat membahayakan kesehatan 
-    manusia atau lingkungan.  
-                </p>
-                <p>
-                  <strong>Toksisitas: </strong>
-                  Tingkat keracunan suatu bahan terhadap makhluk hidup. Kimia hijau berusaha 
-    menghindari penggunaan senyawa dengan toksisitas tinggi.
-                </p>
               </CardDescription>
             </CardHeader>
           </div>

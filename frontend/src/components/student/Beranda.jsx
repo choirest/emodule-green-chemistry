@@ -29,6 +29,7 @@ const Beranda = () => {
               <CardTitle>Aspek Green Chemistry</CardTitle>
               <CardDescription>
                 <img src="/prinsip.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
+                <p className="italic text-center text-xs mb-2">Sumber: Vector Stock</p>
               </CardDescription>
             </CardHeader>
 
@@ -36,6 +37,7 @@ const Beranda = () => {
               <CardTitle>Sintaks Inquiry Based Experiment (IBE)</CardTitle>
               <CardDescription>
                 <img src="/sintaks.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
+                <p className="italic text-center text-xs mb-2">(Pedaste et al., 2015)</p>
               </CardDescription>
             </CardHeader>
 
@@ -43,24 +45,25 @@ const Beranda = () => {
               <CardTitle>Petunjuk Penggunaan</CardTitle>
               <CardDescription>
                 <img src="/petunjuk.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
+                <p className="italic text-center text-xs mb-2">Petunjuk Penggunaan e-Module</p>
               </CardDescription>
             </CardHeader>
 
-            <div className="w-1/3 px-8 flex gap-8 mx-auto font-semibold">
+            <div className="w-2/5 px-8 grid xl:flex gap-8 justify-center mx-auto font-semibold">
               <Link to="/kegiatan-1" className="w-full">
-                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white text-center">
                   <ClipboardList className="w-8 h-8 mx-auto" />
                   <h3 className="mx-auto">Kegiatan 1</h3>
                 </Card>
               </Link>
               <Link to="/kegiatan-2" className="w-full">
-                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white text-center">
                   <ClipboardList className="w-8 h-8 mx-auto" />
                   <h3 className="mx-auto">Kegiatan 2</h3>
                 </Card>
               </Link>
               <Link to="/kegiatan-3" className="w-full">
-                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white text-center">
                   <ClipboardList className="w-8 h-8 mx-auto" />
                   <h3 className="mx-auto">Kegiatan 3</h3>
                 </Card>

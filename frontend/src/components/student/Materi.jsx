@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Card, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import api from '@/services/api';
 import { ScrollArea } from '../ui/scroll-area';
 import { Separator } from '../ui/separator';
+import { Link } from 'react-router-dom';
 
 const Materi = () => {
   const [soal, setSoal] = useState([]);
@@ -10,6 +11,7 @@ const Materi = () => {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
+  const scrollAreaRef = useRef(null);
 
   useEffect(() => {
     fetchSoal();
@@ -64,6 +66,20 @@ const Materi = () => {
     }
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element && scrollAreaRef.current) {
+      const viewport = scrollAreaRef.current.querySelector('[data-radix-scroll-area-viewport]');
+      if (viewport) {
+        const elementPosition = element.offsetTop;
+        viewport.scrollTo({
+          top: elementPosition - 4,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -75,8 +91,8 @@ const Materi = () => {
   return (
     <section className="p-4">
       <Card>
-        <ScrollArea className="h-144">
-          <div className="grid gap-16">
+        <ScrollArea className="h-144" ref={scrollAreaRef}>
+          <div id="a" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 Pengertian Kimia Hijau
@@ -93,6 +109,7 @@ const Materi = () => {
                 </p>
                 <p>Simak Video Dibawah ini untuk dapat menafsirkan apa itu arti dari Green Chemisry </p>
                 <iframe
+                  className="mx-auto"
                   src="https://www.youtube.com/embed/C-iJJzWQ1kA?si=815nhch-n3lbyULS" 
                   title="YouTube video player" 
                   frameBorder="0" 
@@ -100,6 +117,7 @@ const Materi = () => {
                   referrerPolicy="strict-origin-when-cross-origin" 
                   allowFullScreen>
                 </iframe>
+                <p className="italic text-center text-xs mb-2">Sumber: GCCE Videos</p>
                 {soal.map((item, index) => (
                   <div key={item.id} className="pb-6">
                     <h3 className="mb-3">
@@ -123,7 +141,9 @@ const Materi = () => {
                 ))}
               </CardDescription>
             </CardHeader>
+          </div>
 
+          <div id="b" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">12 Prinsip Kimia Hijau</CardTitle>
               <CardDescription className="pt-2 grid gap-4 text-justify text-black">
@@ -144,11 +164,137 @@ Dalam aktivitas selanjutnya, Kalian akan merancang mengembangkan, dan
 mempraktikkan prinsip yang lebih hijau untuk pelestarian lingkungan. Berikut
 adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </p>
-                <img src="/prinsip.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
-                <p className="italic text-center text-xs mb-2">Prinsip Green Chemistry</p>
               </CardDescription>
             </CardHeader>
+          </div>
 
+          <div className="w-2/3 px-8 justify-center mx-auto pb-12">
+            <Card className="bg-green-600 p-4">
+              <div className="grid xl:grid-cols-4 gap-4">
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('1')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p1.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Waste Prevention</p>
+                  </button>
+                </Card>
+
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('2')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p2.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Atom Economy</p>
+                  </button>
+                </Card>
+
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('3')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p3.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Less Hazardous Syntheses</p>
+                  </button>
+                </Card>
+
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('4')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p4.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Designing Safer Chemicals</p>
+                  </button>
+                </Card>
+
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('5')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p5.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Safer Solvents & Auxiliaries</p>
+                  </button>
+                </Card>
+
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('6')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p6.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Design for Energy Efficiency</p>
+                  </button>
+                </Card>
+
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('7')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p7.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Catalyst</p>
+                  </button>
+                </Card>
+
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('8')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p8.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Reduce Derivatives</p>
+                  </button>
+                </Card>
+
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('9')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p9.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Use of Renewable Feedstocks</p>
+                  </button>
+                </Card>
+
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('10')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p10.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Design for Degradation</p>
+                  </button>
+                </Card>
+
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('11')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p11.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Real-time Pollution Prevention</p>
+                  </button>
+                </Card>
+
+                <Card className="bg-white hover:bg-green-100">
+                  <button 
+                    onClick={() => scrollToSection('12')} 
+                    className="p-2 flex flex-col gap-2 items-center text-center w-full"
+                  >
+                    <img src="/p12.png" alt="greenchemistry" className="w-16 h-16" />
+                    <p className="text-green-600">Safer Chemistry for Accident Prevention</p>
+                  </button>
+                </Card>
+              </div>
+            </Card>
+          </div>
+
+          <div id="1" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 1. Waste Prevention
@@ -169,9 +315,23 @@ membuang sampah pada tempatnya, merapikan tempat tidur setiap pagi, dan
 mencuci baju secara rutin. Dengan cara ini, kamar tetap bersih tanpa perlu kerja
 ekstra membersihkan tumpukan kekacauan.
                 </p>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="text-justify text-black">
+                        Hal inilah yang menjadi inti dari prinsip pertama Green Chemistry, lebih baik mencegah terbentuknya limbah daripada mengatasinya setelah ada. <span className="text-red-500">Dalam konteks kimia, prinsip ini mendorong kita untuk merancang proses yang tidak menghasilkan limbah sejak awal, seperti menggunakan bahan secukupnya, memilih reaksi yang bersih, dan tidak bergantung pada bahan beracun.</span> Sama seperti menjaga kamar agar tetap bersih setiap hari, prinsip ini membantu menjaga bumi tetap sehat tanpa menunggu terjadi kerusakan lingkungan terlebih dahulu.
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
+          </div>
 
+          <div id="2" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 2. Atom Economy
@@ -195,15 +355,29 @@ tumpah dan tidak dipakai. Ini contoh yang tidak efisien, banyak bahan yang tidak
 berubah menjadi produk akhir. Dalam istilah kimia hijau, itu berarti ekonomi
 atomnya rendah.
                 </p>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="text-justify text-black">
+                        Nah, dalam prinsip Green Chemistry, ekonomi atom mengajarkan bahwa setiap atom dari bahan kimia sebaiknya masuk ke dalam produk yang diinginkan, bukan jadi limbah. Seperti dalam memasak kue, <span className="text-red-500">semakin sedikit bahan yang terbuang, semakin baik. Kimia yang baik bukan hanya menghasilkan produk, tapi juga menghargai setiap atom agar tidak ada yang sia-sia.</span><br />Dengan kata lain, reaksi kimia yang memiliki ekonomi atom tinggi adalah seperti membuat kue yang utuh, lezat, dan tidak ada adonan yang tersisa. Semua bahan berguna dan menjadi satu produk yang utuh. Itulah tujuan dari prinsip ini: efisien, hemat, dan minim limbah.
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
+          </div>
 
+          <div id="3" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 3. Less Hazardous Chemical Synthesis
                 <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
               </CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify">
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip3.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
                 <p className="italic text-center text-xs mb-2">Nylon, Polyurethane, dan PVC</p>
                 <p>
@@ -216,9 +390,23 @@ terpapar langsung. Begitu juga polyurethane yang dibuat dari isosianat zat berac
 yang dapat mengiritasi paru-paru, dan PVC plasticiser seperti ftalat yang bisa
 mengganggu hormon.
                 </p>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="text-justify text-black">
+                        Dalam praktik kimia, prinsip ini diterapkan dengan menghindari bahan yang mudah meledak, beracun, korosif, atau menghasilkan gas berbahaya, dan menggantinya dengan bahan yang lebih aman jika memungkinkan. Nah jadi sesuai prinsip ketiga Green Chemistry bahan bahan tersebut bisa digantikan dengan bahan baku alternatif yang lebih aman, loh!
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
+          </div>
 
+          <div id="4" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 4. Design Safer Chemical
@@ -244,9 +432,23 @@ daun mint, kulit jeruk, atau bunga lavender, menghindari zat pengawet sintetis
 atau pelarut organik beracun, dan mendesain kemasan tanpa gas pendorong
 berbahaya (aerosol).
                 </p>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="text-justify text-black">
+                        Produk pewangi yang ramah lingkungan dan aman tetap memberikan efek harum, tanpa menyebabkan iritasi, alergi, atau pencemaran udara dalam ruangan. Ini adalah contoh nyata dari prinsip “desain yang lebih aman” yaitu membuat sesuatu yang bermanfaat tapi juga tidak membahayakan siapa pun yang menggunakannya.
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
+          </div>
 
+          <div id="5" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 5. Safer Solvents & Auxiliaries
@@ -275,9 +477,24 @@ bisa bikin pusing, dan mudah terbakar.
 berbahaya bagi tubuh atau lingkungan.
                   </p>
                 </div>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="grid gap-2 text-justify text-black">
+                        <p>Prinsip ke-5 Green Chemistry mengajarkan bahwa dalam reaksi kimia atau produksi produk, bahan pelarut (zat pelarut atau media reaksi) sebaiknya tidak beracun, tidak mudah terbakar, dan aman bagi lingkungan. Pelarut sering digunakan dalam eksperimen kimia dan pembuatan produk seperti obat, cat, kosmetik, atau sabun. Namun, banyak pelarut konvensional seperti aseton, benzena, toluena, atau kloroform bersifat racun, mudah menguap, dan bisa mencemari udara, air, serta membahayakan kesehatan.</p>
+                        <p>Sebagai gantinya, Green Chemistry mendorong penggunaan pelarut yang lebih aman, seperti air , etanol, atau pelarut berbasis tumbuhan, seperti minyak kelapa atau minyak jeruk.</p>
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
-
+          </div>
+            
+          <div id="6" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 6. Design for Energy Efficiency
@@ -293,9 +510,29 @@ cukup nyaman untuk kondisi itu.
                   Jika kamu memilih kipas, kamu sudah menerapkan prinsip efisiensi energi dengan
 menggunakan energi sesuai kebutuhan, tanpa berlebihan.
                 </p>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="grid gap-2 text-justify text-black">
+                        <p>Nah, prinsip ke-6 dalam Green Chemistry mengajarkan bahwa reaksi atau proses kimia sebaiknya dilakukan dengan energi sekecil mungkin, dan kalau bisa cukup dilakukan pada suhu ruang dan tekanan biasa, tanpa perlu dipanaskan terus-menerus, ditekan tinggi, atau memakai alat mahal yang menyedot daya besar. Karena setiap tambahan energi butuh bahan bakar, listrik, atau sumber daya lain yang akhirnya menghasilkan limbah panas dan emisi.</p>
+                        <p>Contoh penerapannya:</p>
+                        <ul>
+                          <li>- Memilih reaksi kimia yang terjadi pada suhu ruang, bukan dipanaskan 100°C berjam-jam.</li>
+                          <li>- Menggunakan katalis agar reaksi berlangsung lebih cepat dan hemat energi.</li>
+                          <li>- Menggunakan energi alternatif, seperti sinar matahari untuk mengeringkan hasil reaksi.</li>
+                        </ul>
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
-
+          </div>
+            
+          <div id="7" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 7. Use of Renewable Feddstocks
@@ -317,9 +554,23 @@ tahun. Selain itu, tinta dari kedelai tidak mengandung logam berat seperti tinta
 konvensional, lebih mudah terurai, sehingga lebih ramah lingkungan, dna
 menghasilkan warna yang tajam, tapi tetap aman bagi kesehatan dan bumi.
                 </p>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="text-justify text-black">
+                        Prinsip 7 Green Chemistry sebisa mungkin, produk kimia harus menggunakan bahan baku yang dapat diperbarui, bukan bahan yang berasal dari sumber daya terbatas seperti batu bara, gas alam, atau minyak bumi.
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
-
+          </div>
+            
+          <div id="8" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 8. Reduce Derivatives
@@ -341,9 +592,23 @@ lebih banyak energi, bahan kimia tambahan, dan menghasilkan limbah. Oleh
 karena itu, pendekatan tanpa derivatisasi lebih efisien, aman, dan ramah
 lingkungan sesuai prinsip kimia hijau.
                 </p>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="text-justify text-black">
+                        Nah, prinsip ke-8 dalam Green Chemistry mengajarkan hindari langkah-langkah kimia yang tidak perlu, seperti penambahan senyawa pelindung, pelindih, atau modifikasi struktur kimia (derivatisasi) jika tidak benar-benar dibutuhkan. Setiap langkah tambahan membutuhkan bahan kimia lagi, meningkatkan limbah, dan mungkin menggunakan pelarut atau energi tambahan yang berpotensi menghasilkan produk samping berbahaya.
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
-
+          </div>
+            
+          <div id="9" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 9. Catalyst
@@ -364,9 +629,23 @@ bahan bakar diubah menjadi hidrogen sulfida (H₂S), yang lebih mudah ditangani.
 Proses ini dilakukan menggunakan katalis logam seperti nikel-molibdenum (Ni-Mo)
 atau kobalt-molibdenum (Co-Mo) pada suhu dan tekanan tinggi.
                 </p>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="text-justify text-black">
+                        Prinsip ke-9 Green Chemistry menekankan pentingnya penggunaan katalis dibandingkan reagen sekali pakai dalam proses kimia. Katalis memungkinkan reaksi berlangsung lebih cepat dan efisien tanpa ikut habis dalam reaksi, sehingga dapat digunakan berulang kali. Hal ini tidak hanya menghemat bahan dan energi, tetapi juga mengurangi limbah dan dampak lingkungan. 
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
-
+          </div>
+            
+          <div id="10" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 10. Design for Degradation
@@ -391,9 +670,23 @@ singkong atau jagung. Akhirnya kamu memutuskan: mengganti plastik biasa
 dengan plastik yang bisa terurai secara alami. Meski langkah kecil, kamu tahu itu
 berarti besar bagi lingkungan.
                 </p>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="text-justify text-black">
+                        Prinsip ke-10 menekankan bahwa produk kimia yang dibuat harus dapat terurai menjadi zat yang tidak berbahaya setelah digunakan, baik di lingkungan tanah, air, maupun udara. Artinya, ketika produk tersebut dibuang, ia tidak meninggalkan racun, tidak mencemari tanah atau air, dan tidak bertahan selama ratusan tahun seperti plastik konvensional.
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
-
+          </div>
+            
+          <div id="11" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 11. Real-Time Pollution Prevention
@@ -415,9 +708,23 @@ operator dapat langsung menghentikan proses atau menyesuaikan parameter
 sebelum limbah berbahaya terbentuk. Ini lebih efisien dan aman dibandingkan
 cara lama yang hanya menguji sampel akhir produk di laboratorium.
                 </p>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="text-justify text-black">
+                        Prinsip ke-11 Green Chemistry menekankan pentingnya memantau proses kimia secara langsung dan terus-menerus (real-time) untuk mencegah pencemaran sebelum terjadi, bukan menanganinya setelah selesai. Dalam industri, hal ini dapat dilakukan dengan memasang sensor online atau sistem pemantauan otomatis yang dapat mendeteksi jika reaksi menghasilkan zat berbahaya, berlebih, atau tidak sesuai standar.
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
-
+          </div>
+            
+          <div id="12" className="grid gap-16 pb-6">
             <CardHeader>
               <CardTitle className="flex gap-4">
                 12. Safer Chemistry for Accident Prevention
@@ -438,6 +745,18 @@ yang lebih aman sejak tahap desain menunjukkan bahwa keselamatan bukan
 hanya tanggung jawab pengguna akhir, tetapi bagian dari prinsip keberlanjutan
 dan etika dalam proses kimia itu sendiri.
                 </p>
+                <div className="grid grid-cols-3">
+                  <Card className="col-span-2 col-start-2">
+                    <CardHeader className="grid gap-4">
+                      <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
+                        NOTECHEM
+                      </CardTitle>
+                      <CardDescription className="text-justify text-black">
+                        Prinsip ke-12 Green Chemistry mendorong kita untuk merancang zat dan proses kimia yang lebih aman, baik dalam penanganan, penggunaan, maupun pembuangannya. Ini berarti menghindari bahan kimia yang mudah meledak, mudah terbakar, atau menghasilkan gas beracun, dan menggantinya dengan alternatif yang tidak reaktif berbahaya. Tujuannya adalah melindungi pekerja, masyarakat, dan lingkungan dari risiko kecelakaan yang bisa terjadi selama produksi, penyimpanan, atau transportasi bahan kimia.
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
               </CardDescription>
             </CardHeader>
           </div>

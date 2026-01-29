@@ -21,6 +21,12 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true
         }
       }
+    },
+    preview: {
+      allowedHosts: [
+        'e-modul-kimia-hijau.my.id',
+        '.my.id' // Opsional: mengizinkan semua subdomain *.my.id
+      ]
     }
   }
 })

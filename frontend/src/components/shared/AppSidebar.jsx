@@ -34,7 +34,27 @@ const AppSidebar = () => {
     { label: "Kata Pengantar", href: "/kata-pengantar", icon: BookOpen },
     { label: "Pendahuluan", href: "/pendahuluan", icon: FileText },
     { label: "Pretest", href: "/pretest", icon: ClipboardList },
-    { label: "Materi dan Kata Kunci", href: "/materi", icon: BookMarked },
+    { 
+      label: "Materi dan Kata Kunci", 
+      href: "/materi", 
+      icon: BookMarked,
+      submenu: [
+        { label: "Pengertian Kimia Hijau", href: "#a" },
+        { label: "12 Prinsip Kimia Hijau", href: "#b" },
+        { label: "1. Waste Prevention", href: "#1" },
+        { label: "2. Atom Economy", href: "#2" },
+        { label: "3. Less Hazardous Chemical Synthesis", href: "#3" },
+        { label: "4. Design Safer Chemical", href: "#4" },
+        { label: "5. Safer Solvents & Auxiliaries", href: "#5" },
+        { label: "6. Design for Energy Efficiency", href: "#6" },
+        { label: "7. Use of Renewable Feddstocks", href: "#7" },
+        { label: "8. Reduce Derivatives", href: "#8" },
+        { label: "9. Catalyst", href: "#9" },
+        { label: "10. Design for Degradation", href: "#10" },
+        { label: "11. Real-Time Pollution Prevention", href: "#11" },
+        { label: "12. Safer Chemistry for Accident Prevention", href: "#12" },
+      ],
+    },
     {
       label: "Kegiatan 1",
       href: "/kegiatan-1",
@@ -89,20 +109,20 @@ const AppSidebar = () => {
 
   return (
     <Sidebar>
-      <SidebarContent>
-        <SidebarGroup>
-          <SidebarHeader className="mb-1">
+      <SidebarContent className="flex flex-col h-full">
+        <SidebarGroup className="flex flex-col h-full">
+          <SidebarHeader className="mb-1 flex-shrink-0">
             <div className="p-2 flex items-center">
-              <Link to="/" className="flex items-center gap-2 font-semibold text-xl">
+              <Link to="/" className="flex items-center gap-2 font-semibold text-lg">
                 <div className="w-full h-8 rounded-lg flex gap-4 items-center justify-center text-green-500">
                   <img src="/gr-ch.png" alt="Green Chemistry" className="w-8 h-8" />
-                  <h3>E-Modul <br/>Green Chemistry</h3>
+                  <h3>E-Modul <br/>Kimia Hijau</h3>
                 </div>
               </Link>
             </div>
           </SidebarHeader>
-          <Separator />
-          <SidebarGroupContent className="mt-2">
+          <Separator className="flex-shrink-0" />
+          <SidebarGroupContent className="mt-2 flex-1 overflow-y-auto">
             <SidebarMenu>
               {menus.map((item) => {
                 const isActive = location.pathname === item.href;
@@ -163,7 +183,7 @@ const AppSidebar = () => {
         </SidebarGroup>
       </SidebarContent>
       <Separator />
-      <SidebarFooter>
+      <SidebarFooter className="flex-shrink-0">
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
