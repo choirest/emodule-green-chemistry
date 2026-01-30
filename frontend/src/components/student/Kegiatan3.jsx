@@ -86,8 +86,8 @@ const Kegiatan3 = () => {
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>Simak permasalahan pada vidio berikut!</p>
-                  <iframe 
-                    className="mx-auto" 
+                  <iframe
+                    className="w-100 h-72 mx-auto" 
                     src="https://www.youtube.com/embed/X96MPG_W7nY?si=nl_AgFMW-BdI9Ed8" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -104,10 +104,10 @@ benar-benar hilang, melainkan mengalir ke sungai, danau, atau meresap ke tanah s
 berpotensi mencemari lingkungan perairan.
                   </p>
                   <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kandungan kimia dalam deterjen, seperti surfaktan, fosfat, pewangi, dan zat aditif 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kandungan kimia dalam deterjen, seperti <i>surfaktan, fosfat</i>, pewangi, dan zat aditif 
 lainnya, yang berfungsi untuk mengangkat kotoran namun memiliki dampak negatif jika 
-masuk ke lingkungan. Surfaktan dijelaskan dapat menurunkan tegangan permukaan air 
-sehingga mengganggu sistem pernapasan organisme air, sementara fosfat dapat memicu 
+masuk ke lingkungan. <i>Surfaktan </i>dijelaskan dapat menurunkan tegangan permukaan air 
+sehingga mengganggu sistem pernapasan organisme air, sementara <i>fosfat </i>dapat memicu 
 pertumbuhan alga secara berlebihan. Kondisi ini menyebabkan eutrofikasi, yaitu 
 menurunnya kadar oksigen terlarut dalam air, yang pada akhirnya dapat menyebabkan 
 kematian ikan dan organisme perairan lainnya.
@@ -157,9 +157,9 @@ serta mengelola limbah detergen sebelum dibuang ke perairan.
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studi pembuatan cairan pembersih dari bahan organik berkembang sebagai 
 respons terhadap meningkatnya pencemaran lingkungan akibat penggunaan pembersih 
 sintetis berbahan kimia keras. Pemanfaatan bahan organik yang mudah terurai 
-(biodegradable), seperti kulit jeruk, lemon, nanas, daun sirih, lerak, dan sisa fermentasi 
+<i> (biodegradable)</i>, seperti kulit jeruk, lemon, nanas, daun sirih, lerak, dan sisa fermentasi 
 bahan dapur, yang memiliki kandungan senyawa aktif alami. Senyawa seperti asam sitrat, 
-saponin, flavonoid, dan minyak atsiri diketahui memiliki sifat pembersih, antibakteri, dan 
+<i> saponin, flavonoid</i>, dan minyak atsiri diketahui memiliki sifat pembersih, antibakteri, dan 
 penghilang bau, sehingga berpotensi menggantikan fungsi deterjen sintetis. 
                   </p>
                   <p>
@@ -231,7 +231,7 @@ informasi dari berbagai sumber!
               <CardHeader>
                 <CardTitle className="flex gap-4">Hasil Pengamatan</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  <p>Organoleptik</p>
+                  <p><i>Organoleptik</i></p>
                   {soal.slice(5, 6).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -266,7 +266,7 @@ informasi dari berbagai sumber!
                   <div className="flex gap-2">
                     <p className="">1.</p>
                     <div className="grid gap-4">
-                      <p>Analisis Oganoleptik</p>  
+                      <p>Analisis <i>Oganoleptik</i></p>  
                       {soal.slice(6, 7).map((item, index) => (
                         <div key={item.id} className="pb-6">
                           <h3 className="mb-3">
@@ -293,7 +293,7 @@ informasi dari berbagai sumber!
                   <div className="flex gap-2">
                     <p className="">2.</p>
                     <div className="grid gap-4">
-                      <p>Analisis Prinsip Green Chemistry</p>
+                      <p>Analisis Prinsip <i>Green Chemistry</i></p>
                       {soal.slice(7, 8).map((item, index) => (
                         <div key={item.id} className="pb-6">
                           <h3 className="mb-3">

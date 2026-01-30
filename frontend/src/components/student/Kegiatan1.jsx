@@ -86,8 +86,8 @@ const Kegiatan1 = () => {
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>Perhatikan video dibawah ini</p>
-                  <iframe 
-                    className="mx-auto"
+                  <iframe
+                    className="w-100 h-72 mx-auto"
                     src="https://www.youtube.com/embed/wgLuXvtaLyQ?si=2AiqBb9Hu0h0-MUo" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -97,7 +97,7 @@ const Kegiatan1 = () => {
                   </iframe>
                   <p className="italic text-center text-xs mb-2">Sumber: OzHarvest</p>
                   <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Video tersebut membahas isu food waste (pemborosan makanan) sebagai salah 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Video tersebut membahas isu <i>food waste </i>(pemborosan makanan) sebagai salah 
 satu permasalahan lingkungan yang sering terjadi dalam kehidupan sehari-hari, khususnya 
 di tingkat rumah tangga. Video ini menekankan bahwa banyak makanan yang sebenarnya 
 masih layak konsumsi justru dibuang karena perencanaan yang kurang tepat, penyimpanan 
@@ -111,12 +111,12 @@ terbuang, seperti air, energi, tenaga kerja, dan bahan bakar yang digunakan sela
 produksi, pengolahan, dan distribusi makanan. Ketika makanan dibuang ke tempat 
 pembuangan akhir, proses pembusukannya menghasilkan gas rumah kaca, terutama 
 metana, yang berkontribusi terhadap pemanasan global dan perubahan iklim. Oleh karena 
-itu, food waste dipandang sebagai masalah lingkungan yang serius dan berkaitan langsung 
+itu, <i>food waste </i>dipandang sebagai masalah lingkungan yang serius dan berkaitan langsung 
 dengan keberlanjutan.
                   </p>
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Secara keseluruhan, video tersebut bertujuan untuk menumbuhkan kesadaran 
-bahwa food waste bukan sekadar masalah individu, melainkan permasalahan bersama 
+bahwa <i>food waste </i>bukan sekadar masalah individu, melainkan permasalahan bersama 
 yang berdampak pada lingkungan dan masa depan keberlanjutan. Pesan utama yang 
 disampaikan adalah bahwa melalui langkah kecil dan konsisten dalam mengelola makanan, 
 setiap orang dapat berkontribusi dalam menjaga lingkungan, mengurangi pencemaran, 
@@ -154,11 +154,11 @@ serta mendukung prinsip-prinsip keberlanjutan yang sejalan dengan konsep kimia h
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menurut data World Bank 2019 sampah organik menjadi salah salah satu 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menurut data <i>World Bank </i>2019 sampah organik menjadi salah salah satu 
 penyumbang terbesar sampah di Indonesia. Apa benar ya? Yuk kita simak vidio berikut 
                   </p>
-                  <iframe 
-                    className="mx-auto"
+                  <iframe
+                    className="w-100 h-72 mx-auto"
                     src="https://www.youtube.com/embed/JqNjPnsYXDY?si=49UimW9Sv4t0LkmN" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -169,8 +169,8 @@ penyumbang terbesar sampah di Indonesia. Apa benar ya? Yuk kita simak vidio beri
                   <p className="italic text-center text-xs mb-2">Sumber: Siapdarling</p>
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dari vidio tersebut dinyatakan bahwa sampah organik bisa dirubah menjadi sediaan 
-pupuk lho! Sebuah studi ilmiah dari SPECTA Journal of Technology tahun 2025 membahas 
-pemanfaatan produk biokonversi dari limbah organik—termasuk limbah rumah tangga 
+pupuk lho! Sebuah studi ilmiah dari <i>SPECTA Journal of Technology </i>tahun 2025 membahas 
+pemanfaatan produk biokonversi dari limbah organik termasuk limbah rumah tangga 
 sebagai pupuk organik cair yang diuji pada pertumbuhan tanaman <i>miana</i>.
                   </p>
                   {soal.slice(2, 3).map((item, index) => (

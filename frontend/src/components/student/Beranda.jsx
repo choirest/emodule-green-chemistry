@@ -13,13 +13,13 @@ const Beranda = () => {
             <CardHeader>
               <CardTitle>Tujuan Pembuatan e-Module</CardTitle>
               <CardDescription className="text-justify text-black">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-module berbasis Inquiry-based Experiment (IBE) terintegrasi green 
-    chemistry ini disusun sebagai media pembelajaran agar siswa dapat merancang 
-    sendiri eksperimen sederhana dengan mengintegrasikan prinsip green chemistry. 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>E-module </i>berbasis <i>Inquiry-based Experiment (IBE) </i>terintegrasi <i>green 
+    chemistry </i>ini disusun sebagai media pembelajaran agar siswa dapat merancang 
+    sendiri eksperimen sederhana dengan mengintegrasikan prinsip <i>green chemistry</i>. 
     Praktikum kimia yang dilakukan siswa yaitu mengolah limbah organik menjadi 
     produk ramah lingkungan. Melalui kegiatan ini, siswa menerapkan prinsip kimia 
-    hijau. E-module ini diharapkan dapat meningkatkan kemampuan system thinking 
-    dan sustainability literacy siswa yang mengarah pada pentingnya keberlanjutan 
+    hijau. <i>E-module </i>ini diharapkan dapat meningkatkan kemampuan <i>system thinking </i> 
+    dan <i>sustainability literacy </i>siswa yang mengarah pada pentingnya keberlanjutan 
     lingkungan melalui penerapan langsung ilmu kimia dalam kehidupan sehari-hari, 
     khususnya pada Materi Kimia Hijau.
               </CardDescription>

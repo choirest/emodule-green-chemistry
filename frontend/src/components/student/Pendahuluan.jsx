@@ -106,8 +106,8 @@ const Pendahuluan = () => {
                 <div className="flex gap-2">
                   <p className="">3.</p>
                   <p className="">
-                    Pada menu Beranda terdiri atas cover modul yang judul modul, logo UNS, subjek 
-    sasaran modul, penyusun modul, dan instansi penyusun modul. 
+                    Pada menu Beranda terdiri atas <i>cover e-module </i>yang judul modul, logo UNS, subjek 
+    sasaran <i>e-module</i>, penyusun <i>e-module</i>, dan instansi penyusun <i>e-module</i>. 
                   </p>
                 </div>
                 <div className="flex gap-2">
@@ -121,8 +121,8 @@ const Pendahuluan = () => {
                 <div className="flex gap-2">
                   <p className="">5.</p>
                   <p className="">
-                    Pada Menu Pretest terdiri atas 15 soal untuk mengukur keterampilan awal system 
-    thinking dan sustainability literacy siswa 
+                    Pada Menu Pretest terdiri atas 15 soal untuk mengukur keterampilan awal <i>system 
+    thinking </i>dan <i>sustainability literacy </i>siswa 
                   </p>
                 </div>
                 <div className="flex gap-2">
@@ -142,8 +142,8 @@ const Pendahuluan = () => {
                 <div className="flex gap-2">
                   <p className="">8.</p>
                   <p className="">
-                    Pada Menu Post Test terdiri atas 15 soal untuk mengukur keterampilan system 
-    thinking dan sustainability literacy siswa setelah menggunakan e-module
+                    Pada Menu Post Test terdiri atas 15 soal untuk mengukur keterampilan <i>system 
+    thinking </i>dan <i>sustainability literacy </i>siswa setelah menggunakan <i>e-module</i>.
                   </p>
                 </div>
                 <div className="flex gap-2">

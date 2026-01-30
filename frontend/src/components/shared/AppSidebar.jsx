@@ -97,7 +97,13 @@ const AppSidebar = () => {
         { label: "Evaluasi Proses Belajar", href: "#u" },
       ],
     },
-    { label: "Post Test", href: "/post-test", icon: ClipboardList },
+    { 
+      label: "Post Test", href: "/post-test", icon: ClipboardList,
+      submenu: [
+        { label: "Glosarium", href: "#glosarium" },
+        { label: "Daftar Pustaka", href: "#pustaka" },
+      ],
+    },
   ]
 
   const adminMenus = [

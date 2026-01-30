@@ -129,8 +129,8 @@ const Kegiatan2 = () => {
                 </CardTitle>
                 <CardDescription className="pt-2 pb-8 grid gap-4 text-justify text-black">
                   <p>Perhatikan Video dibawah ini</p>
-                  <iframe 
-                    className="mx-auto"
+                  <iframe
+                    className="w-100 h-72 mx-auto"
                     src="https://www.youtube.com/embed/pnuiEGuThsI?si=Ja2dZWd64GCtrKDN" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -140,7 +140,7 @@ const Kegiatan2 = () => {
                   </iframe>
                   <p className="italic text-center text-xs mb-2">Sumber: Kok Bisa?</p>
                   <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selain handphone di tangan, ada satu benda yang susah lepas dari hidup kita. 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selain <i>handphone </i>di tangan, ada satu benda yang susah lepas dari hidup kita. 
 Dialah, plastik! Benda ringan yang karena kuat dan praktisnya bikin disukai sama banyak 
 orang. Tapi, masalah terus muncul, karena gara-gara ulah kita juga, sampah plastik kini jadi 
 ada di tanah, di sungai, dan sampai bikin benua sendiri di samudera sana. Sekarang, kita 
@@ -150,9 +150,11 @@ sebahaya apakah mereka?
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Video tersebut membahas seberapa berbahaya sampah plastik bagi kehidupan kita. 
 Secara keseluruhan, uraian mengenai sampah plastik dan bahayanya bisa kita gambarkan 
-dalam konsep mapping berikut!
+dalam konsep <i>mapping </i>berikut!
                   </p>
-                  <img src="/keg2a.jpg" alt="greenchemistry" className="w-1/4 mx-auto mt-4" />
+                  <img src="/mapping.png" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
+                  <p className="italic text-center text-xs mb-2">Konsep Mapping</p>
+                  <img src="/keg2a.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
                   <p className="italic text-center text-xs mb-2">(Sumber: rejekiabadi)</p>
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seperti yang kita tahu saat kita pergi ke restoran atau cafe banyak sekali sampah 
@@ -160,8 +162,8 @@ plastik yang kita temukan, salah satunya sedotan. Begitupun saat kita makan mie 
 bumbu mie instan pun dikemas menggunakan plastik. Bahaya sedotan plastik bisa kalian 
 simak dalam video berikut!
                   </p>
-                  <iframe 
-                    className="mx-auto"
+                  <iframe
+                    className="w-100 h-72 mx-auto"
                     src="https://www.youtube.com/embed/TX6QbdSi3sY?si=R9lyVUn76e8uBM6c" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -170,15 +172,15 @@ simak dalam video berikut!
                     allowFullScreen>
                   </iframe>
                   <p className="italic text-center text-xs mb-2">Sumber: CNN Indonesia</p>
-                  <img src="/keg2b.jpg" alt="greenchemistry" className="w-1/4 mx-auto mt-4" />
+                  <img src="/keg2b.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
                   <p className="italic text-center text-xs mb-2">(Sumber: kontakpackaging)</p>
                   <p>
                     Wah jadi kita bisa menggunakan sedotan kertas karena kertas lebih cepat terurai 
 dong! Namun tahukah kamu sedotan kertas berbahaya bagi kesehatan? Yuk simak 
 beritanya!
                   </p>
-                  <iframe 
-                    className="mx-auto"
+                  <iframe
+                    className="w-100 h-72 mx-auto"
                     src="https://www.youtube.com/embed/Z3m7qkOYPOs?si=4p7erA-iTQRjVyr_" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -196,7 +198,6 @@ beritanya!
                   <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  <img src="/mapping.png" alt="greenchemistry" className="w-1/4 mx-auto mt-4" />
                   {soal.slice(0, 1).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -229,7 +230,7 @@ beritanya!
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lalu penanggulangan apa yang bisa kita lakukan untuk mencegah munculnya 
 sampah plastik tersebut? Berbagai upaya penanggulangan sampah telah dilakukan melalui 
-pendekatan pencegahan, seperti membawa tumbler dan wadah makan dari rumah, 
+pendekatan pencegahan, seperti membawa <i>tumbler </i>dan wadah makan dari rumah, 
 menggunakan produk daur ulang, serta melakukan pemilahan sampah. Namun, langkah
 langkah tersebut masih bergantung pada perilaku individu dan belum sepenuhnya mampu 
 menekan timbulan sampah, khususnya sampah kemasan sekali pakai.
@@ -242,7 +243,7 @@ plastik di Indonesia dan menjadi solusi dari permasalahan diatas!
                   </p>
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eitt tapi memang bisa loh dimakan, namun harus melewati tahapan dan bahan yang 
-tepat. Bagaimana ya caranya menghasilkan sedotan dan plastik packaging yang sekaligus 
+tepat. Bagaimana ya caranya menghasilkan sedotan dan plastik <i>packaging </i>yang sekaligus 
 bisa dimakan beserta makanannya?
                   </p>
                 </CardDescription>
@@ -258,12 +259,12 @@ bisa dimakan beserta makanannya?
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Berbagai upaya penanggulangan sampah telah dilakukan melalui pendekatan 
-pencegahan, seperti membawa tumbler dan wadah makan dari rumah serta melakukan 
+pencegahan, seperti membawa <i>tumbler </i>dan wadah makan dari rumah serta melakukan 
 pemilahan sampah. Namun, langkah-langkah tersebut masih bergantung pada perilaku 
 individu dan belum sepenuhnya mampu menekan timbulan sampah, khususnya sampah 
 kemasan sekali pakai. Oleh karena itu, diperlukan strategi pencegahan yang lebih 
 fundamental, yaitu menanggulangi sampah sebelum sampah itu terbentuk. Salah satu 
-solusi inovatif yang dapat diterapkan adalah pengembangan produk edible packaging atau 
+solusi inovatif yang dapat diterapkan adalah pengembangan produk <i>edible packaging </i>atau 
 kemasan yang dapat dimakan. Kemasan ini tidak hanya berfungsi sebagai pelindung 
 makanan, tetapi juga dapat dikonsumsi bersama produk yang dikemas, sehingga secara 
 langsung menghilangkan potensi sampah.

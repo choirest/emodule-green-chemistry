@@ -98,7 +98,7 @@ const Materi = () => {
                 Pengertian Kimia Hijau
                 <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
               </CardTitle>
-              <CardDescription className="pt-2 grid gap-4 text-justify italic text-black">
+              <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemanfaatan limbah organik sebagai pupuk merupakan salah satu contoh nyata penerapan prinsip kimia 
     hijau dalam kehidupan sehari-hari. Banyak jenis sampah rumah tangga yang biasanya dianggap tidak 
@@ -107,9 +107,9 @@ const Materi = () => {
     sampah yang berakhir di tempat pembuangan akhir, tetapi juga menghasilkan pupuk organik yang ramah 
     lingkungan. 
                 </p>
-                <p>Simak Video Dibawah ini untuk dapat menafsirkan apa itu arti dari Green Chemisry </p>
+                <p>Simak Video Dibawah ini untuk dapat menafsirkan apa itu arti dari <i>Green Chemisry</i></p>
                 <iframe
-                  className="mx-auto"
+                  className="w-100 h-72 mx-auto"
                   src="https://www.youtube.com/embed/C-iJJzWQ1kA?si=815nhch-n3lbyULS" 
                   title="YouTube video player" 
                   frameBorder="0" 
@@ -302,7 +302,8 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
               </CardTitle>
               <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip1.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
-                <p className="italic text-center text-xs mb-2">Kamar Tidur Berantakan vs Kamar Tidur Rapi</p>
+                <p className="italic text-center text-xs">Kamar Tidur Berantakan vs Kamar Tidur Rapi</p>
+                <p className="italic text-center text-xs mb-2">Sumber: fuse player</p>
                 <p>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bayangkan kamu memiliki kamar tidur. Jika setiap hari kamu membuang sampah
 sembarangan, menumpuk pakaian kotor di lantai, dan membiarkan sisa makanan
@@ -322,7 +323,7 @@ ekstra membersihkan tumpukan kekacauan.
                         NOTECHEM
                       </CardTitle>
                       <CardDescription className="text-justify text-black">
-                        Hal inilah yang menjadi inti dari prinsip pertama Green Chemistry, lebih baik mencegah terbentuknya limbah daripada mengatasinya setelah ada. <span className="text-red-500">Dalam konteks kimia, prinsip ini mendorong kita untuk merancang proses yang tidak menghasilkan limbah sejak awal, seperti menggunakan bahan secukupnya, memilih reaksi yang bersih, dan tidak bergantung pada bahan beracun.</span> Sama seperti menjaga kamar agar tetap bersih setiap hari, prinsip ini membantu menjaga bumi tetap sehat tanpa menunggu terjadi kerusakan lingkungan terlebih dahulu.
+                        Hal inilah yang menjadi inti dari prinsip pertama <i>Green Chemistry</i>, lebih baik mencegah terbentuknya limbah daripada mengatasinya setelah ada. Dalam konteks kimia, prinsip ini mendorong kita untuk merancang proses yang tidak menghasilkan limbah sejak awal, seperti menggunakan bahan secukupnya, memilih reaksi yang bersih, dan tidak bergantung pada bahan beracun. Sama seperti menjaga kamar agar tetap bersih setiap hari, prinsip ini membantu menjaga bumi tetap sehat tanpa menunggu terjadi kerusakan lingkungan terlebih dahulu.
                       </CardDescription>
                     </CardHeader>
                   </Card>
@@ -342,7 +343,8 @@ ekstra membersihkan tumpukan kekacauan.
                   <img src="/prinsip2a.jpg" alt="greenchemistry" className="w-2/3" />
                   <img src="/prinsip2b.jpg" alt="greenchemistry" className="w-1/3" />
                 </div>
-                <p className="italic text-center text-xs mb-2">Ilustrasi Prinsip ke-2 Green Chemistry</p>
+                <p className="italic text-center text-xs">Ilustrasi Prinsip ke-2 Green Chemistry</p>
+                <p className="italic text-center text-xs mb-2">Sumber: fuse player</p>
                 <p>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bayangkan kamu sedang membuat kue. Kamu mencampur tepung, telur, gula,
 mentega, dan susu ke dalam adonan. Setelah dipanggang, semua bahan tersebut
@@ -361,8 +363,9 @@ atomnya rendah.
                       <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
                         NOTECHEM
                       </CardTitle>
-                      <CardDescription className="text-justify text-black">
-                        Nah, dalam prinsip Green Chemistry, ekonomi atom mengajarkan bahwa setiap atom dari bahan kimia sebaiknya masuk ke dalam produk yang diinginkan, bukan jadi limbah. Seperti dalam memasak kue, <span className="text-red-500">semakin sedikit bahan yang terbuang, semakin baik. Kimia yang baik bukan hanya menghasilkan produk, tapi juga menghargai setiap atom agar tidak ada yang sia-sia.</span><br />Dengan kata lain, reaksi kimia yang memiliki ekonomi atom tinggi adalah seperti membuat kue yang utuh, lezat, dan tidak ada adonan yang tersisa. Semua bahan berguna dan menjadi satu produk yang utuh. Itulah tujuan dari prinsip ini: efisien, hemat, dan minim limbah.
+                      <CardDescription className="grid gap-2 text-justify text-black">
+                        <p>Nah, dalam prinsip <i>Green Chemistry</i>, ekonomi atom mengajarkan bahwa setiap atom dari bahan kimia sebaiknya masuk ke dalam produk yang diinginkan, bukan jadi limbah. Seperti dalam memasak kue, semakin sedikit bahan yang terbuang, semakin baik. Kimia yang baik bukan hanya menghasilkan produk, tapi juga menghargai setiap atom agar tidak ada yang sia-sia.</p>
+                        <p>Dengan kata lain, reaksi kimia yang memiliki ekonomi atom tinggi adalah seperti membuat kue yang utuh, lezat, dan tidak ada adonan yang tersisa. Semua bahan berguna dan menjadi satu produk yang utuh. Itulah tujuan dari prinsip ini: efisien, hemat, dan minim limbah.</p>
                       </CardDescription>
                     </CardHeader>
                   </Card>
@@ -379,15 +382,16 @@ atomnya rendah.
               </CardTitle>
               <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip3.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
-                <p className="italic text-center text-xs mb-2">Nylon, Polyurethane, dan PVC</p>
+                <p className="italic text-center text-xs">Nylon, Polyurethane, dan PVC</p>
+                <p className="italic text-center text-xs mb-2">Sumber: fuse player</p>
                 <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Banyak produk yang kita gunakan setiap hari seperti stoking dari nylon, busa dari
-polyurethane, atau kusen jendela dari PVC dihasilkan melalui proses kimia yang
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Banyak produk yang kita gunakan setiap hari seperti <i>stoking </i>dari <i>nylon</i>, busa dari
+<i> polyurethane</i>, atau kusen jendela dari <i>PVC </i>dihasilkan melalui proses kimia yang
 menggunakan bahan awal berbahaya, seperti asam kuat, pelarut organik beracun,
-atau senyawa karsinogenik (penyebab kanker). Misalnya, produksi nylon sering
-menggunakan asam adipat dan diamina, yang bisa menyebabkan iritasi jika
-terpapar langsung. Begitu juga polyurethane yang dibuat dari isosianat zat beracun
-yang dapat mengiritasi paru-paru, dan PVC plasticiser seperti ftalat yang bisa
+atau senyawa karsinogenik (penyebab kanker). Misalnya, produksi <i>nylon </i>sering
+menggunakan asam <i>adipat </i>dan <i>diamina</i>, yang bisa menyebabkan iritasi jika
+terpapar langsung. Begitu juga <i>polyurethane </i>yang dibuat dari <i>isosianat </i>zat beracun
+yang dapat mengiritasi paru-paru, dan <i>PVC plasticiser </i>seperti <i>ftalat </i>yang bisa
 mengganggu hormon.
                 </p>
                 <div className="grid grid-cols-3">
@@ -396,8 +400,10 @@ mengganggu hormon.
                       <CardTitle className="w-2/3 mx-auto bg-green-500 p-2 text-white text-center rounded-sm">
                         NOTECHEM
                       </CardTitle>
-                      <CardDescription className="text-justify text-black">
-                        Dalam praktik kimia, prinsip ini diterapkan dengan menghindari bahan yang mudah meledak, beracun, korosif, atau menghasilkan gas berbahaya, dan menggantinya dengan bahan yang lebih aman jika memungkinkan. Nah jadi sesuai prinsip ketiga Green Chemistry bahan bahan tersebut bisa digantikan dengan bahan baku alternatif yang lebih aman, loh!
+                      <CardDescription className="grid gap-2 text-justify text-black">
+                        <p>Dalam praktik kimia, prinsip ini diterapkan dengan menghindari bahan yang mudah meledak, beracun, korosif, atau menghasilkan gas berbahaya, dan menggantinya dengan bahan yang lebih aman jika memungkinkan. Nah jadi sesuai prinsip ketiga <i>Green Chemistry </i>bahan bahan tersebut bisa digantikan dengan bahan baku alternatif yang lebih aman, loh!</p>
+                        <p className="font-semibold underline text-center mt-2">YUK SIMAK BERSAMA</p>
+                        <img src="/qr3.jpg" alt="greenchemistry" className="w-1/4 mx-auto" />
                       </CardDescription>
                     </CardHeader>
                   </Card>
@@ -417,20 +423,21 @@ mengganggu hormon.
                   <img src="/prinsip4a.jpg" alt="greenchemistry" className="w-2/5" />
                   <img src="/prinsip4b.jpg" alt="greenchemistry" className="w-3/5" />
                 </div>
-                <p className="italic text-center text-xs mb-2">Pewangi Ruangan Buatan dan Alami</p>
+                <p className="italic text-center text-xs">Pewangi Ruangan Buatan dan Alami</p>
+                <p className="italic text-center text-xs mb-2">Sumber: orchibrand</p>
                 <p>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bayangkan kamu menyemprotkan pewangi ruangan di kamar agar lebih segar.
 Pewanginya harum, tapi beberapa saat kemudian kamu merasa pusing,
 tenggorokan agak gatal, atau temanmu bersin-bersin. Ini bisa jadi karena pewangi
-itu mengandung senyawa kimia sintetis yang kuat, seperti phthalates yang
+itu mengandung senyawa kimia sintetis yang kuat, seperti <i>phthalates </i>yang
 memang bikin wangi, tapi juga bisa berbahaya jika terhirup terus-menerus, apalagi
 di ruang tertutup.
-Nah, Green Chemistry melalui prinsip keempat mengajak kita untuk merancang
+Nah, <i>Green Chemistry </i>melalui prinsip keempat mengajak kita untuk merancang
 produk seperti pewangi ruangan dengan bahan yang tetap efektif, tapi lebih aman
 untuk tubuh dan lingkungan. Misalnya menggunakan minyak esensial alami dari
 daun mint, kulit jeruk, atau bunga lavender, menghindari zat pengawet sintetis
 atau pelarut organik beracun, dan mendesain kemasan tanpa gas pendorong
-berbahaya (aerosol).
+berbahaya <i>(aerosol)</i>.
                 </p>
                 <div className="grid grid-cols-3">
                   <Card className="col-span-2 col-start-2">
@@ -459,14 +466,15 @@ berbahaya (aerosol).
                   <img src="/prinsip5a.jpg" alt="greenchemistry" className="w-1/5" />
                   <img src="/prinsip5b.jpg" alt="greenchemistry" className="w-4/5" />
                 </div>
-                <p className="italic text-center text-xs mb-4">Pembersih Noda Tinta</p>
+                <p className="italic text-center text-xs">Pembersih Noda Tinta</p>
+                <p className="italic text-center text-xs mb-4">Sumber: fauxbrushed</p>
                 <p>
                   Bayangkan kamu ingin membersihkan noda tinta di meja belajar. Kamu punya dua pilihan:
                 </p>
                 <div className="flex gap-2">
                   <p className="">1.</p>
                   <p className="">
-                    Thinner yang bisa menghilangkan noda dengan cepat, tapi baunya menyengat,
+                    <i>Thinner </i>yang bisa menghilangkan noda dengan cepat, tapi baunya menyengat,
 bisa bikin pusing, dan mudah terbakar.
                   </p>
                 </div>
@@ -484,8 +492,8 @@ berbahaya bagi tubuh atau lingkungan.
                         NOTECHEM
                       </CardTitle>
                       <CardDescription className="grid gap-2 text-justify text-black">
-                        <p>Prinsip ke-5 Green Chemistry mengajarkan bahwa dalam reaksi kimia atau produksi produk, bahan pelarut (zat pelarut atau media reaksi) sebaiknya tidak beracun, tidak mudah terbakar, dan aman bagi lingkungan. Pelarut sering digunakan dalam eksperimen kimia dan pembuatan produk seperti obat, cat, kosmetik, atau sabun. Namun, banyak pelarut konvensional seperti aseton, benzena, toluena, atau kloroform bersifat racun, mudah menguap, dan bisa mencemari udara, air, serta membahayakan kesehatan.</p>
-                        <p>Sebagai gantinya, Green Chemistry mendorong penggunaan pelarut yang lebih aman, seperti air , etanol, atau pelarut berbasis tumbuhan, seperti minyak kelapa atau minyak jeruk.</p>
+                        <p>Prinsip ke-5 <i>Green Chemistry </i>mengajarkan bahwa dalam reaksi kimia atau produksi produk, bahan pelarut (zat pelarut atau media reaksi) sebaiknya tidak beracun, tidak mudah terbakar, dan aman bagi lingkungan. Pelarut sering digunakan dalam eksperimen kimia dan pembuatan produk seperti obat, cat, kosmetik, atau sabun. Namun, banyak pelarut konvensional seperti <i>aseton, benzena, toluena, atau kloroform </i>bersifat racun, mudah menguap, dan bisa mencemari udara, air, serta membahayakan kesehatan.</p>
+                        <p>Sebagai gantinya, <i>Green Chemistry </i>mendorong penggunaan pelarut yang lebih aman, seperti air, <i>etanol</i>, atau pelarut berbasis tumbuhan, seperti minyak kelapa atau minyak jeruk.</p>
                       </CardDescription>
                     </CardHeader>
                   </Card>
@@ -517,13 +525,16 @@ menggunakan energi sesuai kebutuhan, tanpa berlebihan.
                         NOTECHEM
                       </CardTitle>
                       <CardDescription className="grid gap-2 text-justify text-black">
-                        <p>Nah, prinsip ke-6 dalam Green Chemistry mengajarkan bahwa reaksi atau proses kimia sebaiknya dilakukan dengan energi sekecil mungkin, dan kalau bisa cukup dilakukan pada suhu ruang dan tekanan biasa, tanpa perlu dipanaskan terus-menerus, ditekan tinggi, atau memakai alat mahal yang menyedot daya besar. Karena setiap tambahan energi butuh bahan bakar, listrik, atau sumber daya lain yang akhirnya menghasilkan limbah panas dan emisi.</p>
+                        <p>Nah, prinsip ke-6 dalam <i>Green Chemistry </i>mengajarkan bahwa reaksi atau proses kimia sebaiknya dilakukan dengan energi sekecil mungkin, dan kalau bisa cukup dilakukan pada suhu ruang dan tekanan biasa, tanpa perlu dipanaskan terus-menerus, ditekan tinggi, atau memakai alat mahal yang menyedot daya besar. Karena setiap tambahan energi butuh bahan bakar, listrik, atau sumber daya lain yang akhirnya menghasilkan limbah panas dan emisi.</p>
                         <p>Contoh penerapannya:</p>
                         <ul>
-                          <li>- Memilih reaksi kimia yang terjadi pada suhu ruang, bukan dipanaskan 100°C berjam-jam.</li>
-                          <li>- Menggunakan katalis agar reaksi berlangsung lebih cepat dan hemat energi.</li>
-                          <li>- Menggunakan energi alternatif, seperti sinar matahari untuk mengeringkan hasil reaksi.</li>
+                          <li className="flex gap-1"><p>-</p>Memilih reaksi kimia yang terjadi pada suhu ruang, bukan dipanaskan 100°C berjam-jam.</li>
+                          <li className="flex gap-1"><p>-</p>Menggunakan katalis agar reaksi berlangsung lebih cepat dan hemat energi.</li>
+                          <li className="flex gap-1"><p>-</p>Menggunakan energi alternatif, seperti sinar matahari untuk mengeringkan hasil reaksi.</li>
                         </ul>
+                        <p className="font-semibold underline text-center mt-2">BAGAIMANA KATALIS DAPAT MEMBUAT REAKSI BERLANGSUNG LEBIH CEPAT?</p>
+                        <p className="font-semibold underline text-center">YUK SCAN UNTUK TAU JAWABANNYA!</p>
+                        <img src="/qr6.jpg" alt="greenchemistry" className="w-1/4 mx-auto" />
                       </CardDescription>
                     </CardHeader>
                   </Card>
@@ -543,15 +554,16 @@ menggunakan energi sesuai kebutuhan, tanpa berlebihan.
                   <img src="/prinsip7a.jpg" alt="greenchemistry" className="w-1/2" />
                   <img src="/prinsip7b.jpg" alt="greenchemistry" className="w-1/2" />
                 </div>
-                <p className="italic text-center text-xs mb-2">Tinta Printer</p>
+                <p className="italic text-center text-xs">Tinta Printer</p>
+                <p className="italic text-center text-xs mb-2">Sumber: fuse player</p>
                 <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Biasanya, tinta printer dibuat dari senyawa berbasis minyak bumi (petroleum) yaitu
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Biasanya, tinta <i>printer </i>dibuat dari senyawa berbasis minyak bumi <i>(petroleum) </i>yaitu
 zat yang berasal dari fosil yang tidak dapat diperbarui. Bahan ini memang efektif,
 tapi proses produksinya menyumbang emisi karbon, sulit terurai, dan suatu saat
 akan habis. Nah, beberapa produsen kini beralih ke tinta berbasis kedelai. Kedelai
 adalah bahan baku alami dan terbarukan karena bisa ditanam kembali setiap
 tahun. Selain itu, tinta dari kedelai tidak mengandung logam berat seperti tinta
-konvensional, lebih mudah terurai, sehingga lebih ramah lingkungan, dna
+konvensional, lebih mudah terurai, sehingga lebih ramah lingkungan, dan
 menghasilkan warna yang tajam, tapi tetap aman bagi kesehatan dan bumi.
                 </p>
                 <div className="grid grid-cols-3">
@@ -561,7 +573,7 @@ menghasilkan warna yang tajam, tapi tetap aman bagi kesehatan dan bumi.
                         NOTECHEM
                       </CardTitle>
                       <CardDescription className="text-justify text-black">
-                        Prinsip 7 Green Chemistry sebisa mungkin, produk kimia harus menggunakan bahan baku yang dapat diperbarui, bukan bahan yang berasal dari sumber daya terbatas seperti batu bara, gas alam, atau minyak bumi.
+                        Prinsip 7 <i>Green Chemistry </i>sebisa mungkin, produk kimia harus menggunakan bahan baku yang dapat diperbarui, bukan bahan yang berasal dari sumber daya terbatas seperti batu bara, gas alam, atau minyak bumi.
                       </CardDescription>
                     </CardHeader>
                   </Card>
@@ -578,7 +590,8 @@ menghasilkan warna yang tajam, tapi tetap aman bagi kesehatan dan bumi.
               </CardTitle>
               <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip8.jpg" alt="greenchemistry" className="w-1/4 mx-auto mt-4" />
-                <p className="italic text-center text-xs mb-2">Kubis Merah</p>
+                <p className="italic text-center text-xs">Kubis Merah</p>
+                <p className="italic text-center text-xs mb-2">Sumber: idnmedis</p>
                 <p>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pembuatan pewarna alami dari kubis merah dapat dilakukan dengan cara yang
 sederhana tanpa derivatisasi, yakni cukup dengan merendam potongan kubis
@@ -586,8 +599,8 @@ dalam air panas selama beberapa menit lalu menyaringnya. Proses ini langsung
 menghasilkan larutan indikator alami yang dapat digunakan untuk menguji pH
 tanpa penambahan bahan kimia atau tahapan yang tidak perlu. Sebaliknya, jika
 tidak menerapkan prinsip ke-8, proses ekstraksi bisa melibatkan pelarut etanol,
-penambahan asam atau basa untuk menyesuaikan pH, serta pemanasan
-menggunakan hot plate. Meskipun hasil warnanya serupa, metode ini memerlukan
+penambahan asam atau basa untuk menyesuaikan <i>pH</i>, serta pemanasan
+menggunakan <i>hot plate</i>. Meskipun hasil warnanya serupa, metode ini memerlukan
 lebih banyak energi, bahan kimia tambahan, dan menghasilkan limbah. Oleh
 karena itu, pendekatan tanpa derivatisasi lebih efisien, aman, dan ramah
 lingkungan sesuai prinsip kimia hijau.
@@ -599,7 +612,7 @@ lingkungan sesuai prinsip kimia hijau.
                         NOTECHEM
                       </CardTitle>
                       <CardDescription className="text-justify text-black">
-                        Nah, prinsip ke-8 dalam Green Chemistry mengajarkan hindari langkah-langkah kimia yang tidak perlu, seperti penambahan senyawa pelindung, pelindih, atau modifikasi struktur kimia (derivatisasi) jika tidak benar-benar dibutuhkan. Setiap langkah tambahan membutuhkan bahan kimia lagi, meningkatkan limbah, dan mungkin menggunakan pelarut atau energi tambahan yang berpotensi menghasilkan produk samping berbahaya.
+                        Nah, prinsip ke-8 dalam <i>Green Chemistry </i>mengajarkan hindari langkah-langkah kimia yang tidak perlu, seperti penambahan senyawa pelindung, pelindih, atau modifikasi struktur kimia (derivatisasi) jika tidak benar-benar dibutuhkan. Setiap langkah tambahan membutuhkan bahan kimia lagi, meningkatkan limbah, dan mungkin menggunakan pelarut atau energi tambahan yang berpotensi menghasilkan produk samping berbahaya.
                       </CardDescription>
                     </CardHeader>
                   </Card>
@@ -616,7 +629,8 @@ lingkungan sesuai prinsip kimia hijau.
               </CardTitle>
               <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip9.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
-                <p className="italic text-center text-xs mb-2">Polusi dari Pabrik</p>
+                <p className="italic text-center text-xs">Polusi dari Pabrik</p>
+                <p className="italic text-center text-xs mb-2">Sumber: fuse player</p>
                 <p>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Katalis mempercepat reaksi tanpa ikut bereaksi secara permanen, sehingga bisa
 digunakan berulang kali. Dalam industri petrokimia, bahan bakar seperti bensin
@@ -624,7 +638,7 @@ dan solar mengandung senyawa belerang (sulfur). Saat bahan bakar dibakar,
 senyawa ini berubah menjadi gas SO₂ (sulfur dioksida), yang menjadi penyebab
 utama hujan asam dan pencemaran udara.
 Untuk mencegahnya, industri kini menggunakan katalis dalam proses desulfurisasi,
-terutama hydrodesulfurization (HDS). Dalam proses ini, senyawa belerang dalam
+terutama <i>hydrodesulfurization (HDS)</i>. Dalam proses ini, senyawa belerang dalam
 bahan bakar diubah menjadi hidrogen sulfida (H₂S), yang lebih mudah ditangani.
 Proses ini dilakukan menggunakan katalis logam seperti nikel-molibdenum (Ni-Mo)
 atau kobalt-molibdenum (Co-Mo) pada suhu dan tekanan tinggi.
@@ -636,7 +650,7 @@ atau kobalt-molibdenum (Co-Mo) pada suhu dan tekanan tinggi.
                         NOTECHEM
                       </CardTitle>
                       <CardDescription className="text-justify text-black">
-                        Prinsip ke-9 Green Chemistry menekankan pentingnya penggunaan katalis dibandingkan reagen sekali pakai dalam proses kimia. Katalis memungkinkan reaksi berlangsung lebih cepat dan efisien tanpa ikut habis dalam reaksi, sehingga dapat digunakan berulang kali. Hal ini tidak hanya menghemat bahan dan energi, tetapi juga mengurangi limbah dan dampak lingkungan. 
+                        Prinsip ke-9 <i>Green Chemistry </i>menekankan pentingnya penggunaan katalis dibandingkan reagen sekali pakai dalam proses kimia. Katalis memungkinkan reaksi berlangsung lebih cepat dan efisien tanpa ikut habis dalam reaksi, sehingga dapat digunakan berulang kali. Hal ini tidak hanya menghemat bahan dan energi, tetapi juga mengurangi limbah dan dampak lingkungan. 
                       </CardDescription>
                     </CardHeader>
                   </Card>
@@ -656,7 +670,8 @@ atau kobalt-molibdenum (Co-Mo) pada suhu dan tekanan tinggi.
                   <img src="/prinsip10a.jpg" alt="greenchemistry" className="w-2/5" />
                   <img src="/prinsip10b.jpg" alt="greenchemistry" className="w-3/5" />
                 </div>
-                <p className="italic text-center text-xs mb-2">Kantong Plastik dari Minyak Bumi vs Kantong Plastik Biodegradable</p>
+                <p className="italic text-center text-xs">Kantong Plastik dari Minyak Bumi vs Kantong Plastik Biodegradable</p>
+                <p className="italic text-center text-xs mb-2">Sumber: ftmn UNAIR</p>
                 <p>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bayangkan kamu memiliki sebuah minimarket kecil yang ramai pengunjung setiap
 hari. Untuk membungkus belanjaan pelanggan, kamu menggunakan ratusan
@@ -694,16 +709,17 @@ berarti besar bagi lingkungan.
               </CardTitle>
               <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip11.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
-                <p className="italic text-center text-xs mb-2">Aktivitas Memasak Air Gula</p>
+                <p className="italic text-center text-xs">Aktivitas Memasak Air Gula</p>
+                <p className="italic text-center text-xs mb-2">Sumber: istockphoto</p>
                 <p>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bayangkan kamu sedang memasak air gula untuk membuat sirup. Jika kamu tidak
 awasi, air bisa menguap habis, dan gulanya gosong, menghasilkan asap berbau
 tidak sedap. Tapi jika kamu awasi suhunya terus-menerus, kamu bisa
 menghentikan pemanasan tepat waktu. Begitu pula dalam industri kimia,
-pemantauan real-time bisa mencegah terbakarnya proses kimia yang
+pemantauan <i>real-time </i>bisa mencegah terbakarnya proses kimia yang
 membahayakan.
-Dalam proses produksi farmasi, jika suhu atau pH melenceng sedikit saja, bisa
-terbentuk produk samping yang beracun. Dengan sistem pemantauan real-time,
+Dalam proses produksi farmasi, jika suhu atau <i>pH </i>melenceng sedikit saja, bisa
+terbentuk produk samping yang beracun. Dengan sistem pemantauan <i>real-time</i>,
 operator dapat langsung menghentikan proses atau menyesuaikan parameter
 sebelum limbah berbahaya terbentuk. Ini lebih efisien dan aman dibandingkan
 cara lama yang hanya menguji sampel akhir produk di laboratorium.
@@ -715,7 +731,7 @@ cara lama yang hanya menguji sampel akhir produk di laboratorium.
                         NOTECHEM
                       </CardTitle>
                       <CardDescription className="text-justify text-black">
-                        Prinsip ke-11 Green Chemistry menekankan pentingnya memantau proses kimia secara langsung dan terus-menerus (real-time) untuk mencegah pencemaran sebelum terjadi, bukan menanganinya setelah selesai. Dalam industri, hal ini dapat dilakukan dengan memasang sensor online atau sistem pemantauan otomatis yang dapat mendeteksi jika reaksi menghasilkan zat berbahaya, berlebih, atau tidak sesuai standar.
+                        Prinsip ke-11 <i>Green Chemistry </i>menekankan pentingnya memantau proses kimia secara langsung dan terus-menerus <i>(real-time) </i>untuk mencegah pencemaran sebelum terjadi, bukan menanganinya setelah selesai. Dalam industri, hal ini dapat dilakukan dengan memasang sensor online atau sistem pemantauan otomatis yang dapat mendeteksi jika reaksi menghasilkan zat berbahaya, berlebih, atau tidak sesuai standar.
                       </CardDescription>
                     </CardHeader>
                   </Card>
@@ -732,14 +748,15 @@ cara lama yang hanya menguji sampel akhir produk di laboratorium.
               </CardTitle>
               <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <img src="/prinsip12.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
-                <p className="italic text-center text-xs mb-2">Airbag Mobil</p>
+                <p className="italic text-center text-xs">Airbag Mobil</p>
+                <p className="italic text-center text-xs mb-2">Sumber: camagazine</p>
                 <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Airbag generasi awal menggunakan natrium azida (NaN₃), senyawa yang sangat
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Airbag </i>generasi awal menggunakan <i>natrium azida (NaN₃)</i>, senyawa yang sangat
 reaktif dan beracun, sehingga menimbulkan risiko tinggi selama produksi,
 penyimpanan, hingga pembuangan. Sebagai bentuk perbaikan, para ilmuwan kini
 mengganti bahan tersebut dengan senyawa yang lebih stabil dan aman seperti
-guanidine nitrate atau 5-aminotetrazole. Bahan alternatif ini tetap mampu
-menghasilkan gas nitrogen yang dibutuhkan untuk mengembangkan airbag,
+<i>guanidine nitrate </i>atau <i>5-aminotetrazole</i>. Bahan alternatif ini tetap mampu
+menghasilkan gas nitrogen yang dibutuhkan untuk mengembangkan <i>airbag</i>,
 namun dengan risiko jauh lebih rendah. Dengan demikian, pemilihan bahan kimia
 yang lebih aman sejak tahap desain menunjukkan bahwa keselamatan bukan
 hanya tanggung jawab pengguna akhir, tetapi bagian dari prinsip keberlanjutan
@@ -752,7 +769,7 @@ dan etika dalam proses kimia itu sendiri.
                         NOTECHEM
                       </CardTitle>
                       <CardDescription className="text-justify text-black">
-                        Prinsip ke-12 Green Chemistry mendorong kita untuk merancang zat dan proses kimia yang lebih aman, baik dalam penanganan, penggunaan, maupun pembuangannya. Ini berarti menghindari bahan kimia yang mudah meledak, mudah terbakar, atau menghasilkan gas beracun, dan menggantinya dengan alternatif yang tidak reaktif berbahaya. Tujuannya adalah melindungi pekerja, masyarakat, dan lingkungan dari risiko kecelakaan yang bisa terjadi selama produksi, penyimpanan, atau transportasi bahan kimia.
+                        Prinsip ke-12 <i>Green Chemistry </i>mendorong kita untuk merancang zat dan proses kimia yang lebih aman, baik dalam penanganan, penggunaan, maupun pembuangannya. Ini berarti menghindari bahan kimia yang mudah meledak, mudah terbakar, atau menghasilkan gas beracun, dan menggantinya dengan alternatif yang tidak reaktif berbahaya. Tujuannya adalah melindungi pekerja, masyarakat, dan lingkungan dari risiko kecelakaan yang bisa terjadi selama produksi, penyimpanan, atau transportasi bahan kimia.
                       </CardDescription>
                     </CardHeader>
                   </Card>
