@@ -16,6 +16,7 @@ const Kegiatan2 = () => {
   });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [savingTable, setSavingTable] = useState(false);
   const [message, setMessage] = useState('');
 
   useEffect(() => {
@@ -38,10 +39,34 @@ const Kegiatan2 = () => {
     try {
       const response = await api.get('/jawaban/kegiatan2');
       const jawabanMap = {};
+      let tabelFound = false;
+      
       response.data.forEach(item => {
-        jawabanMap[item.soalId] = item.jawaban;
+        // Jika ini data tabel pengamatan
+        if (item.soal.pertanyaan.includes('Tulislah hasil perolehan informasi pada kolom berikut!')) {
+          try {
+            const parsedData = JSON.parse(item.jawaban);
+            // Pastikan data memiliki struktur day1, day2, dst
+            if (parsedData && typeof parsedData === 'object' && parsedData.day1) {
+              setTabelPengamatan(parsedData);
+              tabelFound = true;
+            }
+          } catch (e) {
+            // Jika bukan JSON, tetap simpan sebagai string
+            console.log('Data tabel bukan JSON:', e);
+            jawabanMap[item.soalId] = item.jawaban;
+          }
+        } else {
+          jawabanMap[item.soalId] = item.jawaban;
+        }
       });
+      
       setJawaban(jawabanMap);
+      
+      // Log untuk debugging
+      if (tabelFound) {
+        console.log('Tabel pengamatan berhasil dimuat dari database');
+      }
     } catch (error) {
       console.error('Error fetching jawaban:', error);
     }
@@ -107,8 +132,7 @@ const Kegiatan2 = () => {
   }
 
   const soalPengamatan = soal.find(s => 
-    s.pertanyaan.includes('Hasil Pengamatan') || 
-    s.pertanyaan.includes('Organoleptik')
+    s.pertanyaan.includes('Tulislah hasil perolehan informasi pada kolom berikut!')
   );
   const soalLainnya = soal.filter(s => 
     !s.pertanyaan.includes('Hasil Pengamatan') && 
@@ -130,7 +154,7 @@ const Kegiatan2 = () => {
                 <CardDescription className="pt-2 pb-8 grid gap-4 text-justify text-black">
                   <p>Perhatikan Video dibawah ini</p>
                   <iframe
-                    className="w-100 h-72 mx-auto"
+                    className="md:w-100 md:h-72 mx-auto"
                     src="https://www.youtube.com/embed/pnuiEGuThsI?si=Ja2dZWd64GCtrKDN" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -163,7 +187,7 @@ bumbu mie instan pun dikemas menggunakan plastik. Bahaya sedotan plastik bisa ka
 simak dalam video berikut!
                   </p>
                   <iframe
-                    className="w-100 h-72 mx-auto"
+                    className="md:w-100 md:h-72 mx-auto"
                     src="https://www.youtube.com/embed/TX6QbdSi3sY?si=R9lyVUn76e8uBM6c" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -180,7 +204,7 @@ dong! Namun tahukah kamu sedotan kertas berbahaya bagi kesehatan? Yuk simak
 beritanya!
                   </p>
                   <iframe
-                    className="w-100 h-72 mx-auto"
+                    className="md:w-100 md:h-72 mx-auto"
                     src="https://www.youtube.com/embed/Z3m7qkOYPOs?si=4p7erA-iTQRjVyr_" 
                     title="YouTube video player" 
                     frameBorder="0" 
@@ -336,19 +360,61 @@ langsung menghilangkan potensi sampah.
                       <h3 className="mb-3">
                         {item.pertanyaan}
                       </h3>
-                      <textarea
-                        value={jawaban[item.id] || ''}
-                        onChange={(e) => handleJawabanChange(item.id, e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
-                        placeholder="Tulis jawaban Anda di sini..."
-                      />
-                      <button
-                        onClick={() => handleSubmit(item.id)}
-                        disabled={saving}
-                        className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
-                      >
-                        {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
-                      </button>
+                      {soalPengamatan && (
+                        <section className="mb-8">
+                          <div className="overflow-x-auto">
+                            <table className="min-w-full border-collapse border border-gray-300">
+                              <thead>
+                                <tr className="bg-green-100 text-green-500">
+                                  <th className="border border-gray-300 px-4 py-3 text-left">Pengamatan</th>
+                                  <th className="border border-gray-300 px-4 py-3 text-center">Day 1</th>
+                                  <th className="border border-gray-300 px-4 py-3 text-center">Day 2</th>
+                                  <th className="border border-gray-300 px-4 py-3 text-center">Day 3</th>
+                                  <th className="border border-gray-300 px-4 py-3 text-center">Day 4</th>
+                                  <th className="border border-gray-300 px-4 py-3 text-center">Day 5</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr className="bg-white hover:bg-gray-50">
+                                  <td className="border border-gray-300 px-4 py-3 font-medium">Bau</td>
+                                  {['day1', 'day2', 'day3', 'day4', 'day5'].map(day => (
+                                    <td key={`bau-${day}`} className="border border-gray-300 px-2 py-2">
+                                      <input
+                                        type="text"
+                                        value={tabelPengamatan[day].bau}
+                                        onChange={(e) => handleTabelChange(day, 'bau', e.target.value)}
+                                        className="w-full px-2 py-1 border border-gray-200 rounded focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                        placeholder="Deskripsi bau"
+                                      />
+                                    </td>
+                                  ))}
+                                </tr>
+                                <tr className="bg-gray-50 hover:bg-gray-100">
+                                  <td className="border border-gray-300 px-4 py-3 font-medium">Warna</td>
+                                  {['day1', 'day2', 'day3', 'day4', 'day5'].map(day => (
+                                    <td key={`warna-${day}`} className="border border-gray-300 px-2 py-2">
+                                      <input
+                                        type="text"
+                                        value={tabelPengamatan[day].warna}
+                                        onChange={(e) => handleTabelChange(day, 'warna', e.target.value)}
+                                        className="w-full px-2 py-1 border border-gray-200 rounded focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                        placeholder="Deskripsi warna"
+                                      />
+                                    </td>
+                                  ))}
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <button
+                            onClick={() => handleSaveTable(soalPengamatan.id)}
+                            disabled={savingTable}
+                            className="mt-4 bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
+                          >
+                            {savingTable ? 'Menyimpan...' : 'Simpan Tabel Pengamatan'}
+                          </button>
+                        </section>
+                      )}
                     </div>
                   ))}
                 </CardDescription>

@@ -109,7 +109,7 @@ const Materi = () => {
                 </p>
                 <p>Simak Video Dibawah ini untuk dapat menafsirkan apa itu arti dari <i>Green Chemisry</i></p>
                 <iframe
-                  className="w-100 h-72 mx-auto"
+                  className="md:w-100 md:h-72 mx-auto"
                   src="https://www.youtube.com/embed/C-iJJzWQ1kA?si=815nhch-n3lbyULS" 
                   title="YouTube video player" 
                   frameBorder="0" 

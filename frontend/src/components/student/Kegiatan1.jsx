@@ -87,7 +87,7 @@ const Kegiatan1 = () => {
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>Perhatikan video dibawah ini</p>
                   <iframe
-                    className="w-100 h-72 mx-auto"
+                    className="md:w-100 md:h-72 mx-auto"
                     src="https://www.youtube.com/embed/wgLuXvtaLyQ?si=2AiqBb9Hu0h0-MUo" 
                     title="YouTube video player" 
                     frameBorder="0" 
