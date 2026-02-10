@@ -59,7 +59,7 @@ export default function Register({ className, ...props }) {
               <div className="flex items-center justify-center rounded-md">
                 <img src="/gr-ch.png" alt="Green Chemistry" className="w-10 h-10" />
               </div>
-              <h3>E-Modul <br/>Green Chemistry</h3>
+              <h3>E-Modul <br/>Kimia Hijau</h3>
             </Link>
           </div>
           <div className="flex flex-1 items-center justify-center">
