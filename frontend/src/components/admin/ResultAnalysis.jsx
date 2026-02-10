@@ -378,7 +378,7 @@ export default function ResultAnalysis() {
                 <p className="text-sm text-gray-600">Kegiatan 2</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-semibold text-red-600">{groupedJawaban.KEGIATAN2.length}/8</p>
+                <p className="text-2xl font-semibold text-red-600">{groupedJawaban.KEGIATAN3.length}/8</p>
                 <p className="text-sm text-gray-600">Kegiatan 3</p>
               </div>
               <div className="text-center">
