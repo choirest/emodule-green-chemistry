@@ -48,6 +48,16 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
   return children;
 };
 
+const RoleBasedRedirect = () => {
+  const { user } = useAuth();
+  
+  if (user?.role === 'ADMIN') {
+    return <Navigate to="/admin" replace />;
+  }
+  
+  return <Beranda />;
+};
+
 function AppRoutes() {
   const { user, loading } = useAuth();
   
@@ -67,9 +77,23 @@ function AppRoutes() {
     <div className="min-h-screen bg-gray-50">
       <Routes>
         {/* Auth Routes */}
-        <Route path="/login" element={!user ? <Login /> : <Navigate to="/" replace />} />
-        <Route path="/register" element={!user ? <Register /> : <Navigate to="/" replace />} />
-        
+        <Route 
+          path="/login" 
+          element={
+            !user ? <Login /> : (
+              user.role === 'ADMIN' ? <Navigate to="/admin" replace /> : <Navigate to="/" replace />
+            )
+          } 
+        />
+        <Route 
+          path="/register" 
+          element={
+            !user ? <Register /> : (
+              user.role === 'ADMIN' ? <Navigate to="/admin" replace /> : <Navigate to="/" replace />
+            )
+          } 
+        />
+
         {/* Protected Routes */}
         <Route 
           path="*" 
@@ -82,11 +106,7 @@ function AppRoutes() {
                   <Routes>
                     <Route 
                       path="/" 
-                      element={
-                        <ProtectedRoute allowedRoles={['SISWA']}>
-                          <Beranda />
-                        </ProtectedRoute>
-                      } 
+                      element={<RoleBasedRedirect />} 
                     />
                     <Route 
                       path="/francis" 
