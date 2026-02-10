@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import api from '../../services/api';
+import api, { apiURL } from '../../services/api';
 
 export default function ResultAnalysis() {
   const { studentId } = useParams();
@@ -39,6 +39,93 @@ export default function ResultAnalysis() {
     });
 
     return grouped;
+  };
+
+  const renderJawaban = (jawaban, fileUrl, fileName) => {
+    // Jika ada file upload
+    if (fileUrl) {
+      return (
+        <div className="mt-2">
+          <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg border">
+            <img
+              src={`${apiURL}${fileUrl}`}
+              alt={fileName || 'Uploaded file'}
+              className="w-48 h-48 object-contain rounded border"
+              onError={(e) => {
+                console.error('❌ Failed to load image:', fileUrl);
+                console.error('Full URL:', `${apiURL}${fileUrl}`);
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
+            />
+            <div className="hidden p-4 bg-red-50 border border-red-200 rounded">
+              <p className="text-sm text-red-600">⚠️ Gambar gagal dimuat</p>
+              <p className="text-xs text-gray-600 mt-1">Path: {fileUrl}</p>
+            </div>
+            <div className="flex flex-col my-auto">
+              {/* <p className="text-sm font-medium text-gray-700 mb-1">File yang diupload:</p> */}
+              <a
+                href={`${apiURL}${fileUrl}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-sm text-green-600 hover:text-green-800 hover:underline"
+              >
+                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                Buka gambar di tab baru
+              </a>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Cek apakah ini data tabel (JSON)
+    try {
+      const parsed = JSON.parse(jawaban);
+      if (parsed.day1 && parsed.day2) {
+        // Ini adalah tabel pengamatan organoleptik
+        return (
+          <div className="overflow-x-auto mt-2">
+            <table className="min-w-full border-collapse border border-gray-300 text-sm">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border border-gray-300 px-3 py-2 text-left">Pengamatan</th>
+                  <th className="border border-gray-300 px-3 py-2 text-center">Day 1</th>
+                  <th className="border border-gray-300 px-3 py-2 text-center">Day 2</th>
+                  <th className="border border-gray-300 px-3 py-2 text-center">Day 3</th>
+                  <th className="border border-gray-300 px-3 py-2 text-center">Day 4</th>
+                  <th className="border border-gray-300 px-3 py-2 text-center">Day 5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-3 py-2 font-medium">Bau</td>
+                  {['day1', 'day2', 'day3', 'day4', 'day5'].map(day => (
+                    <td key={`bau-${day}`} className="border border-gray-300 px-3 py-2 text-center">
+                      {parsed[day]?.bau || '-'}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-3 py-2 font-medium">Warna</td>
+                  {['day1', 'day2', 'day3', 'day4', 'day5'].map(day => (
+                    <td key={`warna-${day}`} className="border border-gray-300 px-3 py-2 text-center">
+                      {parsed[day]?.warna || '-'}
+                    </td>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        );
+      }
+    } catch (e) {
+      // Bukan JSON, render sebagai text biasa
+    }
+    
+    return <p className="text-gray-700 whitespace-pre-wrap">{jawaban}</p>;
   };
 
   if (loading) {
@@ -128,7 +215,7 @@ export default function ResultAnalysis() {
                       <div className="bg-green-50 p-4 rounded-lg">
                         <p className="text-sm text-gray-600 mb-2 font-medium">Jawaban Siswa:</p>
                         <p className="text-gray-800 whitespace-pre-wrap leading-relaxed">
-                          {item.jawaban || <span className="text-gray-400 italic">Belum dijawab</span>}
+                          {renderJawaban(item.jawaban, item.fileUrl, item.fileName) || <span className="text-gray-400 italic">Belum dijawab</span>}
                         </p>
                       </div>
                       <p className="text-xs text-gray-500 mt-3">
@@ -170,7 +257,7 @@ export default function ResultAnalysis() {
                       <div className="bg-orange-50 p-4 rounded-lg">
                         <p className="text-sm text-gray-600 mb-2 font-medium">Jawaban Siswa:</p>
                         <p className="text-gray-800 whitespace-pre-wrap leading-relaxed">
-                          {item.jawaban || <span className="text-gray-400 italic">Belum dijawab</span>}
+                          {renderJawaban(item.jawaban, item.fileUrl, item.fileName) || <span className="text-gray-400 italic">Belum dijawab</span>}
                         </p>
                       </div>
                       <p className="text-xs text-gray-500 mt-3">
@@ -212,7 +299,7 @@ export default function ResultAnalysis() {
                       <div className="bg-blue-50 p-4 rounded-lg">
                         <p className="text-sm text-gray-600 mb-2 font-medium">Jawaban Siswa:</p>
                         <p className="text-gray-800 whitespace-pre-wrap leading-relaxed">
-                          {item.jawaban || <span className="text-gray-400 italic">Belum dijawab</span>}
+                          {renderJawaban(item.jawaban, item.fileUrl, item.fileName) || <span className="text-gray-400 italic">Belum dijawab</span>}
                         </p>
                       </div>
                       <p className="text-xs text-gray-500 mt-3">
@@ -254,7 +341,7 @@ export default function ResultAnalysis() {
                       <div className="bg-purple-50 p-4 rounded-lg">
                         <p className="text-sm text-gray-600 mb-2 font-medium">Jawaban Siswa:</p>
                         <p className="text-gray-800 whitespace-pre-wrap leading-relaxed">
-                          {item.jawaban || <span className="text-gray-400 italic">Belum dijawab</span>}
+                          {renderJawaban(item.jawaban, item.fileUrl, item.fileName) || <span className="text-gray-400 italic">Belum dijawab</span>}
                         </p>
                       </div>
                       <p className="text-xs text-gray-500 mt-3">
@@ -296,7 +383,7 @@ export default function ResultAnalysis() {
                       <div className="bg-red-50 p-4 rounded-lg">
                         <p className="text-sm text-gray-600 mb-2 font-medium">Jawaban Siswa:</p>
                         <p className="text-gray-800 whitespace-pre-wrap leading-relaxed">
-                          {item.jawaban || <span className="text-gray-400 italic">Belum dijawab</span>}
+                          {renderJawaban(item.jawaban, item.fileUrl, item.fileName) || <span className="text-gray-400 italic">Belum dijawab</span>}
                         </p>
                       </div>
                       <p className="text-xs text-gray-500 mt-3">
@@ -338,7 +425,7 @@ export default function ResultAnalysis() {
                       <div className="bg-yellow-50 p-4 rounded-lg">
                         <p className="text-sm text-gray-600 mb-2 font-medium">Jawaban Siswa:</p>
                         <p className="text-gray-800 whitespace-pre-wrap leading-relaxed">
-                          {item.jawaban || <span className="text-gray-400 italic">Belum dijawab</span>}
+                          {renderJawaban(item.jawaban, item.fileUrl, item.fileName) || <span className="text-gray-400 italic">Belum dijawab</span>}
                         </p>
                       </div>
                       <p className="text-xs text-gray-500 mt-3">
@@ -374,11 +461,11 @@ export default function ResultAnalysis() {
                 <p className="text-sm text-gray-600">Kegiatan 1</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-semibold text-purple-600">{groupedJawaban.KEGIATAN2.length}/10</p>
+                <p className="text-2xl font-semibold text-purple-600">{groupedJawaban.KEGIATAN2.length}/8</p>
                 <p className="text-sm text-gray-600">Kegiatan 2</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-semibold text-red-600">{groupedJawaban.KEGIATAN3.length}/8</p>
+                <p className="text-2xl font-semibold text-red-600">{groupedJawaban.KEGIATAN3.length}/10</p>
                 <p className="text-sm text-gray-600">Kegiatan 3</p>
               </div>
               <div className="text-center">
