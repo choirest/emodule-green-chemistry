@@ -18,7 +18,7 @@ const Kegiatan3 = () => {
 
   const fetchSoal = async () => {
     try {
-      const response = await api.get('/api/api/soal/kegiatan3');
+      const response = await api.get('/api/soal/kegiatan3');
       setSoal(response.data);
     } catch (error) {
       console.error('Error fetching soal:', error);
@@ -29,7 +29,7 @@ const Kegiatan3 = () => {
 
   const fetchMyJawaban = async () => {
     try {
-      const response = await api.get('/api/api/jawaban/kegiatan3');
+      const response = await api.get('/api/jawaban/kegiatan3');
       const jawabanMap = {};
       response.data.forEach(item => {
         jawabanMap[item.soalId] = item.jawaban;
