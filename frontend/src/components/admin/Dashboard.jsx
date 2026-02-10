@@ -12,7 +12,7 @@ export default function Dashboard() {
 
   const fetchStatistics = async () => {
     try {
-      const response = await api.get('/admin/statistics');
+      const response = await api.get('/api/admin/statistics');
       setStatistics(response.data);
     } catch (error) {
       console.error('Error fetching statistics:', error);

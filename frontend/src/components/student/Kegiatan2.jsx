@@ -26,7 +26,7 @@ const Kegiatan2 = () => {
 
   const fetchSoal = async () => {
     try {
-      const response = await api.get('/soal/kegiatan2');
+      const response = await api.get('/api/soal/kegiatan2');
       setSoal(response.data);
     } catch (error) {
       console.error('Error fetching soal:', error);
@@ -37,7 +37,7 @@ const Kegiatan2 = () => {
 
   const fetchMyJawaban = async () => {
     try {
-      const response = await api.get('/jawaban/kegiatan2');
+      const response = await api.get('/api/jawaban/kegiatan2');
       const jawabanMap = {};
       let tabelFound = false;
       
@@ -92,7 +92,7 @@ const Kegiatan2 = () => {
   const handleSubmit = async (soalId) => {
     setSaving(true);
     try {
-      await api.post('/jawaban', {
+      await api.post('/api/jawaban', {
         soalId,
         jawaban: jawaban[soalId] || ''
       });
@@ -109,7 +109,7 @@ const Kegiatan2 = () => {
   const handleSaveTable = async (soalId) => {
     setSavingTable(true);
     try {
-      await api.post('/jawaban', {
+      await api.post('/api/jawaban', {
         soalId,
         jawaban: JSON.stringify(tabelPengamatan)
       });

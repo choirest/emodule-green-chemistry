@@ -13,7 +13,7 @@ export default function ResultAnalysis() {
 
   const fetchStudentDetail = async () => {
     try {
-      const response = await api.get(`/admin/students/${studentId}`);
+      const response = await api.get(`/api/admin/students/${studentId}`);
       setStudent(response.data);
     } catch (error) {
       console.error('Error fetching student detail:', error);

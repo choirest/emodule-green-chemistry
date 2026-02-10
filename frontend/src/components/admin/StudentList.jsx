@@ -12,7 +12,7 @@ export default function StudentList() {
 
   const fetchStudents = async () => {
     try {
-      const response = await api.get('/admin/students');
+      const response = await api.get('/api/admin/students');
       setStudents(response.data);
     } catch (error) {
       console.error('Error fetching students:', error);

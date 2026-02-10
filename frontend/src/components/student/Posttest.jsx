@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Card, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import api from '@/services/api';
+import api, { apiURL } from '@/services/api';
 import { ScrollArea } from '../ui/scroll-area';
 
 const Posttest = () => {
@@ -18,7 +18,7 @@ const Posttest = () => {
 
   const fetchSoal = async () => {
     try {
-      const response = await api.get('/soal/posttest');
+      const response = await api.get('/api/soal/posttest');
       setSoal(response.data);
     } catch (error) {
       console.error('Error fetching soal:', error);
@@ -29,7 +29,7 @@ const Posttest = () => {
 
   const fetchMyJawaban = async () => {
     try {
-      const response = await api.get('/jawaban/posttest');
+      const response = await api.get('/api/jawaban/posttest');
       const jawabanMap = {};
       const filesMap = {};
       
@@ -79,7 +79,7 @@ const Posttest = () => {
         formData.append('jawaban', jawaban[soalId] || '');
       }
 
-      await api.post('/jawaban', formData, {
+      await api.post('/api/jawaban', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -103,7 +103,7 @@ const Posttest = () => {
     if (!confirm('Apakah Anda yakin ingin menghapus file ini?')) return;
 
     try {
-      await api.delete(`/jawaban/file/${jawabanId}`);
+      await api.delete(`/api/jawaban/file/${jawabanId}`);
       setMessage('File berhasil dihapus!');
       setTimeout(() => setMessage(''), 3000);
       
@@ -172,14 +172,14 @@ const Posttest = () => {
                               <div className="flex items-center justify-between">
                                 <div className="flex items-center space-x-3">
                                   <img
-                                    src={`http://localhost:5000${files[item.id].url}`}
-                                    alt={files[item.id].name}
+                                    src={`${apiURL}${files[item.id].url}`}
+                                    alt={`${apiURL}${files[item.id].name}`}
                                     className="h-20 w-20 object-cover rounded border"
                                   />
                                   <div>
-                                    <p className="text-sm text-gray-700">{files[item.id].name}</p>
+                                    {/* <p className="text-sm text-gray-700">{files[item.id].name}</p> */}
                                     <a
-                                      href={`http://localhost:5000${files[item.id].url}`}
+                                      href={`${apiURL}${files[item.id].url}`}
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       className="text-sm text-green-600 hover:underline"

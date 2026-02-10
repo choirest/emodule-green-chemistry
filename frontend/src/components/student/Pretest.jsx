@@ -17,7 +17,7 @@ const Pretest = () => {
 
   const fetchSoal = async () => {
     try {
-      const response = await api.get('/soal/pretest');
+      const response = await api.get('/api/soal/pretest');
       setSoal(response.data);
     } catch (error) {
       console.error('Error fetching soal:', error);
@@ -28,7 +28,7 @@ const Pretest = () => {
 
   const fetchMyJawaban = async () => {
     try {
-      const response = await api.get('/jawaban/pretest');
+      const response = await api.get('/api/jawaban/pretest');
       const jawabanMap = {};
       response.data.forEach(item => {
         jawabanMap[item.soalId] = item.jawaban;
@@ -49,7 +49,7 @@ const Pretest = () => {
   const handleSubmit = async (soalId) => {
     setSaving(true);
     try {
-      await api.post('/jawaban', {
+      await api.post('/api/jawaban', {
         soalId,
         jawaban: jawaban[soalId] || ''
       });
