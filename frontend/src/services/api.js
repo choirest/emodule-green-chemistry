@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const apiURL = 'http://localhost:5000';
+export const apiURL = 'https://api.emodulkimiahijau.my.id';
 
 const api = axios.create({
   baseURL: apiURL,
