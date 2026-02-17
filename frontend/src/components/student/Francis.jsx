@@ -1,19 +1,42 @@
 import React from 'react'
 import { Card, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { ScrollArea } from '../ui/scroll-area'
+import { Separator } from '../ui/separator'
 
 const Francis = () => {
   return (
     <section className="p-4">
       <Card>
         <ScrollArea className="h-144">
-          <div className="grid gap-8">
+          <CardHeader>
+            <CardTitle className="text-xl mb-4">Halaman Francis</CardTitle>
+            <Separator />
+          </CardHeader>
+          <div className="pt-6 grid gap-16">
             <CardHeader>
-              <CardTitle>E-Module Berbasis Inquiry-based Experiment terintegrasi Green Chemistry</CardTitle>
-            </CardHeader>
-            <CardHeader>
-              <CardTitle>Tim Penyusun</CardTitle>
-              <CardDescription className="text-black">
+              <CardDescription className="grid gap-2 text-black">
+                <div className="grid grid-cols-3">
+                  <p className="col-span-1 font-semibold">Judul</p>
+                  <p className="col-span-2">: <i>E-Module</i> Berbasis <i>Inquiry-based Experiment</i> terintegrasi <i>Green Chemistry</i></p>
+                </div>
+                <div className="grid grid-cols-3">
+                  <p className="col-span-1 font-semibold">Nama Mata Pelajaran</p>
+                  <p className="col-span-2">: Kimia</p>
+                </div>
+                <div className="grid grid-cols-3">
+                  <p className="col-span-1 font-semibold">Topik Materi</p>
+                  <p className="col-span-2">: Kimia Hijau dalam Pembangunan Berkelanjutan 2030</p>
+                </div>
+                <div className="grid grid-cols-3">
+                  <p className="col-span-1 font-semibold">Kelas</p>
+                  <p className="col-span-2">: X Fase E</p>
+                </div>
+                <div className="grid grid-cols-3">
+                  <p className="col-span-1 font-semibold">Waktu</p>
+                  <p className="col-span-2">: 4 x 90 menit</p>
+                </div>
+
+                <p className="col-span-1 font-semibold">Tim Penyusun</p>
                 <div className="w-4/5 mx-auto py-8 grid xl:flex gap-4">
                   <div className="grid gap-4 w-fit justify-items-center mx-auto">
                     <img src="/annisa.png" alt="Adik Annisa Fitri Suryani S.Pd." width={150} height={150} className="bg-green-600 rounded-lg" />
@@ -34,11 +57,8 @@ const Francis = () => {
                     </div>
                   </div>
                 </div>
-              </CardDescription>
-            </CardHeader>
-            <CardHeader>
-              <CardTitle>Validator</CardTitle>
-              <CardDescription className="text-black">
+
+                <p className="col-span-1 font-semibold">Validator</p>
                 <ul>
                   <li>Dr. Kadek Dwi Hendratma Gunawan S.Pd., M.Pd. </li>
                   <li>Dr. Ari Syahidul Shidiq, S.Pd., M.Pd. </li>

@@ -3,20 +3,23 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Navbar from './components/shared/Navbar';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import { SidebarProvider, SidebarTrigger } from './components/ui/sidebar';
+import { SidebarProvider } from './components/ui/sidebar';
 import AppSidebar from './components/shared/AppSidebar';
 
 // Student Components
 import Beranda from './components/student/Beranda';
 import Francis from './components/student/Francis';
-import Pendahuluan from './components/student/Pendahuluan';
 import KataPengantar from './components/student/KataPengantar';
-import Pretest from './components/student/Pretest';
-import Materi from './components/student/Materi';
+import Pendahuluan from './components/student/Pendahuluan';
+import Kerangka from './components/student/Kerangka';
 import Kegiatan1 from './components/student/Kegiatan1';
 import Kegiatan2 from './components/student/Kegiatan2';
 import Kegiatan3 from './components/student/Kegiatan3';
-import Posttest from './components/student/Posttest';
+import Kegiatan4 from './components/student/Kegiatan4';
+import Evaluasi from './components/student/Evaluasi';
+import KunciJawaban from './components/student/KunciJawaban';
+import Glosarium from './components/student/Glosarium';
+import DaftarPustaka from './components/student/DaftarPustaka';
 
 // Admin Components
 import Dashboard from './components/admin/Dashboard';
@@ -133,18 +136,10 @@ function AppRoutes() {
                       } 
                     />
                     <Route 
-                      path="/pretest" 
+                      path="/kerangka-modul" 
                       element={
                         <ProtectedRoute allowedRoles={['SISWA']}>
-                          <Pretest />
-                        </ProtectedRoute>
-                      } 
-                    />
-                    <Route 
-                      path="/materi" 
-                      element={
-                        <ProtectedRoute allowedRoles={['SISWA']}>
-                          <Materi />
+                          <Kerangka />
                         </ProtectedRoute>
                       } 
                     />
@@ -173,10 +168,42 @@ function AppRoutes() {
                       } 
                     />
                     <Route 
-                      path="/post-test" 
+                      path="/kegiatan-4" 
                       element={
                         <ProtectedRoute allowedRoles={['SISWA']}>
-                          <Posttest />
+                          <Kegiatan4 />
+                        </ProtectedRoute>
+                      } 
+                    />
+                    <Route 
+                      path="/evaluasi" 
+                      element={
+                        <ProtectedRoute allowedRoles={['SISWA']}>
+                          <Evaluasi />
+                        </ProtectedRoute>
+                      } 
+                    />
+                    <Route 
+                      path="/kunci-jawaban" 
+                      element={
+                        <ProtectedRoute allowedRoles={['SISWA']}>
+                          <KunciJawaban />
+                        </ProtectedRoute>
+                      } 
+                    />
+                    <Route 
+                      path="/glosarium" 
+                      element={
+                        <ProtectedRoute allowedRoles={['SISWA']}>
+                          <Glosarium />
+                        </ProtectedRoute>
+                      } 
+                    />
+                    <Route 
+                      path="/daftar-pustaka" 
+                      element={
+                        <ProtectedRoute allowedRoles={['SISWA']}>
+                          <DaftarPustaka />
                         </ProtectedRoute>
                       } 
                     />

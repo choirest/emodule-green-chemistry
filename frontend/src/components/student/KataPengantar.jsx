@@ -1,13 +1,18 @@
 import React from 'react'
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card'
 import { ScrollArea } from '../ui/scroll-area'
+import { Separator } from '../ui/separator'
 
 const KataPengantar = () => {
   return (
     <section className="p-4">
       <Card>
         <ScrollArea className="h-144">
-          <div className="grid gap-16">
+          <CardHeader>
+            <CardTitle className="text-xl mb-4">Kata Pengantar</CardTitle>
+            <Separator />
+          </CardHeader>
+          <div className="pt-6 grid gap-16">
             <CardHeader>
               <CardTitle></CardTitle>
               <CardDescription className="grid gap-4 text-justify text-black">

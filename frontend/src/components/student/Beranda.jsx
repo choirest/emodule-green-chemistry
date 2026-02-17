@@ -1,76 +1,102 @@
 import React from 'react'
 import { Card, CardDescription, CardHeader, CardTitle } from '../ui/card'
-import { ClipboardList } from 'lucide-react'
+import { BookOpen, ClipboardList, FileText, FlaskConical, Home, User } from 'lucide-react'
 import { ScrollArea } from '../ui/scroll-area'
 import { Link } from 'react-router-dom'
+import { Separator } from '../ui/separator'
 
 const Beranda = () => {
   return (
     <section className="p-4">
       <Card>
         <ScrollArea className="h-144">
+          <CardHeader>
+            <CardTitle className="text-xl mb-4">Beranda</CardTitle>
+            <Separator />
+          </CardHeader>
           <div className="grid gap-16">
-            <CardHeader>
-              <CardTitle>Tujuan Pembuatan e-Module</CardTitle>
-              <CardDescription className="text-justify text-black">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>E-module </i>berbasis <i>Inquiry-based Experiment (IBE) </i>terintegrasi <i>green 
-    chemistry </i>ini disusun sebagai media pembelajaran agar siswa dapat merancang 
-    sendiri eksperimen sederhana dengan mengintegrasikan prinsip <i>green chemistry</i>. 
-    Praktikum kimia yang dilakukan siswa yaitu mengolah limbah organik menjadi 
-    produk ramah lingkungan. Melalui kegiatan ini, siswa menerapkan prinsip kimia 
-    hijau. <i>E-module </i>ini diharapkan dapat meningkatkan kemampuan <i>system thinking </i> 
-    dan <i>sustainability literacy </i>siswa yang mengarah pada pentingnya keberlanjutan 
-    lingkungan melalui penerapan langsung ilmu kimia dalam kehidupan sehari-hari, 
-    khususnya pada Materi Kimia Hijau.
-              </CardDescription>
-            </CardHeader>
-
-            <CardHeader>
-              <CardTitle>Aspek Green Chemistry</CardTitle>
-              <CardDescription>
-                <img src="/prinsip.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
-                <p className="italic text-center text-xs mb-2">Sumber: Vector Stock</p>
-              </CardDescription>
-            </CardHeader>
-
-            <CardHeader>
-              <CardTitle>Sintaks Inquiry Based Experiment (IBE)</CardTitle>
-              <CardDescription>
-                <img src="/sintaks.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
-                <p className="italic text-center text-xs mb-2">(Pedaste et al., 2015)</p>
-              </CardDescription>
-            </CardHeader>
-
-            <CardHeader>
-              <CardTitle>Petunjuk Penggunaan</CardTitle>
-              <CardDescription>
-                <img src="/petunjuk.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
-                <p className="italic text-center text-xs mb-2">Petunjuk Penggunaan e-Module</p>
-              </CardDescription>
-            </CardHeader>
-
-            <div className="w-2/5 px-8 grid xl:flex gap-8 justify-center mx-auto font-semibold">
+            <div className="p-6 grid xl:grid-cols-5 gap-5">
+              <Link to="/" className="w-full">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <Home className="w-8 h-8 " />
+                  <h3 className="font-semibold">Beranda</h3>
+                </Card>
+              </Link>
+              <Link to="/francis" className="w-full">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <User className="w-8 h-8 " />
+                  <h3 className="font-semibold">Francis</h3>
+                </Card>
+              </Link>
+              <Link to="/kata-pengantar" className="w-full">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <BookOpen className="w-8 h-8 " />
+                  <h3 className="font-semibold">Kata Pengantar</h3>
+                </Card>
+              </Link>
+              <Link to="/pendahuluan" className="w-full">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <FileText className="w-8 h-8 " />
+                  <h3 className="font-semibold">Pendahuluan</h3>
+                </Card>
+              </Link>
+              <Link to="/kerangka-modul" className="w-full">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <ClipboardList className="w-8 h-8 " />
+                  <h3 className="font-semibold">Kerangka e-Modul</h3>
+                </Card>
+              </Link>
               <Link to="/kegiatan-1" className="w-full">
-                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white text-center">
-                  <ClipboardList className="w-8 h-8 mx-auto" />
-                  <h3 className="mx-auto">Kegiatan 1</h3>
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <FlaskConical className="w-8 h-8 " />
+                  <h3 className="font-semibold">Kegiatan 1</h3>
                 </Card>
               </Link>
               <Link to="/kegiatan-2" className="w-full">
-                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white text-center">
-                  <ClipboardList className="w-8 h-8 mx-auto" />
-                  <h3 className="mx-auto">Kegiatan 2</h3>
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <FlaskConical className="w-8 h-8" />
+                  <h3 className="font-semibold">Kegiatan 2</h3>
                 </Card>
               </Link>
               <Link to="/kegiatan-3" className="w-full">
-                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white text-center">
-                  <ClipboardList className="w-8 h-8 mx-auto" />
-                  <h3 className="mx-auto">Kegiatan 3</h3>
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <FlaskConical className="w-8 h-8" />
+                  <h3 className="font-semibold">Kegiatan 3</h3>
+                </Card>
+              </Link>
+              <Link to="/kegiatan-4" className="w-full">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <FlaskConical className="w-8 h-8" />
+                  <h3 className="font-semibold">Kegiatan 4</h3>
+                </Card>
+              </Link>
+              <Link to="/evaluasi" className="w-full">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <ClipboardList className="w-8 h-8" />
+                  <h3 className="font-semibold">Evaluasi</h3>
+                </Card>
+              </Link>
+              <Link to="/kunci-jawaban" className="w-full">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <ClipboardList className="w-8 h-8" />
+                  <h3 className="font-semibold">Kunci Jawaban</h3>
+                </Card>
+              </Link>
+              <Link to="/glosarium" className="w-full">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <ClipboardList className="w-8 h-8" />
+                  <h3 className="font-semibold">Glosarium</h3>
+                </Card>
+              </Link>
+              <Link to="/daftar-pustaka" className="w-full">
+                <Card className="p-4 bg-green-600 hover:bg-green-700 text-white">
+                  <ClipboardList className="w-8 h-8" />
+                  <h3 className="font-semibold">Daftar Pustaka</h3>
                 </Card>
               </Link>
             </div>
 
-            <CardHeader className="text-right text-black">
+            <CardHeader className="mt-8 text-right text-black">
               <CardTitle>Identitas Penyusun</CardTitle>
               <CardDescription className="text-black">
                 Adik Annisa Fitri Suryani S.Pd. 

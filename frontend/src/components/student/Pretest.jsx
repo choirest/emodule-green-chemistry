@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Card, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import api from '@/services/api';
 import { ScrollArea } from '../ui/scroll-area';
+import { Separator } from '../ui/separator';
 
 const Pretest = () => {
   const [soal, setSoal] = useState([]);
@@ -76,7 +77,11 @@ const Pretest = () => {
       <section className="p-4">
         <Card>
           <ScrollArea className="h-144">
-            <div className="grid gap-16">
+            <CardHeader>
+              <CardTitle className="text-xl mb-4">Pretest</CardTitle>
+              <Separator />
+            </CardHeader>
+            <div className="pt-6 grid gap-16">
               <CardHeader>
                 <CardTitle>BACAAN UNTUK MENJAWAB SOAL NOMOR 1-8 </CardTitle>
                 <CardDescription className="pt-2 grid gap-2 text-justify text-black">

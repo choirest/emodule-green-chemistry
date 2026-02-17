@@ -57,7 +57,7 @@ export default function Register({ className, ...props }) {
           <div className="flex justify-center gap-2 md:justify-start">
             <Link to="/login" className="flex items-center gap-2 font-medium text-green-500">
               <div className="flex items-center justify-center rounded-md">
-                <img src="/gr-ch.png" alt="Green Chemistry" className="w-10 h-10" />
+                <img src="/uns.png" alt="Green Chemistry" className="w-10 h-10" />
               </div>
               <h3>E-Modul <br/>Kimia Hijau</h3>
             </Link>

@@ -193,7 +193,7 @@ export default function ResultAnalysis() {
           </div>
 
           {/* Pretest Section */}
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-2xl font-semibold text-gray-800">Pretest</h2>
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -232,12 +232,12 @@ export default function ResultAnalysis() {
                 <p className="text-gray-500 italic">Belum ada jawaban untuk Pretest</p>
               </div>
             )}
-          </div>
+          </div> */}
 
-          {/* Materi Section */}
+          {/* Kegiatan 1 Section */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-semibold text-gray-800">Materi</h2>
+              <h2 className="text-2xl font-semibold text-gray-800">Kegiatan 1</h2>
               <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
                 {groupedJawaban.MATERI.length} jawaban
               </span>
@@ -271,15 +271,15 @@ export default function ResultAnalysis() {
               </div>
             ) : (
               <div className="bg-gray-50 rounded-lg p-8 text-center">
-                <p className="text-gray-500 italic">Belum ada jawaban untuk Materi</p>
+                <p className="text-gray-500 italic">Belum ada jawaban untuk Kegiatan 1</p>
               </div>
             )}
           </div>
 
-          {/* Kegiatan 1 Section */}
+          {/* Kegiatan 2 Section */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-semibold text-gray-800">Kegiatan 1</h2>
+              <h2 className="text-2xl font-semibold text-gray-800">Kegiatan 2</h2>
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                 {groupedJawaban.KEGIATAN1.length} jawaban
               </span>
@@ -313,15 +313,15 @@ export default function ResultAnalysis() {
               </div>
             ) : (
               <div className="bg-gray-50 rounded-lg p-8 text-center">
-                <p className="text-gray-500 italic">Belum ada jawaban untuk Kegiatan 1</p>
+                <p className="text-gray-500 italic">Belum ada jawaban untuk Kegiatan 2</p>
               </div>
             )}
           </div>
 
-          {/* Kegiatan 2 Section */}
+          {/* Kegiatan 3 Section */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-semibold text-gray-800">Kegiatan 2</h2>
+              <h2 className="text-2xl font-semibold text-gray-800">Kegiatan 3</h2>
               <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
                 {groupedJawaban.KEGIATAN2.length} jawaban
               </span>
@@ -355,15 +355,15 @@ export default function ResultAnalysis() {
               </div>
             ) : (
               <div className="bg-gray-50 rounded-lg p-8 text-center">
-                <p className="text-gray-500 italic">Belum ada jawaban untuk Kegiatan 2</p>
+                <p className="text-gray-500 italic">Belum ada jawaban untuk Kegiatan 3</p>
               </div>
             )}
           </div>
 
-          {/* Kegiatan 3 Section */}
+          {/* Kegiatan 4 Section */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-semibold text-gray-800">Kegiatan 3</h2>
+              <h2 className="text-2xl font-semibold text-gray-800">Kegiatan 4</h2>
               <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
                 {groupedJawaban.KEGIATAN3.length} jawaban
               </span>
@@ -397,15 +397,15 @@ export default function ResultAnalysis() {
               </div>
             ) : (
               <div className="bg-gray-50 rounded-lg p-8 text-center">
-                <p className="text-gray-500 italic">Belum ada jawaban untuk Kegiatan 3</p>
+                <p className="text-gray-500 italic">Belum ada jawaban untuk Kegiatan 4</p>
               </div>
             )}
           </div>
 
-          {/* Posttest Section */}
+          {/* Evaluasi Section */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-semibold text-gray-800">Post Test</h2>
+              <h2 className="text-2xl font-semibold text-gray-800">Evaluasi</h2>
               <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
                 {groupedJawaban.POSTTEST.length} jawaban
               </span>
@@ -439,7 +439,7 @@ export default function ResultAnalysis() {
               </div>
             ) : (
               <div className="bg-gray-50 rounded-lg p-8 text-center">
-                <p className="text-gray-500 italic">Belum ada jawaban untuk Post Test</p>
+                <p className="text-gray-500 italic">Belum ada jawaban untuk Evaluasi</p>
               </div>
             )}
           </div>
@@ -448,29 +448,29 @@ export default function ResultAnalysis() {
           <div className="bg-linear-to-r from-green-50 to-blue-50 rounded-lg p-6 border border-gray-200">
             <h3 className="text-lg font-semibold text-gray-800 mb-4">Ringkasan Progres</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="text-center">
+              {/* <div className="text-center">
                 <p className="text-2xl font-semibold text-green-600">{groupedJawaban.PRETEST.length}/15</p>
                 <p className="text-sm text-gray-600">Pretest</p>
-              </div>
+              </div> */}
               <div className="text-center">
                 <p className="text-2xl font-semibold text-orange-600">{groupedJawaban.MATERI.length}/1</p>
-                <p className="text-sm text-gray-600">Materi</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl font-semibold text-blue-600">{groupedJawaban.KEGIATAN1.length}/8</p>
                 <p className="text-sm text-gray-600">Kegiatan 1</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-semibold text-purple-600">{groupedJawaban.KEGIATAN2.length}/8</p>
+                <p className="text-2xl font-semibold text-blue-600">{groupedJawaban.KEGIATAN1.length}/8</p>
                 <p className="text-sm text-gray-600">Kegiatan 2</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-semibold text-red-600">{groupedJawaban.KEGIATAN3.length}/10</p>
+                <p className="text-2xl font-semibold text-purple-600">{groupedJawaban.KEGIATAN2.length}/8</p>
                 <p className="text-sm text-gray-600">Kegiatan 3</p>
               </div>
               <div className="text-center">
+                <p className="text-2xl font-semibold text-red-600">{groupedJawaban.KEGIATAN3.length}/10</p>
+                <p className="text-sm text-gray-600">Kegiatan 4</p>
+              </div>
+              <div className="text-center">
                 <p className="text-2xl font-semibold text-yellow-600">{groupedJawaban.POSTTEST.length}/15</p>
-                <p className="text-sm text-gray-600">Post Test</p>
+                <p className="text-sm text-gray-600">Evaluasi</p>
               </div>
             </div>
           </div>

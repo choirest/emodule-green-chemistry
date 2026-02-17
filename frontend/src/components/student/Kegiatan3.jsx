@@ -3,6 +3,7 @@ import Footer from '../shared/Footer';
 import api from '@/services/api';
 import { Card, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { ScrollArea } from '../ui/scroll-area';
+import { Separator } from '../ui/separator';
 
 const Kegiatan3 = () => {
   const [soal, setSoal] = useState([]);
@@ -18,7 +19,7 @@ const Kegiatan3 = () => {
 
   const fetchSoal = async () => {
     try {
-      const response = await api.get('/api/soal/kegiatan3');
+      const response = await api.get('/api/soal/kegiatan2');
       setSoal(response.data);
     } catch (error) {
       console.error('Error fetching soal:', error);
@@ -29,7 +30,7 @@ const Kegiatan3 = () => {
 
   const fetchMyJawaban = async () => {
     try {
-      const response = await api.get('/api/jawaban/kegiatan3');
+      const response = await api.get('/api/jawaban/kegiatan2');
       const jawabanMap = {};
       response.data.forEach(item => {
         jawabanMap[item.soalId] = item.jawaban;
@@ -77,76 +78,117 @@ const Kegiatan3 = () => {
       <section className="p-4">
         <Card>
           <ScrollArea className="h-144">
-            <div id="o" className="grid gap-16">
+            <CardHeader>
+              <CardTitle className="text-xl text-center">Kegiatan 3</CardTitle>
+              <CardDescription className="my-4 grid gap-2 text-justify text-black">
+                <p className="font-semibold text-center text-lg mb-4">"Apakah Produksi Plastik Membahayakan Bumi?"</p>
+                <Separator />
+                <p className="mt-4"><span className="font-semibold">Tujuan:</span> Mengidentifikasi proses kimia dalam kehidupan sehari-hari terkait hal yang tidak sesusai dengan Prinsip Kimia Hijau</p>
+              </CardDescription>
+              <Separator />
+            </CardHeader>
+            <div id="h" className="pt-6 grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">
                   Identifikasi Masalah
                   <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
                   <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
                 </CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  <p>Simak permasalahan pada vidio berikut!</p>
+                <CardDescription className="pt-2 pb-8 grid gap-4 text-justify text-black">
+                  <p>Perhatikan Video dibawah ini</p>
                   <iframe
-                    className="md:w-100 md:h-72 mx-auto" 
-                    src="https://www.youtube.com/embed/X96MPG_W7nY?si=nl_AgFMW-BdI9Ed8" 
+                    className="md:w-100 md:h-72 mx-auto"
+                    src="https://www.youtube.com/embed/pnuiEGuThsI?si=Ja2dZWd64GCtrKDN" 
                     title="YouTube video player" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen>
                   </iframe>
-                  <p className="italic text-center text-xs mb-2">Channel PasraJY</p>
+                  <p className="italic text-center text-xs mb-2">Sumber: Kok Bisa?</p>
                   <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aktivitas sehari-hari masyarakat seperti mencuci pakaian, mandi, dan mencuci 
-peralatan dapur yang hampir semuanya menggunakan deterjen. Dari aktivitas sederhana 
-ini, dijelaskan bahwa sisa deterjen yang terbuang melalui saluran air rumah tangga tidak 
-benar-benar hilang, melainkan mengalir ke sungai, danau, atau meresap ke tanah sehingga 
-berpotensi mencemari lingkungan perairan.
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selain <i>handphone </i>di tangan, ada satu benda yang susah lepas dari hidup kita. 
+Dialah, plastik! Benda ringan yang karena kuat dan praktisnya bikin disukai sama banyak 
+orang. Tapi, masalah terus muncul, karena gara-gara ulah kita juga, sampah plastik kini jadi 
+ada di tanah, di sungai, dan sampai bikin benua sendiri di samudera sana. Sekarang, kita 
+mungkin ngeri mikirin seberapa banyak sih sebenernya sampah plastik di dunia? Dan 
+sebahaya apakah mereka?
                   </p>
                   <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kandungan kimia dalam deterjen, seperti <i>surfaktan, fosfat</i>, pewangi, dan zat aditif 
-lainnya, yang berfungsi untuk mengangkat kotoran namun memiliki dampak negatif jika 
-masuk ke lingkungan. <i>Surfaktan </i>dijelaskan dapat menurunkan tegangan permukaan air 
-sehingga mengganggu sistem pernapasan organisme air, sementara <i>fosfat </i>dapat memicu 
-pertumbuhan alga secara berlebihan. Kondisi ini menyebabkan eutrofikasi, yaitu 
-menurunnya kadar oksigen terlarut dalam air, yang pada akhirnya dapat menyebabkan 
-kematian ikan dan organisme perairan lainnya.
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Video tersebut membahas seberapa berbahaya sampah plastik bagi kehidupan kita. 
+Secara keseluruhan, uraian mengenai sampah plastik dan bahayanya bisa kita gambarkan 
+dalam konsep <i>mapping </i>berikut!
+                  </p>
+                  <img src="/mapping.png" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
+                  <p className="italic text-center text-xs mb-2">Konsep Mapping</p>
+                  <img src="/keg2a.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
+                  <p className="italic text-center text-xs mb-2">(Sumber: rejekiabadi)</p>
+                  <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seperti yang kita tahu saat kita pergi ke restoran atau cafe banyak sekali sampah 
+plastik yang kita temukan, salah satunya sedotan. Begitupun saat kita makan mie instan, 
+bumbu mie instan pun dikemas menggunakan plastik. Bahaya sedotan plastik bisa kalian 
+simak dalam video berikut!
+                  </p>
+                  <iframe
+                    className="md:w-100 md:h-72 mx-auto"
+                    src="https://www.youtube.com/embed/TX6QbdSi3sY?si=R9lyVUn76e8uBM6c" 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen>
+                  </iframe>
+                  <p className="italic text-center text-xs mb-2">Sumber: CNN Indonesia</p>
+                  <img src="/keg2b.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
+                  <p className="italic text-center text-xs mb-2">(Sumber: kontakpackaging)</p>
+                  <p>
+                    Wah jadi kita bisa menggunakan sedotan kertas karena kertas lebih cepat terurai 
+dong! Namun tahukah kamu sedotan kertas berbahaya bagi kesehatan? Yuk simak 
+beritanya!
+                  </p>
+                  <iframe
+                    className="md:w-100 md:h-72 mx-auto"
+                    src="https://www.youtube.com/embed/Z3m7qkOYPOs?si=4p7erA-iTQRjVyr_" 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen>
+                  </iframe>
+                  <p className="italic text-center text-xs mb-2">Sumber: CNN Indonesia</p>
+                  </CardDescription>
+              </CardHeader>
+
+              <CardHeader>
+                <CardTitle className="flex gap-4">
+                  Mari Berpikir
+                  <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 pb-8 grid gap-4 text-justify text-black">
+                  <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lalu penanggulangan apa yang bisa kita lakukan untuk mencegah munculnya 
+sampah plastik tersebut? Berbagai upaya penanggulangan sampah telah dilakukan melalui 
+pendekatan pencegahan, seperti membawa <i>tumbler </i>dan wadah makan dari rumah, 
+menggunakan produk daur ulang, serta melakukan pemilahan sampah. Namun, langkah
+langkah tersebut masih bergantung pada perilaku individu dan belum sepenuhnya mampu 
+menekan timbulan sampah, khususnya sampah kemasan sekali pakai.
                   </p>
                   <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limbah deterjen berdampak tidak langsung terhadap manusia. Air yang tercemar 
-deterjen dapat memengaruhi kualitas air bersih yang digunakan untuk kebutuhan sehari
-hari. Selain itu, paparan deterjen dalam kadar tertentu dapat menyebabkan iritasi kulit, 
-gangguan kesehatan, serta merusak ekosistem yang menjadi sumber pangan manusia. 
-Pencemaran akibat deterjen bukan hanya masalah lingkungan, tetapi juga masalah 
-kesehatan dan keberlanjutan kehidupan manusia. Dalam vidio dijelaskan upaya 
-mengurangi dampak limbah deterjen melalui tindakan membangun saluran IPAL yang baik 
-serta mengelola limbah detergen sebelum dibuang ke perairan. 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oleh karena itu, diperlukan strategi pencegahan yang lebih fundamental, yaitu 
+menanggulangi sampah sebelum sampah itu terbentuk. Andai saja sampah plastik dapat 
+kita telan dan tidak berbahaya bagi kesehtan kita, pasti akan mengurangi jumlah sampah 
+plastik di Indonesia dan menjadi solusi dari permasalahan diatas!
                   </p>
-                  {soal.slice(0, 1).map((item, index) => (
-                    <div key={item.id} className="pb-6">
-                      <h3 className="mb-3">
-                        {item.pertanyaan}
-                      </h3>
-                      <textarea
-                        value={jawaban[item.id] || ''}
-                        onChange={(e) => handleJawabanChange(item.id, e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
-                        placeholder="Tulis jawaban Anda di sini..."
-                      />
-                      <button
-                        onClick={() => handleSubmit(item.id)}
-                        disabled={saving}
-                        className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
-                      >
-                        {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
-                      </button>
-                    </div>
-                  ))}
+                  <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eitt tapi memang bisa loh dimakan, namun harus melewati tahapan dan bahan yang 
+tepat. Bagaimana ya caranya menghasilkan sedotan dan plastik <i>packaging </i>yang sekaligus 
+bisa dimakan beserta makanannya?
+                  </p>
                 </CardDescription>
               </CardHeader>
             </div>
 
-            <div id="p" className="grid gap-16">
+            <div id="i" className="grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">
                   Merumuskan Hipotesis
@@ -154,18 +196,16 @@ serta mengelola limbah detergen sebelum dibuang ke perairan.
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studi pembuatan cairan pembersih dari bahan organik berkembang sebagai 
-respons terhadap meningkatnya pencemaran lingkungan akibat penggunaan pembersih 
-sintetis berbahan kimia keras. Pemanfaatan bahan organik yang mudah terurai 
-<i> (biodegradable)</i>, seperti kulit jeruk, lemon, nanas, daun sirih, lerak, dan sisa fermentasi 
-bahan dapur, yang memiliki kandungan senyawa aktif alami. Senyawa seperti asam sitrat, 
-<i> saponin, flavonoid</i>, dan minyak atsiri diketahui memiliki sifat pembersih, antibakteri, dan 
-penghilang bau, sehingga berpotensi menggantikan fungsi deterjen sintetis. 
-                  </p>
-                  <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pada Praktikum kali ini kita akan membat cairan pembersih dari bahan organik. 
-Percobaan ini bertujuan untuk membuat cairan pembersih yang ramah lingkungan sebagai 
-salah satu solusi menanggulangi pencemaran air akibat cairan pembersih komersial.
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Berbagai upaya penanggulangan sampah telah dilakukan melalui pendekatan 
+pencegahan, seperti membawa <i>tumbler </i>dan wadah makan dari rumah serta melakukan 
+pemilahan sampah. Namun, langkah-langkah tersebut masih bergantung pada perilaku 
+individu dan belum sepenuhnya mampu menekan timbulan sampah, khususnya sampah 
+kemasan sekali pakai. Oleh karena itu, diperlukan strategi pencegahan yang lebih 
+fundamental, yaitu menanggulangi sampah sebelum sampah itu terbentuk. Salah satu 
+solusi inovatif yang dapat diterapkan adalah pengembangan produk <i>edible packaging </i>atau 
+kemasan yang dapat dimakan. Kemasan ini tidak hanya berfungsi sebagai pelindung 
+makanan, tetapi juga dapat dikonsumsi bersama produk yang dikemas, sehingga secara 
+langsung menghilangkan potensi sampah.
                   </p>
                   {soal.slice(1, 2).map((item, index) => (
                     <div key={item.id} className="pb-6">
@@ -191,19 +231,17 @@ salah satu solusi menanggulangi pencemaran air akibat cairan pembersih komersial
               </CardHeader>
             </div>
 
-            <div id="q" className="grid gap-16">
+            <div id="j" className="grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">
                   Mengumpulkan Data dan Menguji Hipotesis
-                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
                   <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>
-                    Rancanglah alat dan bahan serta langkah kerja dalam praktikum ini dengan menghimpun 
-informasi dari berbagai sumber!
+                    Carilah informasi dari berbagai sumber untuk menguji hipotesis yang telah kalian buat!
                   </p>
-                  {soal.slice(2, 5).map((item, index) => (
+                  {soal.slice(2, 3).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
                         {item.pertanyaan}
@@ -227,12 +265,11 @@ informasi dari berbagai sumber!
               </CardHeader>
             </div>
 
-            <div id="r" className="grid gap-16">
+            <div id="k" className="grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">Hasil Pengamatan</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  <p><i>Organoleptik</i></p>
-                  {soal.slice(5, 6).map((item, index) => (
+                  {soal.slice(3, 4).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
                         {item.pertanyaan}
@@ -256,78 +293,14 @@ informasi dari berbagai sumber!
               </CardHeader>
             </div>
 
-            <div id="s" className="grid gap-16">
+            <div id="l" className="grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">
                   Analisis Data
                   <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  <div className="flex gap-2">
-                    <p className="">1.</p>
-                    <div className="grid gap-4">
-                      <p>Analisis <i>Oganoleptik</i></p>  
-                      {soal.slice(6, 7).map((item, index) => (
-                        <div key={item.id} className="pb-6">
-                          <h3 className="mb-3">
-                            {item.pertanyaan}
-                          </h3>
-                          <textarea
-                            value={jawaban[item.id] || ''}
-                            onChange={(e) => handleJawabanChange(item.id, e.target.value)}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
-                            placeholder="Tulis jawaban Anda di sini..."
-                          />
-                          <button
-                            onClick={() => handleSubmit(item.id)}
-                            disabled={saving}
-                            className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
-                          >
-                            {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
-                          </button>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex gap-2">
-                    <p className="">2.</p>
-                    <div className="grid gap-4">
-                      <p>Analisis Prinsip <i>Green Chemistry</i></p>
-                      {soal.slice(7, 8).map((item, index) => (
-                        <div key={item.id} className="pb-6">
-                          <h3 className="mb-3">
-                            {item.pertanyaan}
-                          </h3>
-                          <textarea
-                            value={jawaban[item.id] || ''}
-                            onChange={(e) => handleJawabanChange(item.id, e.target.value)}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
-                            placeholder="Tulis jawaban Anda di sini..."
-                          />
-                          <button
-                            onClick={() => handleSubmit(item.id)}
-                            disabled={saving}
-                            className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
-                          >
-                            {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
-                          </button>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </CardDescription>
-              </CardHeader>
-            </div>
-
-            <div id="t" className="grid gap-16">
-              <CardHeader>
-                <CardTitle className="flex gap-4">
-                  Kesimpulan
-                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
-                </CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  {soal.slice(8, 9).map((item, index) => (
+                  {soal.slice(4, 6).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
                         {item.pertanyaan}
@@ -351,11 +324,51 @@ informasi dari berbagai sumber!
               </CardHeader>
             </div>
 
-            <div id="u" className="grid gap-16">
+            <div id="m" className="grid gap-16">
+              <CardHeader>
+                <CardTitle className="flex gap-4">
+                  Kesimpulan
+                  <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
+                </CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-justify text-black">
+                  {soal.slice(6, 7).map((item, index) => (
+                    <div key={item.id} className="pb-6">
+                      <h3 className="mb-3">
+                        {item.pertanyaan}
+                      </h3>
+                      <textarea
+                        value={jawaban[item.id] || ''}
+                        onChange={(e) => handleJawabanChange(item.id, e.target.value)}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
+                        placeholder="Tulis jawaban Anda di sini..."
+                      />
+                      <button
+                        onClick={() => handleSubmit(item.id)}
+                        disabled={saving}
+                        className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
+                      >
+                        {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
+                      </button>
+                    </div>
+                  ))}
+                </CardDescription>
+              </CardHeader>
+            </div>
+
+            <div id="tugas" className="grid gap-16 pb-6">
+              <CardHeader>
+                <CardTitle>Tugas</CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-black">
+                  <p>Yuk cek pemahamanmu dengan klik <a href="https://drive.google.com/drive/folders/1AxF5EMR93UzoR1H9jAgNL4NlYqD6zVuP?usp=drive_link" className="hover:underline text-green-500 hover:text-green-600">link berikut</a> untuk mengerjakan lembar kerja!</p>
+                </CardDescription>
+              </CardHeader>
+            </div>
+
+            <div id="n" className="grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">Evaluasi Proses Belajar</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  {soal.slice(9, 10).map((item, index) => (
+                  {soal.slice(7, 8).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
                         {item.pertanyaan}

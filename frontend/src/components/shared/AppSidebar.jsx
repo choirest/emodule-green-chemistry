@@ -7,7 +7,6 @@ import {
   BookOpen, 
   FileText, 
   ClipboardList, 
-  BookMarked, 
   LayoutDashboard, 
   Users, 
   FlaskConical
@@ -33,11 +32,11 @@ const AppSidebar = () => {
     { label: "Halaman Francis", href: "/francis", icon: User },
     { label: "Kata Pengantar", href: "/kata-pengantar", icon: BookOpen },
     { label: "Pendahuluan", href: "/pendahuluan", icon: FileText },
-    { label: "Pretest", href: "/pretest", icon: ClipboardList },
+    { label: "Kerangka E-Module", href: "/kerangka-modul", icon: ClipboardList },
     { 
-      label: "Materi dan Kata Kunci", 
-      href: "/materi", 
-      icon: BookMarked,
+      label: "Kegiatan 1", 
+      href: "/kegiatan-1", 
+      icon: FlaskConical,
       submenu: [
         { label: "Pengertian Kimia Hijau", href: "#a" },
         { label: "12 Prinsip Kimia Hijau", href: "#b" },
@@ -53,11 +52,12 @@ const AppSidebar = () => {
         { label: "10. Design for Degradation", href: "#10" },
         { label: "11. Real-Time Pollution Prevention", href: "#11" },
         { label: "12. Safer Chemistry for Accident Prevention", href: "#12" },
+        { label: "Tugas", href: "#tugas" },
       ],
     },
     {
-      label: "Kegiatan 1",
-      href: "/kegiatan-1",
+      label: "Kegiatan 2",
+      href: "/kegiatan-2",
       icon: FlaskConical,
       submenu: [
         { label: "Identifikasi Masalah", href: "#a" },
@@ -66,12 +66,13 @@ const AppSidebar = () => {
         { label: "Hasil Pengamatan", href: "#d" },
         { label: "Analisis Data", href: "#e" },
         { label: "Kesimpulan", href: "#f" },
+        { label: "Tugas", href: "#tugas" },
         { label: "Evaluasi Proses Belajar", href: "#g" },
       ],
     },
     {
-      label: "Kegiatan 2",
-      href: "/kegiatan-2",
+      label: "Kegiatan 3",
+      href: "/kegiatan-3",
       icon: FlaskConical,
       submenu: [
         { label: "Identifikasi Masalah", href: "#h" },
@@ -80,12 +81,13 @@ const AppSidebar = () => {
         { label: "Hasil Pengamatan", href: "#k" },
         { label: "Analisis Data", href: "#l" },
         { label: "Kesimpulan", href: "#m" },
+        { label: "Tugas", href: "#tugas" },
         { label: "Evaluasi Proses Belajar", href: "#n" },
       ],
     },
     {
-      label: "Kegiatan 3",
-      href: "/kegiatan-3",
+      label: "Kegiatan 4",
+      href: "/kegiatan-4",
       icon: FlaskConical,
       submenu: [
         { label: "Identifikasi Masalah", href: "#o" },
@@ -94,16 +96,14 @@ const AppSidebar = () => {
         { label: "Hasil Pengamatan", href: "#r" },
         { label: "Analisis Data", href: "#s" },
         { label: "Kesimpulan", href: "#t" },
+        { label: "Tugas", href: "#tugas" },
         { label: "Evaluasi Proses Belajar", href: "#u" },
       ],
     },
-    { 
-      label: "Post Test", href: "/post-test", icon: ClipboardList,
-      submenu: [
-        { label: "Glosarium", href: "#glosarium" },
-        { label: "Daftar Pustaka", href: "#pustaka" },
-      ],
-    },
+    { label: "Evaluasi", href: "/evaluasi", icon: ClipboardList },
+    { label: "Kunci Jawaban dan Pedoman Penskoran", href: "/kunci-jawaban", icon: ClipboardList },
+    { label: "Glosarium", href: "/glosarium", icon: FileText },
+    { label: "Daftar Pustaka", href: "/daftar-pustaka", icon: BookOpen },
   ]
 
   const adminMenus = [
@@ -121,7 +121,7 @@ const AppSidebar = () => {
             <div className="p-2 flex items-center">
               <Link to="/" className="flex items-center gap-2 font-semibold text-lg">
                 <div className="w-full h-8 rounded-lg flex gap-4 items-center justify-center text-green-500">
-                  <img src="/gr-ch.png" alt="Green Chemistry" className="w-8 h-8" />
+                  <img src="/uns.png" alt="Green Chemistry" className="w-8 h-8" />
                   <h3>E-Modul <br/>Kimia Hijau</h3>
                 </div>
               </Link>
