@@ -15,7 +15,7 @@ const Kerangka = () => {
           <div className="pt-6 grid gap-16">
             <CardHeader>
               <CardDescription className="grid gap-2 text-black">
-                <p>Klik <a href="https://bit.ly/KuncidanPedoman" className="hover:underline text-green-500 hover:text-green-600">link berikut</a> untuk mengakses kerangka <i>e-module</i>!</p>
+                <p>Klik <a href="https://drive.google.com/drive/folders/18XLApW44nZmYBliXqMSJMKwU-TjGqQaz?usp=sharing" className="hover:underline text-green-500 hover:text-green-600">link berikut</a> untuk mengakses kerangka <i>e-module</i>!</p>
               </CardDescription>
             </CardHeader>
           </div>
