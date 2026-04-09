@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Card, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import api from '@/services/api';
 import { ScrollArea } from '../ui/scroll-area';
@@ -11,7 +11,6 @@ const Kegiatan1 = () => {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
-  const scrollAreaRef = useRef(null);
 
   useEffect(() => {
     fetchSoal();
@@ -73,6 +72,14 @@ const Kegiatan1 = () => {
       </div>
     );
   }
+
+  const scrollToSection = (id) => {
+  const viewport = document.querySelector('[data-radix-scroll-area-viewport]');
+  const target = document.getElementById(id);
+    if (viewport && target) {
+      viewport.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="p-4">
@@ -175,7 +182,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
             <Card className="bg-green-600 p-4">
               <div className="grid xl:grid-cols-4 gap-4">
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('1')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >
@@ -185,7 +192,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </Card>
 
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('2')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >
@@ -195,7 +202,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </Card>
 
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('3')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >
@@ -205,7 +212,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </Card>
 
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('4')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >
@@ -215,7 +222,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </Card>
 
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('5')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >
@@ -225,7 +232,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </Card>
 
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('6')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >
@@ -235,7 +242,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </Card>
 
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('7')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >
@@ -245,7 +252,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </Card>
 
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('8')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >
@@ -255,7 +262,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </Card>
 
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('9')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >
@@ -265,7 +272,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </Card>
 
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('10')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >
@@ -275,7 +282,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </Card>
 
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('11')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >
@@ -285,7 +292,7 @@ adalah analisis mengenai apa dan bagaimana prinsip kimia hijau :
                 </Card>
 
                 <Card className="bg-white hover:bg-green-100">
-                  <button 
+                  <button
                     onClick={() => scrollToSection('12')} 
                     className="p-2 flex flex-col gap-2 items-center text-center w-full"
                   >

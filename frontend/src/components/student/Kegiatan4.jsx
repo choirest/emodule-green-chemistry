@@ -474,7 +474,7 @@ informasi dari berbagai sumber!
               <CardHeader>
                 <CardTitle>Tugas</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-black">
-                  <p>Yuk cek pemahamanmu mengenai isu <i>Food Waste</i> serta kaitannya dengan <i>Green Chemistry</i> melalui <a href="https://bit.ly/GCuntukKeberlanjutanAirSungai" className="hover:underline text-green-500 hover:text-green-600">link berikut</a>!</p>
+                  <p>Yuk cek pemahamanmu melalui <a href="https://bit.ly/GCuntukKeberlanjutanAirSungai" className="hover:underline text-green-500 hover:text-green-600">link berikut</a>!</p>
                 </CardDescription>
               </CardHeader>
             </div>
