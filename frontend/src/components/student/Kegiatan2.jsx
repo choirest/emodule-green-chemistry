@@ -152,6 +152,10 @@ serta mendukung prinsip-prinsip keberlanjutan yang sejalan dengan konsep kimia h
                       </button>
                     </div>
                   ))}
+                  <p>Mari kita identifikasi sistem <i>food waste</i> dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
+                  <a href="https://drive.google.com/drive/folders/1A9d4R73BqM_Zc-wpQPPKI3a85BPtgx9y">
+                    <img src="/k2.1.png" alt="greenchemistry" className="w-1/4 mx-auto my-4"/>
+                  </a>
                 </CardDescription>
               </CardHeader>
             </div>
@@ -164,7 +168,7 @@ serta mendukung prinsip-prinsip keberlanjutan yang sejalan dengan konsep kimia h
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menurut data <i>World Bank </i>2019 sampah organik menjadi salah salah satu 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menurut data <i>World Bank</i> 2019 sampah organik menjadi salah salah satu 
 penyumbang terbesar sampah di Indonesia. Apa benar ya? Yuk kita simak vidio berikut 
                   </p>
                   <iframe
@@ -183,6 +187,10 @@ pupuk lho! Sebuah studi ilmiah dari <i>SPECTA Journal of Technology </i>tahun 20
 pemanfaatan produk biokonversi dari limbah organik termasuk limbah rumah tangga 
 sebagai pupuk organik cair yang diuji pada pertumbuhan tanaman <i>miana</i>.
                   </p>
+                  <p>Mari kita lanjutkan identifikasi sistem <i>food waste</i> dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
+                  <a href="https://drive.google.com/drive/folders/1yC1auvIULiw6vG8atHZszNXugaV9_gtQ">
+                    <img src="/k2.2.png" alt="greenchemistry" className="w-1/4 mx-auto my-4"/>
+                  </a>
                   {soal.slice(2, 3).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">

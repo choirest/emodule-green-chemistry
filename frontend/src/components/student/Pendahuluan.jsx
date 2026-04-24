@@ -73,6 +73,25 @@ const Pendahuluan = () => {
                 </p>
               </CardDescription>
             </CardHeader>
+
+            <div className="w-fit px-8 justify-center mx-auto pb-12">
+              <Card className="bg-green-600 p-4">
+                <div className="grid xl:grid-cols-2 gap-4">
+                  <Card className="bg-white hover:bg-green-100">
+                    <a href="https://drive.google.com/drive/folders/1DObq2KP7ADULb9CrasRglm5RJV8nmmZl" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                      <p className="text-green-600">System Thinking</p>
+                      <img src="/st.png" alt="greenchemistry" className="w-16 h-16" />
+                    </a>
+                  </Card>
+                  <Card className="bg-white hover:bg-green-100">
+                    <a href="https://drive.google.com/drive/folders/1q0ZPTd1fABokMvwu4IBGkhzOH8ZgrxBK" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                      <p className="text-green-600">Sustainability Literacy</p>
+                      <img src="/sl.png" alt="greenchemistry" className="w-16 h-16" />
+                    </a>
+                  </Card>
+                </div>
+              </Card>
+            </div>
             
             <CardHeader>
               <CardTitle>Pengetahuan Prasyarat</CardTitle>

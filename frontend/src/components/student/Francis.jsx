@@ -39,19 +39,19 @@ const Francis = () => {
                 <p className="col-span-1 font-semibold">Tim Penyusun</p>
                 <div className="w-4/5 mx-auto py-8 grid xl:flex gap-4">
                   <div className="grid gap-4 w-fit justify-items-center mx-auto">
-                    <img src="/annisa.png" alt="Adik Annisa Fitri Suryani S.Pd." width={150} height={150} className="bg-green-600 rounded-lg" />
+                    <img src="/fr1.png" alt="Adik Annisa Fitri Suryani S.Pd." className="w-40 h-50 bg-green-600 rounded-lg object-cover object-top" />
                     <div className="grid gap-1 mx-auto text-center">
                       <p className=" mx-auto">Adik Annisa Fitri Suryani S.Pd.</p>
                     </div>
                   </div>
                   <div className="grid gap-4 w-fit justify-items-center mx-auto">
-                    <img src="/masykuri.png" alt="Prof. Dr. Mohammad Masykuri, M.Si." width={150} height={150} className="bg-green-600 rounded-lg" />
+                    <img src="/fr2.png" alt="Prof. Dr. Mohammad Masykuri, M.Si." className="w-40 h-50 bg-green-600 rounded-lg object-cover object-top" />
                     <div className="grid gap-1 mx-auto text-center">
                       <p className=" mx-auto">Prof. Dr. Mohammad Masykuri, M.Si.</p>
                     </div>
                   </div>
                   <div className="grid gap-4 w-fit justify-items-center mx-auto">
-                    <img src="/maria.png" alt="Dr. Maria Ulfa, S.Si., M.Si." width={150} height={150} className="bg-green-600 rounded-lg" />
+                    <img src="/fr3.png" alt="Dr. Maria Ulfa, S.Si., M.Si." className="w-40 h-50 bg-green-600 rounded-lg object-cover object-top" />
                     <div className="grid gap-1 mx-auto text-center">
                       <p className=" mx-auto">Dr. Maria Ulfa, S.Si., M.Si.</p>
                     </div>

@@ -181,9 +181,9 @@ benar-benar hilang, melainkan mengalir ke sungai, danau, atau meresap ke tanah s
 berpotensi mencemari lingkungan perairan.
                   </p>
                   <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kandungan kimia dalam deterjen, seperti <i>surfaktan, fosfat</i>, pewangi, dan zat aditif 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kandungan kimia dalam deterjen, seperti surfaktan, fosfat, pewangi, dan zat aditif 
 lainnya, yang berfungsi untuk mengangkat kotoran namun memiliki dampak negatif jika 
-masuk ke lingkungan. <i>Surfaktan </i>dijelaskan dapat menurunkan tegangan permukaan air 
+masuk ke lingkungan. Surfaktan dijelaskan dapat menurunkan tegangan permukaan air 
 sehingga mengganggu sistem pernapasan organisme air, sementara <i>fosfat </i>dapat memicu 
 pertumbuhan alga secara berlebihan. Kondisi ini menyebabkan eutrofikasi, yaitu 
 menurunnya kadar oksigen terlarut dalam air, yang pada akhirnya dapat menyebabkan 
@@ -199,6 +199,10 @@ kesehatan dan keberlanjutan kehidupan manusia. Dalam vidio dijelaskan upaya
 mengurangi dampak limbah deterjen melalui tindakan membangun saluran IPAL yang baik 
 serta mengelola limbah detergen sebelum dibuang ke perairan. 
                   </p>
+                  <p>Limbah detergen juga dapat menyebakan terjadinya eutrofikasi loh! Apa itu Eutrofikasi? Yuk kita identifikasi sistem eutrofikasi dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
+                  <a href="https://drive.google.com/drive/folders/1IIonwgLLXVrh6fdG2S1U3pq71uxGYx0c">
+                    <img src="/k4.1.png" alt="greenchemistry" className="w-1/4 mx-auto my-4"/>
+                  </a>
                   {soal.slice(0, 1).map((item, index) => (
                     <div key={item.id} className="pb-6">
                       <h3 className="mb-3">
@@ -236,9 +240,13 @@ respons terhadap meningkatnya pencemaran lingkungan akibat penggunaan pembersih
 sintetis berbahan kimia keras. Pemanfaatan bahan organik yang mudah terurai 
 <i> (biodegradable)</i>, seperti kulit jeruk, lemon, nanas, daun sirih, lerak, dan sisa fermentasi 
 bahan dapur, yang memiliki kandungan senyawa aktif alami. Senyawa seperti asam sitrat, 
-<i> saponin, flavonoid</i>, dan minyak atsiri diketahui memiliki sifat pembersih, antibakteri, dan 
+ saponin, flavonoid, dan minyak atsiri diketahui memiliki sifat pembersih, antibakteri, dan 
 penghilang bau, sehingga berpotensi menggantikan fungsi deterjen sintetis. 
                   </p>
+                  <p>Sebelum kita melanjutkan untuk merancang kegiatan praktikum, mari kita lanjutkan terlebih dahulu melakukan identifikasi lanjutan sistem eutrofikasi  dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
+                  <a href="https://drive.google.com/drive/folders/1xtM0xlkXe_dH6qS0cciLi7Sldxif9Z5J">
+                    <img src="/k4.2.png" alt="greenchemistry" className="w-1/4 mx-auto my-4"/>
+                  </a>
                   <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pada Praktikum kali ini kita akan membat cairan pembersih dari bahan organik. 
 Percobaan ini bertujuan untuk membuat cairan pembersih yang ramah lingkungan sebagai 

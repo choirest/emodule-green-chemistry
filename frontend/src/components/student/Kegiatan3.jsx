@@ -87,7 +87,7 @@ const Kegiatan3 = () => {
               </CardDescription>
               <Separator />
             </CardHeader>
-            <div id="h" className="pt-6 grid gap-16">
+            <div id="h" className="pt-6 grid gap-8">
               <CardHeader>
                 <CardTitle className="flex gap-4">
                   Identifikasi Masalah
@@ -114,13 +114,13 @@ ada di tanah, di sungai, dan sampai bikin benua sendiri di samudera sana. Sekara
 mungkin ngeri mikirin seberapa banyak sih sebenernya sampah plastik di dunia? Dan 
 sebahaya apakah mereka?
                   </p>
-                  <p>
+                  {/* <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Video tersebut membahas seberapa berbahaya sampah plastik bagi kehidupan kita. 
 Secara keseluruhan, uraian mengenai sampah plastik dan bahayanya bisa kita gambarkan 
 dalam konsep <i>mapping </i>berikut!
                   </p>
                   <img src="/mapping.png" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
-                  <p className="italic text-center text-xs mb-2">Konsep Mapping</p>
+                  <p className="italic text-center text-xs mb-2">Konsep Mapping</p> */}
                   <img src="/keg2a.jpg" alt="greenchemistry" className="w-1/2 mx-auto mt-4" />
                   <p className="italic text-center text-xs mb-2">(Sumber: rejekiabadi)</p>
                   <p>
@@ -156,6 +156,10 @@ beritanya!
                     allowFullScreen>
                   </iframe>
                   <p className="italic text-center text-xs mb-2">Sumber: CNN Indonesia</p>
+                  <p>Mari kita identifikasi sistem sampah plastik dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
+                  <a href="https://drive.google.com/drive/folders/1eg3Orvs6LSnzt8DyZMxsgUTwYPEImIVc">
+                    <img src="/k3.1.png" alt="greenchemistry" className="w-1/4 mx-auto my-4"/>
+                  </a>
                   </CardDescription>
               </CardHeader>
 
@@ -184,11 +188,15 @@ plastik di Indonesia dan menjadi solusi dari permasalahan diatas!
 tepat. Bagaimana ya caranya menghasilkan sedotan dan plastik <i>packaging </i>yang sekaligus 
 bisa dimakan beserta makanannya?
                   </p>
+                  <p>Mari kita lanjutkan identifikasi sistem sampah plastik dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
+                  <a href="https://drive.google.com/drive/folders/18HYq4Rh0NX_MjVMig5BfwyHv2Q3zMD6L">
+                    <img src="/k3.2.png" alt="greenchemistry" className="w-1/4 mx-auto my-4"/>
+                  </a>
                 </CardDescription>
               </CardHeader>
             </div>
 
-            <div id="i" className="grid gap-16">
+            <div id="i" className="grid gap-8">
               <CardHeader>
                 <CardTitle className="flex gap-4">
                   Merumuskan Hipotesis

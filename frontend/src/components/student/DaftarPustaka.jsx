@@ -16,7 +16,7 @@ const DaftarPustaka = () => {
             <div id="pustaka">
               <CardHeader>
                 <CardDescription className="grid gap-2 text-justify text-black">
-                  <p>
+                  {/* <p>
                     Anastas, P. A. (2019) Beyond reductionism thinking in chemistry for sustainability. Trends in Chemistry, 1, 145–148.
                   </p>
                   <p>
@@ -51,7 +51,44 @@ const DaftarPustaka = () => {
                   </p>
                   <p>
                     World Economic Forum, Ellen MacArthur Foundation and McKinsey and Company. (2016). The New Plastics Economy Rethinking the Future of Plastics.
-                  </p>
+                  </p> */}
+                  <div className="w-fit px-8 justify-center mx-auto pb-12">
+                    <div className="grid xl:grid-cols-6 gap-4">
+                      <a href="https://drive.google.com/file/d/1X1fHT-DEa7orvApO-ODAQrtD6TRPhH8R/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                        <img src="/dp1.png" alt="greenchemistry" className="" />
+                      </a>
+                      <a href="https://drive.google.com/file/d/16z2sAo3o9mJo5Dtnr0755mt4AXMVao8W/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                        <img src="/dp2.png" alt="greenchemistry" className="" />
+                      </a>
+                      <a href="https://drive.google.com/file/d/198mtQoJeXTlyzCcxVITFuOSSaftUyakW/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                        <img src="/dp3.png" alt="greenchemistry" className="" />
+                      </a>
+                      <a href="https://drive.google.com/file/d/1rg3qs4RdGzF85kioglPz7a3C5RA0fXrQ/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                        <img src="/dp4.png" alt="greenchemistry" className="" />
+                      </a>
+                      <a href="https://drive.google.com/file/d/1vc6d8CMK0Z9X35pOvy4SdTSn2_53T0Ln/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                        <img src="/dp5.png" alt="greenchemistry" className="" />
+                      </a>
+                      <a href="https://drive.google.com/file/d/1Sh95AOjo1qBtc0HkHErF-K_JlGgRePIl/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                        <img src="/dp6.png" alt="greenchemistry" className="" />
+                      </a>
+                      <a href="https://drive.google.com/file/d/10mScDvuuj0Tkq5u0SxfK1F5vjgHyzn1j/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                        <img src="/dp7.png" alt="greenchemistry" className="" />
+                      </a>
+                      <a href="https://drive.google.com/file/d/1gdeiNkwmDNrrgz8Lu_PWhuLwpP75tHwv/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                        <img src="/dp8.png" alt="greenchemistry" className="" />
+                      </a>
+                      <a href="https://drive.google.com/file/d/16DADWU3fijLNCf_idt5KRKDNUhXUl6bh/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                        <img src="/dp9.png" alt="greenchemistry" className="" />
+                      </a>
+                      <a href="https://drive.google.com/file/d/1945TlG5t_JEJEQN7izbpFsJicRvZJFkD/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                        <img src="/dp10.png" alt="greenchemistry" className="" />
+                      </a>
+                      <a href="https://drive.google.com/file/d/1OKV62uuNnJQiVVx_Mx9V9XQadkesTJ5a/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                        <img src="/dp11.png" alt="greenchemistry" className="" />
+                      </a>
+                    </div>
+                  </div>
                 </CardDescription>
               </CardHeader>
             </div>
