@@ -42,10 +42,7 @@ const Kegiatan2 = () => {
   };
 
   const handleJawabanChange = (soalId, value) => {
-    setJawaban({
-      ...jawaban,
-      [soalId]: value
-    });
+    setJawaban({ ...jawaban, [soalId]: value });
   };
 
   const handleSubmit = async (soalId) => {
@@ -73,20 +70,46 @@ const Kegiatan2 = () => {
     );
   }
 
+  // Reusable textarea + tombol simpan
+  const SoalItem = ({ item }) => (
+    <div className="pb-6">
+      <h3 className="mb-3">{item.pertanyaan}</h3>
+      <textarea
+        value={jawaban[item.id] || ''}
+        onChange={(e) => handleJawabanChange(item.id, e.target.value)}
+        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
+        placeholder="Tulis jawaban Anda di sini..."
+      />
+      <button
+        onClick={() => handleSubmit(item.id)}
+        disabled={saving}
+        className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
+      >
+        {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
+      </button>
+    </div>
+  );
+
   return (
     <>
-      <section className="p-4">
-        <Card>
-          <ScrollArea className="h-144">
+      <section className="p-4 overflow-hidden">
+        <Card className="overflow-hidden">
+          <ScrollArea className="h-144 overflow-x-hidden">
             <CardHeader>
-            <CardTitle className="text-xl text-center">Kegiatan 2</CardTitle>
-            <CardDescription className="my-4 grid gap-2 text-justify text-black">
-              <p className="font-semibold text-center text-lg mb-4">"<i>Food Waste</i> dalam Kacamata Kimia Hijau"</p>
+              <CardTitle className="text-xl text-center">Kegiatan 2</CardTitle>
+              <CardDescription className="my-4 grid gap-2 text-justify text-black">
+                <p className="font-semibold text-center text-lg mb-4">
+                  "<i>Food Waste</i> dalam Kacamata Kimia Hijau"
+                </p>
+                <Separator />
+                <p className="mt-4">
+                  <span className="font-semibold">Tujuan:</span> Menganalisis Prinsip Kimia Hijau dalam kehidupan sehari-hari
+                </p>
+              </CardDescription>
               <Separator />
-              <p className="mt-4"><span className="font-semibold">Tujuan:</span> Menganalisis Prinsip Kimia Hijau dalam kehidupan sehari-hari</p>
-            </CardDescription>
-            <Separator />
-          </CardHeader>
+            </CardHeader>
+
+            {/* A - Identifikasi Masalah */}
             <div id="a" className="pt-6 grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">
@@ -96,70 +119,59 @@ const Kegiatan2 = () => {
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                   <p>Perhatikan video dibawah ini</p>
-                  <iframe
-                    className="md:w-100 md:h-72 mx-auto"
-                    src="https://www.youtube.com/embed/wgLuXvtaLyQ?si=2AiqBb9Hu0h0-MUo" 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    allowFullScreen>
-                  </iframe>
+                  <div className="w-full aspect-video">
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/wgLuXvtaLyQ?si=2AiqBb9Hu0h0-MUo"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
                   <p className="italic text-center text-xs mb-2">Sumber: OzHarvest</p>
-                  <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Video tersebut membahas isu <i>food waste </i>(pemborosan makanan) sebagai salah 
-satu permasalahan lingkungan yang sering terjadi dalam kehidupan sehari-hari, khususnya 
-di tingkat rumah tangga. Video ini menekankan bahwa banyak makanan yang sebenarnya 
-masih layak konsumsi justru dibuang karena perencanaan yang kurang tepat, penyimpanan 
-yang tidak optimal, atau kesalahpahaman terhadap tanggal kedaluwarsa. Pemborosan 
-makanan ini tidak hanya berdampak pada kerugian ekonomi, tetapi juga berkontribusi 
-besar terhadap peningkatan volume sampah dan pencemaran lingkungan.
+                  <p className="indent-8">
+                    Video tersebut membahas isu <i>food waste</i> (pemborosan makanan) sebagai salah
+                    satu permasalahan lingkungan yang sering terjadi dalam kehidupan sehari-hari, khususnya
+                    di tingkat rumah tangga. Video ini menekankan bahwa banyak makanan yang sebenarnya
+                    masih layak konsumsi justru dibuang karena perencanaan yang kurang tepat, penyimpanan
+                    yang tidak optimal, atau kesalahpahaman terhadap tanggal kedaluwarsa. Pemborosan
+                    makanan ini tidak hanya berdampak pada kerugian ekonomi, tetapi juga berkontribusi
+                    besar terhadap peningkatan volume sampah dan pencemaran lingkungan.
                   </p>
-                  <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Makanan yang terbuang sebenarnya merepresentasikan sumber daya yang ikut 
-terbuang, seperti air, energi, tenaga kerja, dan bahan bakar yang digunakan selama proses 
-produksi, pengolahan, dan distribusi makanan. Ketika makanan dibuang ke tempat 
-pembuangan akhir, proses pembusukannya menghasilkan gas rumah kaca, terutama 
-metana, yang berkontribusi terhadap pemanasan global dan perubahan iklim. Oleh karena 
-itu, <i>food waste </i>dipandang sebagai masalah lingkungan yang serius dan berkaitan langsung 
-dengan keberlanjutan.
+                  <p className="indent-8">
+                    Makanan yang terbuang sebenarnya merepresentasikan sumber daya yang ikut
+                    terbuang, seperti air, energi, tenaga kerja, dan bahan bakar yang digunakan selama proses
+                    produksi, pengolahan, dan distribusi makanan. Ketika makanan dibuang ke tempat
+                    pembuangan akhir, proses pembusukannya menghasilkan gas rumah kaca, terutama
+                    metana, yang berkontribusi terhadap pemanasan global dan perubahan iklim. Oleh karena
+                    itu, <i>food waste</i> dipandang sebagai masalah lingkungan yang serius dan berkaitan langsung
+                    dengan keberlanjutan.
                   </p>
-                  <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Secara keseluruhan, video tersebut bertujuan untuk menumbuhkan kesadaran 
-bahwa <i>food waste </i>bukan sekadar masalah individu, melainkan permasalahan bersama 
-yang berdampak pada lingkungan dan masa depan keberlanjutan. Pesan utama yang 
-disampaikan adalah bahwa melalui langkah kecil dan konsisten dalam mengelola makanan, 
-setiap orang dapat berkontribusi dalam menjaga lingkungan, mengurangi pencemaran, 
-serta mendukung prinsip-prinsip keberlanjutan yang sejalan dengan konsep kimia hijau. 
+                  <p className="indent-8">
+                    Secara keseluruhan, video tersebut bertujuan untuk menumbuhkan kesadaran
+                    bahwa <i>food waste</i> bukan sekadar masalah individu, melainkan permasalahan bersama
+                    yang berdampak pada lingkungan dan masa depan keberlanjutan. Pesan utama yang
+                    disampaikan adalah bahwa melalui langkah kecil dan konsisten dalam mengelola makanan,
+                    setiap orang dapat berkontribusi dalam menjaga lingkungan, mengurangi pencemaran,
+                    serta mendukung prinsip-prinsip keberlanjutan yang sejalan dengan konsep kimia hijau.
                   </p>
-                  {soal.slice(0, 2).map((item, index) => (
-                    <div key={item.id} className="pb-6">
-                      <h3 className="mb-3">
-                        {item.pertanyaan}
-                      </h3>
-                      <textarea
-                        value={jawaban[item.id] || ''}
-                        onChange={(e) => handleJawabanChange(item.id, e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
-                        placeholder="Tulis jawaban Anda di sini..."
-                      />
-                      <button
-                        onClick={() => handleSubmit(item.id)}
-                        disabled={saving}
-                        className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
-                      >
-                        {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
-                      </button>
-                    </div>
+                  {soal.slice(0, 2).map((item) => (
+                    <SoalItem key={item.id} item={item} />
                   ))}
                   <p>Mari kita identifikasi sistem <i>food waste</i> dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
-                  <a href="https://drive.google.com/drive/folders/1A9d4R73BqM_Zc-wpQPPKI3a85BPtgx9y">
-                    <img src="/k2.1.png" alt="greenchemistry" className="w-1/4 mx-auto my-4"/>
+                  <a
+                    href="https://drive.google.com/drive/folders/1A9d4R73BqM_Zc-wpQPPKI3a85BPtgx9y"
+                    className="block w-1/2 sm:w-1/3 mx-auto my-4 p-4 bg-green-600 rounded-lg"
+                  >
+                    <img src="/k2.1.png" alt="greenchemistry" className="w-full rounded-md" />
                   </a>
                 </CardDescription>
               </CardHeader>
             </div>
 
+            {/* B - Merumuskan Hipotesis */}
             <div id="b" className="grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">
@@ -167,54 +179,43 @@ serta mendukung prinsip-prinsip keberlanjutan yang sejalan dengan konsep kimia h
                   <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menurut data <i>World Bank</i> 2019 sampah organik menjadi salah salah satu 
-penyumbang terbesar sampah di Indonesia. Apa benar ya? Yuk kita simak vidio berikut 
+                  <p className="indent-8">
+                    Menurut data <i>World Bank</i> 2019 sampah organik menjadi salah satu
+                    penyumbang terbesar sampah di Indonesia. Apa benar ya? Yuk kita simak video berikut
                   </p>
-                  <iframe
-                    className="w-100 h-72 mx-auto"
-                    src="https://www.youtube.com/embed/JqNjPnsYXDY?si=49UimW9Sv4t0LkmN" 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    allowFullScreen>
-                  </iframe>                  
+                  <div className="w-full aspect-video">
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/JqNjPnsYXDY?si=49UimW9Sv4t0LkmN"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
                   <p className="italic text-center text-xs mb-2">Sumber: Siapdarling</p>
-                  <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dari vidio tersebut dinyatakan bahwa sampah organik bisa dirubah menjadi sediaan 
-pupuk lho! Sebuah studi ilmiah dari <i>SPECTA Journal of Technology </i>tahun 2025 membahas 
-pemanfaatan produk biokonversi dari limbah organik termasuk limbah rumah tangga 
-sebagai pupuk organik cair yang diuji pada pertumbuhan tanaman <i>miana</i>.
+                  <p className="indent-8">
+                    Dari video tersebut dinyatakan bahwa sampah organik bisa dirubah menjadi sediaan
+                    pupuk lho! Sebuah studi ilmiah dari <i>SPECTA Journal of Technology</i> tahun 2025 membahas
+                    pemanfaatan produk biokonversi dari limbah organik termasuk limbah rumah tangga
+                    sebagai pupuk organik cair yang diuji pada pertumbuhan tanaman <i>miana</i>.
                   </p>
                   <p>Mari kita lanjutkan identifikasi sistem <i>food waste</i> dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
-                  <a href="https://drive.google.com/drive/folders/1yC1auvIULiw6vG8atHZszNXugaV9_gtQ">
-                    <img src="/k2.2.png" alt="greenchemistry" className="w-1/4 mx-auto my-4"/>
+                  <a
+                    href="https://drive.google.com/drive/folders/1yC1auvIULiw6vG8atHZszNXugaV9_gtQ"
+                    className="block w-1/2 sm:w-1/3 mx-auto my-4 p-4 bg-green-600 rounded-lg"
+                  >
+                    <img src="/k2.2.png" alt="greenchemistry" className="w-full rounded-md" />
                   </a>
-                  {soal.slice(2, 3).map((item, index) => (
-                    <div key={item.id} className="pb-6">
-                      <h3 className="mb-3">
-                        {item.pertanyaan}
-                      </h3>
-                      <textarea
-                        value={jawaban[item.id] || ''}
-                        onChange={(e) => handleJawabanChange(item.id, e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
-                        placeholder="Tulis jawaban Anda di sini..."
-                      />
-                      <button
-                        onClick={() => handleSubmit(item.id)}
-                        disabled={saving}
-                        className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
-                      >
-                        {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
-                      </button>
-                    </div>
+                  {soal.slice(2, 3).map((item) => (
+                    <SoalItem key={item.id} item={item} />
                   ))}
                 </CardDescription>
               </CardHeader>
             </div>
 
+            {/* C - Mengumpulkan Data */}
             <div id="c" className="grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">
@@ -222,58 +223,26 @@ sebagai pupuk organik cair yang diuji pada pertumbuhan tanaman <i>miana</i>.
                   <img src="/sl.png" alt="greenchemistry" className="w-4 h-4" />
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  {soal.slice(3, 4).map((item, index) => (
-                    <div key={item.id} className="pb-6">
-                      <h3 className="mb-3">
-                        {item.pertanyaan}
-                      </h3>
-                      <textarea
-                        value={jawaban[item.id] || ''}
-                        onChange={(e) => handleJawabanChange(item.id, e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
-                        placeholder="Tulis jawaban Anda di sini..."
-                      />
-                      <button
-                        onClick={() => handleSubmit(item.id)}
-                        disabled={saving}
-                        className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
-                      >
-                        {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
-                      </button>
-                    </div>
+                  {soal.slice(3, 4).map((item) => (
+                    <SoalItem key={item.id} item={item} />
                   ))}
                 </CardDescription>
               </CardHeader>
             </div>
 
+            {/* D - Hasil Pengamatan */}
             <div id="d" className="grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">Hasil Pengamatan</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  {soal.slice(4, 5).map((item, index) => (
-                    <div key={item.id} className="pb-6">
-                      <h3 className="mb-3">
-                        {item.pertanyaan}
-                      </h3>
-                      <textarea
-                        value={jawaban[item.id] || ''}
-                        onChange={(e) => handleJawabanChange(item.id, e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
-                        placeholder="Tulis jawaban Anda di sini..."
-                      />
-                      <button
-                        onClick={() => handleSubmit(item.id)}
-                        disabled={saving}
-                        className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
-                      >
-                        {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
-                      </button>
-                    </div>
+                  {soal.slice(4, 5).map((item) => (
+                    <SoalItem key={item.id} item={item} />
                   ))}
                 </CardDescription>
               </CardHeader>
             </div>
 
+            {/* E - Analisis Data */}
             <div id="e" className="grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">
@@ -281,102 +250,60 @@ sebagai pupuk organik cair yang diuji pada pertumbuhan tanaman <i>miana</i>.
                   <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
                 </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  {soal.slice(5, 6).map((item, index) => (
-                    <div key={item.id} className="pb-6">
-                      <h3 className="mb-3">
-                        {item.pertanyaan}
-                      </h3>
-                      <textarea
-                        value={jawaban[item.id] || ''}
-                        onChange={(e) => handleJawabanChange(item.id, e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
-                        placeholder="Tulis jawaban Anda di sini..."
-                      />
-                      <button
-                        onClick={() => handleSubmit(item.id)}
-                        disabled={saving}
-                        className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
-                      >
-                        {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
-                      </button>
-                    </div>
+                  {soal.slice(5, 6).map((item) => (
+                    <SoalItem key={item.id} item={item} />
                   ))}
                 </CardDescription>
               </CardHeader>
             </div>
 
+            {/* F - Kesimpulan */}
             <div id="f" className="grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">
                   Kesimpulan
                   <img src="/st.png" alt="greenchemistry" className="w-4 h-4" />
-                  </CardTitle>
+                </CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  {soal.slice(6, 7).map((item, index) => (
-                    <div key={item.id} className="pb-6">
-                      <h3 className="mb-3">
-                        {item.pertanyaan}
-                      </h3>
-                      <textarea
-                        value={jawaban[item.id] || ''}
-                        onChange={(e) => handleJawabanChange(item.id, e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
-                        placeholder="Tulis jawaban Anda di sini..."
-                      />
-                      <button
-                        onClick={() => handleSubmit(item.id)}
-                        disabled={saving}
-                        className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
-                      >
-                        {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
-                      </button>
-                    </div>
+                  {soal.slice(6, 7).map((item) => (
+                    <SoalItem key={item.id} item={item} />
                   ))}
-                </CardDescription>
-              </CardHeader>
-            </div>
-            
-            <div id="tugas" className="grid gap-16 pb-6">
-              <CardHeader>
-                <CardTitle>Tugas</CardTitle>
-                <CardDescription className="pt-2 grid gap-4 text-black">
-                  <p>Yuk cek pemahamanmu megenai isu <i>Food Waste</i> serta kaitannya dengan <i>Green Chemistry</i> melalui <a href="https://bit.ly/FoodWasteinGC" className="hover:underline text-green-500 hover:text-green-600">link berikut</a>!</p>
                 </CardDescription>
               </CardHeader>
             </div>
 
+            {/* Tugas */}
+            <div id="tugas" className="grid gap-16 pb-6">
+              <CardHeader>
+                <CardTitle>Tugas</CardTitle>
+                <CardDescription className="pt-2 grid gap-4 text-black">
+                  <p>
+                    Yuk cek pemahamanmu mengenai isu <i>Food Waste</i> serta kaitannya dengan <i>Green Chemistry</i> melalui{' '}
+                    <a href="https://bit.ly/FoodWasteinGC" className="hover:underline text-green-500 hover:text-green-600">
+                      link berikut
+                    </a>!
+                  </p>
+                </CardDescription>
+              </CardHeader>
+            </div>
+
+            {/* G - Evaluasi Proses Belajar */}
             <div id="g" className="grid gap-16">
               <CardHeader>
                 <CardTitle className="flex gap-4">Evaluasi Proses Belajar</CardTitle>
                 <CardDescription className="pt-2 grid gap-4 text-justify text-black">
-                  {soal.slice(7, 8).map((item, index) => (
-                    <div key={item.id} className="pb-6">
-                      <h3 className="mb-3">
-                        {item.pertanyaan}
-                      </h3>
-                      <textarea
-                        value={jawaban[item.id] || ''}
-                        onChange={(e) => handleJawabanChange(item.id, e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent min-h-32"
-                        placeholder="Tulis jawaban Anda di sini..."
-                      />
-                      <button
-                        onClick={() => handleSubmit(item.id)}
-                        disabled={saving}
-                        className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors disabled:bg-gray-400"
-                      >
-                        {saving ? 'Menyimpan...' : 'Simpan Jawaban'}
-                      </button>
-                    </div>
+                  {soal.slice(7, 8).map((item) => (
+                    <SoalItem key={item.id} item={item} />
                   ))}
                 </CardDescription>
               </CardHeader>
             </div>
+
           </ScrollArea>
         </Card>
       </section>
     </>
   );
-}
+};
 
-export default Kegiatan2
+export default Kegiatan2;
