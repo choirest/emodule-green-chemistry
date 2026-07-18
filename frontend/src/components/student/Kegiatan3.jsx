@@ -92,6 +92,8 @@ const Kegiatan3 = () => {
     <a
       href={href}
       className="block w-1/2 sm:w-1/3 mx-auto my-4 p-4 bg-green-600 rounded-lg"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <img src={src} alt={alt} className="w-full rounded-md" />
     </a>
@@ -186,7 +188,7 @@ const Kegiatan3 = () => {
                 <p className="italic text-center text-xs mb-2">Sumber: CNN Indonesia</p>
                 <p>Mari kita identifikasi sistem sampah plastik dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
                 <LembarKerjaLink
-                  href="https://drive.google.com/drive/folders/1eg3Orvs6LSnzt8DyZMxsgUTwYPEImIVc"
+                  href="https://drive.google.com/file/d/19e00fzlQ6ilA3-s3hmd90sWtPxWzD1Q_/view?usp=sharing"
                   src="/k3.1.png"
                   alt="lembar kerja 3.1"
                 />
@@ -221,7 +223,7 @@ const Kegiatan3 = () => {
                 </p>
                 <p>Mari kita lanjutkan identifikasi sistem sampah plastik dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
                 <LembarKerjaLink
-                  href="https://drive.google.com/drive/folders/18HYq4Rh0NX_MjVMig5BfwyHv2Q3zMD6L"
+                  href="https://drive.google.com/file/d/1neg4FtJ5OAObBm3oZ4c-dhpK3oj8kfqG/view?usp=sharing"
                   src="/k3.2.png"
                   alt="lembar kerja 3.2"
                 />
@@ -322,7 +324,9 @@ const Kegiatan3 = () => {
                 <p>
                   Yuk cek pemahamanmu dengan klik{' '}
                   <a
-                    href="https://drive.google.com/drive/folders/1AxF5EMR93UzoR1H9jAgNL4NlYqD6zVuP?usp=drive_link"
+                    href="https://drive.google.com/file/d/1okrEUvNcmrFOrivkFey-dwQkH5LTSaEC/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:underline text-green-500 hover:text-green-600"
                   >
                     link berikut

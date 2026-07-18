@@ -162,7 +162,9 @@ const Kegiatan2 = () => {
                   ))}
                   <p>Mari kita identifikasi sistem <i>food waste</i> dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
                   <a
-                    href="https://drive.google.com/drive/folders/1A9d4R73BqM_Zc-wpQPPKI3a85BPtgx9y"
+                    href="https://drive.google.com/file/d/1Va67IJEMGY461i7RL0_7JuqyjkMXzOog/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block w-1/2 sm:w-1/3 mx-auto my-4 p-4 bg-green-600 rounded-lg"
                   >
                     <img src="/k2.1.png" alt="greenchemistry" className="w-full rounded-md" />
@@ -203,7 +205,9 @@ const Kegiatan2 = () => {
                   </p>
                   <p>Mari kita lanjutkan identifikasi sistem <i>food waste</i> dengan bersama sama mengerjakan lembar kerja dibawah ini!</p>
                   <a
-                    href="https://drive.google.com/drive/folders/1yC1auvIULiw6vG8atHZszNXugaV9_gtQ"
+                    href="https://drive.google.com/file/d/16LY1-luPbNIDjqdB73MFATvAAzw0XQqv/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block w-1/2 sm:w-1/3 mx-auto my-4 p-4 bg-green-600 rounded-lg"
                   >
                     <img src="/k2.2.png" alt="greenchemistry" className="w-full rounded-md" />

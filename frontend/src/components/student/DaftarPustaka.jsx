@@ -16,45 +16,9 @@ const DaftarPustaka = () => {
             <div id="pustaka">
               <CardHeader>
                 <CardDescription className="grid gap-2 text-justify text-black">
-                  {/* <p>
-                    Anastas, P. A. (2019) Beyond reductionism thinking in chemistry for sustainability. Trends in Chemistry, 1, 145–148.
-                  </p>
-                  <p>
-                    Brady, J.E., Holum, J.R. 1994. General of Chemistry, 5d Edition, New York: John 
-      Wiley & Son joshi, D.R and Nisha Adhikari. 2019. "Green Chemistry: Beginning”.
-                  </p>
-                  <p>
-                    D. H. Meadows. (2009). Thinking in Systems: A Primer. D Wright (ed.), Earthscan, London.
-                  </p>
-                  <p>
-                    International Organization for Standardization. ISO 17556:2019, Plastics - Determination of the Ultimate Aerobic Biodegradability of Plastic Materials in Soil by Measuring the Oxygen Demand in a Respirometer or the Amount of Carbon Dioxide Evolved.
-                  </p>
-                  <p>
-                    Johart, JMC dan M. Rachmawatti. 2017. ESPS Kimia Untuk SMA/MA Kelas X. 
-      Jakarta. Erlangga. 
-                  </p>
-                  <p>
-                    Recent Progress, and Future Challenges". Word Journal of Pharmacy and. 
-      Pharmaceutical Sciences. Volume 8, Issue 7, hal 280, 293. 
-                  </p>
-                  <p>
-                    Tjahjadarmawan, E. dkk. (2021). Ilmu Pengetahuan Alam SMA Kelas X. Jakarta : 
-      Pusat Kurikulum dan Perbukuan Badan Penelitian dan Pengembangan dan Perbukuan 
-      Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi.  
-                  </p>
-                  <p>
-                    Watoni, A. Haris dan Dini K. 2016. Buku Siswa Kimia Untuk SMA/MA Kelas X 
-      Kelompok Peminatan Matematika dan Umum Pengetahuan Alam. Bandung. Yrama Widya. 
-                  </p>
-                  <p>
-                    Wissinger, J. E.; Ellison, C. J.; Dichtel, W. R.; Trotta, J. T.; Chang, A. B; Yang, A.; Bunyard C. W. (2020). Sustainable Polymer Framework. NSF Center for Sustainable Polymers, University of Minnesota.
-                  </p>
-                  <p>
-                    World Economic Forum, Ellen MacArthur Foundation and McKinsey and Company. (2016). The New Plastics Economy Rethinking the Future of Plastics.
-                  </p> */}
                   <div className="w-fit px-8 justify-center mx-auto pb-12">
                     <Card className="bg-green-600 p-4">
-                      <div className="grid xl:grid-cols-6 gap-4">
+                      <div className="grid xl:grid-cols-5 gap-4">
                         <a href="https://drive.google.com/file/d/1X1fHT-DEa7orvApO-ODAQrtD6TRPhH8R/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
                           <img src="/dp1.png" alt="greenchemistry" className="w-40 h-50 rounded-lg" />
                         </a>
@@ -87,6 +51,18 @@ const DaftarPustaka = () => {
                         </a>
                         <a href="https://drive.google.com/file/d/1OKV62uuNnJQiVVx_Mx9V9XQadkesTJ5a/view?usp=sharing" className="p-2 flex flex-col gap-2 items-center text-center w-full">
                           <img src="/dp11.png" alt="greenchemistry" className="w-40 h-50 rounded-lg" />
+                        </a>
+                        <a href="https://books.google.co.id/books?id=YJRfEQAAQBAJ&printsec=frontcover&hl=id&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                          <img src="/dp12.png" alt="greenchemistry" className="w-40 h-50 rounded-lg" />
+                        </a>
+                        <a href="https://anyflip.com/qdblg/smsi/ " className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                          <img src="/dp13.png" alt="greenchemistry" className="w-40 h-50 rounded-lg" />
+                        </a>
+                        <a href="https://repository.getpress.co.id/media/publications/642727-kimia-hijau-prinsip-sintesis-ramah-lingk-01ba0ee8.pdf?exp=1784367975&kid=1&sig=El6jTG7wgeBCqzmoqZ58N7O9MMftj79upHFE18PRRvg" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                          <img src="/dp14.png" alt="greenchemistry" className="w-40 h-50 rounded-lg" />
+                        </a>
+                        <a href="https://www.scribd.com/document/452486701/buku-kimia-dasar-raymon-chang-pdf" className="p-2 flex flex-col gap-2 items-center text-center w-full">
+                          <img src="/dp15.png" alt="greenchemistry" className="w-40 h-50 rounded-lg" />
                         </a>
                       </div>
                     </Card>

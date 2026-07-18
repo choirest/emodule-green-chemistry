@@ -120,7 +120,7 @@ function AppRoutes() {
                       } 
                     />
                     <Route 
-                      path="/kata-pengantar" 
+                      path="/prakata" 
                       element={
                         <ProtectedRoute allowedRoles={['SISWA']}>
                           <KataPengantar />

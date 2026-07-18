@@ -61,7 +61,7 @@ const Francis = () => {
                 <p className="col-span-1 font-semibold">Validator</p>
                 <ul>
                   <li>Dr. Kadek Dwi Hendratma Gunawan S.Pd., M.Pd. </li>
-                  <li>Dr. Ari Syahidul Shidiq, S.Pd., M.Pd. </li>
+                  <li>Nur Hasanah, S.Pd., M.Sc. </li>
                   <li>Dr. Putu Anindita Widhiya Putri, S.Pd., M.Pd. </li>
                   <li>Eswahyudi Kurniawan, S.Pd., Gr. </li>
                   <li>Layla Nur Rahmawati, S.Pd., Gr. </li>

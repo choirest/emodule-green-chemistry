@@ -30,7 +30,7 @@ const AppSidebar = () => {
   const studentMenus = [
     { label: "Beranda", href: "/", icon: Home },
     { label: "Halaman Francis", href: "/francis", icon: User },
-    { label: "Kata Pengantar", href: "/kata-pengantar", icon: BookOpen },
+    { label: "Prakata", href: "/prakata", icon: BookOpen },
     { label: "Pendahuluan", href: "/pendahuluan", icon: FileText },
     { label: "Kerangka E-Module", href: "/kerangka-modul", icon: ClipboardList },
     { 

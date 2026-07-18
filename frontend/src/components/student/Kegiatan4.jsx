@@ -42,7 +42,7 @@ const Kegiatan4 = () => {
       let tabelFound = false;
 
       response.data.forEach(item => {
-        if (item.soal.pertanyaan.includes('Lakukan pemantauan terhadap bau dan warna (Day 1-5)!')) {
+        if (item.soal.pertanyaan.includes('Lakukan pemantauan terhadap bau dan warna!')) {
           try {
             const parsedData = JSON.parse(item.jawaban);
             if (parsedData && typeof parsedData === 'object' && parsedData.day1) {
@@ -113,7 +113,7 @@ const Kegiatan4 = () => {
   }
 
   const soalPengamatan = soal.find(s =>
-    s.pertanyaan.includes('Lakukan pemantauan terhadap bau dan warna (Day 1-5)!')
+    s.pertanyaan.includes('Lakukan pemantauan terhadap bau dan warna!')
   );
 
   // Reusable components
@@ -137,7 +137,7 @@ const Kegiatan4 = () => {
   );
 
   const LembarKerjaLink = ({ href, src, alt }) => (
-    <a href={href} className="block w-1/2 sm:w-1/3 mx-auto my-4 p-4 bg-green-600 rounded-lg">
+    <a href={href} className="block w-1/2 sm:w-1/3 mx-auto my-4 p-4 bg-green-600 rounded-lg" target="_blank" rel="noopener noreferrer">
       <img src={src} alt={alt} className="w-full rounded-md" />
     </a>
   );
@@ -249,6 +249,9 @@ const Kegiatan4 = () => {
                   Percobaan ini bertujuan untuk membuat cairan pembersih yang ramah lingkungan sebagai
                   salah satu solusi menanggulangi pencemaran air akibat cairan pembersih komersial.
                 </p>
+                <p className="">
+                  Menurutmu, apakah bisa kita membuat cairan pembersih yang terbuat dari bahan organik yang lebih ramah lingkungan?
+                </p>
                 {soal.slice(1, 2).map((item) => (
                   <SoalItem key={item.id} item={item} />
                 ))}
@@ -282,6 +285,7 @@ const Kegiatan4 = () => {
               <CardTitle className="flex gap-4">Hasil Pengamatan</CardTitle>
               <CardDescription className="pt-2 grid gap-4 text-justify text-black">
                 <p><i>Organoleptik</i></p>
+                <p>Uji organoleptik adalah metode penilaian kualitas suatu produk menggunakan pancaindra manusia.</p>
                 {soal.slice(5, 6).map((item) => (
                   <div key={item.id} className="pb-6">
                     <h3 className="mb-3">{item.pertanyaan}</h3>
@@ -300,7 +304,7 @@ const Kegiatan4 = () => {
                             <tbody>
                               {['day1', 'day2', 'day3', 'day4', 'day5'].map((day, index) => (
                                 <tr key={day} className={index % 2 === 0 ? 'bg-white hover:bg-gray-50' : 'bg-gray-50 hover:bg-gray-100'}>
-                                  <td className="border border-gray-300 px-4 py-3 font-medium">Day {index + 1}</td>
+                                  <td className="border border-gray-300 px-4 py-3 font-medium"> {index + 1}</td>
                                   {['bau', 'warna'].map(field => (
                                     <td key={`${day}-${field}`} className="border border-gray-300 px-2 py-2">
                                       <input
@@ -385,7 +389,9 @@ const Kegiatan4 = () => {
                 <p>
                   Yuk cek pemahamanmu melalui{' '}
                   <a
-                    href="https://bit.ly/GCuntukKeberlanjutanAirSungai"
+                    href="https://forms.gle/PyrFJZayWjL9cSA87"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:underline text-green-500 hover:text-green-600"
                   >
                     link berikut

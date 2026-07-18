@@ -17,12 +17,12 @@ const Glosarium = () => {
               <CardHeader>
                 <CardDescription className="grid gap-2 text-justify text-black">
                   <p>
-                    <i>Atom Economy</i> (Ekonomi Atom): <br/>Ukuran efisiensi suatu reaksi kimia berdasarkan jumlah 
+                    Ekonomi Atom: <br/>Ukuran efisiensi suatu reaksi kimia berdasarkan jumlah 
       atom reaktan yang benar-benar menjadi bagian dari produk akhir. Semakin tinggi nilai 
       ekonomi atom, semakin sedikit limbah yang dihasilkan.
                   </p>
                   <p>
-                    Bahan Terbarukan <i>(Renewable Resources)</i>: <br/> Bahan yang dapat diperoleh kembali dalam 
+                    Bahan Terbarukan: <br/> Bahan yang dapat diperoleh kembali dalam 
       waktu singkat oleh alam, seperti tanaman, air, dan <i>mikroorganisme</i>.
                   </p>
                   <p>
@@ -30,7 +30,7 @@ const Glosarium = () => {
       sederhana dan tidak berbahaya bagi lingkungan. 
                   </p>
                   <p>
-                    <i>Catalyst</i> (Katalis): <br/> Zat yang mempercepat reaksi kimia tanpa ikut habis dalam reaksi. 
+                    Katalis: <br/> Zat yang mempercepat reaksi kimia tanpa ikut habis dalam reaksi. 
       Katalis penting dalam kimia hijau karena memungkinkan reaksi berlangsung lebih cepat 
       dan efisien dengan energi lebih rendah.
                   </p>
@@ -40,12 +40,12 @@ const Glosarium = () => {
       diutamakan. 
                   </p>
                   <p>
-                    EM4 <i>(Effective Microorganisms 4)</i>: <br/> Campuran <i>mikroorganisme</i> bermanfaat yang 
+                    EM4: <br/> Campuran <i>mikroorganisme</i> bermanfaat yang 
       digunakan untuk mempercepat fermentasi dan penguraian bahan organik, sering dipakai 
       dalam pengelolaan limbah dan pembuatan pupuk organik cair.  
                   </p>
                   <p>
-                    <i>Green Chemistry</i> (Kimia Hijau): <br/> Cabang ilmu kimia yang berfokus pada perancangan 
+                    Kimia Hijau: <br/> Cabang ilmu kimia yang berfokus pada perancangan 
       produk dan proses yang mengurangi atau menghilangkan penggunaan dan pembentukan 
       zat berbahaya.  
                   </p>
@@ -57,15 +57,15 @@ const Glosarium = () => {
       alami dan antibakteri dalam pembersih organik.  
                   </p>
                   <p>
-                    Organik (dalam konteks kimia): <br/> Senyawa yang mengandung karbon, biasanya berasal dari 
+                    Organik: <br/> Senyawa yang mengandung karbon, biasanya berasal dari 
       makhluk hidup. 
                   </p>
                   <p>
-                    Sintesis Hijau <i>(Green Synthesis)</i>: <br/> Proses pembuatan senyawa kimia yang meminimalkan 
+                    Sintesis Hijau: <br/> Proses pembuatan senyawa kimia yang meminimalkan 
       penggunaan bahan beracun dan menghasilkan limbah sedikit.  
                   </p>
                   <p>
-                    Senyawa Berbahaya <i>(Hazardous Substances)</i>: <br/> 
+                    Senyawa Berbahaya: <br/> 
                     Zat yang dapat membahayakan kesehatan 
       manusia atau lingkungan.  
                   </p>

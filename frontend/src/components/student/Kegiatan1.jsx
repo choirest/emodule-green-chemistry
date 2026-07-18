@@ -314,8 +314,8 @@ const Kegiatan1 = () => {
                 </p>
                 <NotechemCard>
                   <p>Dalam praktik kimia, prinsip ini diterapkan dengan menghindari bahan yang mudah meledak, beracun, korosif, atau menghasilkan gas berbahaya, dan menggantinya dengan bahan yang lebih aman jika memungkinkan. Nah jadi sesuai prinsip ketiga <i>Green Chemistry</i> bahan bahan tersebut bisa digantikan dengan bahan baku alternatif yang lebih aman, loh!</p>
-                  <p className="font-semibold underline text-center mt-2">YUK SIMAK BERSAMA</p>
-                  <img src="/qr3.jpg" alt="greenchemistry" className="w-1/4 mx-auto" />
+                  <p className="mt-2">Klik <a href="https://drive.google.com/file/d/10HohpvrbjeKaV_RicbgcE76F36zV5jBL/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" className="hover:underline text-green-500 hover:text-green-600">link disini</a> untuk mengetahuinya</p>
+                  {/* <img src="/qr3.jpg" alt="greenchemistry" className="w-1/4 mx-auto" /> */}
                 </NotechemCard>
               </CardDescription>
             </CardHeader>
@@ -412,9 +412,8 @@ const Kegiatan1 = () => {
                     <li className="flex gap-1"><span>-</span><span>Menggunakan katalis agar reaksi berlangsung lebih cepat dan hemat energi.</span></li>
                     <li className="flex gap-1"><span>-</span><span>Menggunakan energi alternatif, seperti sinar matahari untuk mengeringkan hasil reaksi.</span></li>
                   </ul>
-                  <p className="font-semibold underline text-center mt-2">BAGAIMANA KATALIS DAPAT MEMBUAT REAKSI BERLANGSUNG LEBIH CEPAT?</p>
-                  <p className="font-semibold underline text-center">YUK SCAN UNTUK TAU JAWABANNYA!</p>
-                  <img src="/qr6.jpg" alt="greenchemistry" className="w-1/4 mx-auto" />
+                  <p className="mt-2">Bagaimana katalis dapat membuat reaksi berlangsung lebih cepat? Klik <a href="https://drive.google.com/file/d/1qfRs1qJVeV8IjCmeNKccs1d8jxP1gP1Y/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" className="hover:underline text-green-500 hover:text-green-600">link disini</a> untuk mengetahuinya</p>
+                  {/* <img src="/qr6.jpg" alt="greenchemistry" className="w-1/4 mx-auto" /> */}
                 </NotechemCard>
               </CardDescription>
             </CardHeader>
@@ -614,8 +613,21 @@ const Kegiatan1 = () => {
               <CardDescription className="pt-2 grid gap-4 text-black">
                 <p>
                   Untuk mengeksplor pengetahuan dan pemahamanmu, klik{' '}
-                  <a href="https://drive.google.com/drive/folders/1FiVfT4WT1Rzuqojc3BALsjTuxY110e19?usp=drive_link"
-                    className="hover:underline text-green-500 hover:text-green-600">
+                  <a href="https://forms.gle/NPWptLzVZHgzdrav9" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:underline text-green-500 hover:text-green-600"
+                  >
+                    link berikut
+                  </a>!
+                </p>
+                <p>
+                  Mari <i>explore</i> topik topik praktikum yang sesuai dengan prinsip <i>Green Chemistry</i> dengan klik{' '}
+                  <a href="https://canva.link/c3t5n30epv2m1fa " 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:underline text-green-500 hover:text-green-600"
+                  >
                     link berikut
                   </a>!
                 </p>
