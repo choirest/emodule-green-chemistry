@@ -163,7 +163,7 @@ async function main() {
     'Tuliskan alat yang dibutuhkan dalam praktikum ini!',
     'Tuliskan bahan yang dibutuhkan dalam praktikum ini!',
     'Tuliskan prosedur kerja dalam praktikum ini!',
-    'Lakukan pemantauan terhadap bau dan warna (Day 1-5)!',
+    'Lakukan pemantauan terhadap bau dan warna!',
     'Uraikan perubahan bau dan warna pada kolom berikut!',
     'Uraikan prinsip green chemistry mana saja yang kamu guakan dalam pembuatan cairan pembersih ini!',
     'Buatlah kesimpulan dari paparan yang telah kamu tuliskan!',
