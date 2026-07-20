@@ -16,13 +16,13 @@ const Pendahuluan = () => {
           <div className="pt-6 grid gap-16">
             <CardHeader>
               <CardTitle></CardTitle>
-              <CardDescription className="pt-2 grid gap-2 text-black">
+              <CardDescription className="pt-2 grid gap-2 text-black text-justify">
                 <p className="indent-8">Pada akhir Fase E, peserta didik memiliki kemampuan untuk memahami sistem pengukuran, energi alternatif, ekosistem, bioteknologi, keanekaragaman hayati, struktur atom, reaksi kimia, hukum-hukum dasar kimia, dan perubahan iklim sehingga responsif dan dapat berperan aktif dalam menyelesaikan masalah pada isu-isu lokal dan global. Semua upaya tersebut diarahkan pada pencapaian tujuan pembangunan yang berkelanjutan (<i>Sustainable Development Goals/SDGs</i>).</p>
               </CardDescription>
             </CardHeader>
             <CardHeader>
               <CardTitle>Elemen</CardTitle>
-              <CardDescription className="pt-2 grid gap-2 text-black">
+              <CardDescription className="pt-2 grid gap-2 text-black text-justify">
                 <div className="flex gap-2">
                   <p className="">1.</p>
                   <div className="grid gap-1">
